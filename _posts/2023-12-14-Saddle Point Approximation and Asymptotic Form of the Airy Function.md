@@ -1,6 +1,3 @@
-# Saddle Point Approximation and Asymptotic Form of the Airy Function
-
-
 
  WKB approximation을 공부하다 보면 Airy functiom의 asymptotic form이 필요한데 교재에서는 그냥 휙 하고 던져줄 것이다. 이것 참 괴씸한데...
 
