@@ -108,7 +108,7 @@ author:
   avatar           : "assets/photos/bio-photo.jpg"
   bio              : "Microscopical world depends only on a simple eigenvalue equation : the Schrodinger equation"
   location         : "Seoul"
-  email            : "f4june777@konkuk.ac.kr"
+  # email            : "f4june777@konkuk.ac.kr"
   links:
     - label: "f4june77@konkuk.ac.kr"
       icon: "fas fa-fw fa-envelope-square"
