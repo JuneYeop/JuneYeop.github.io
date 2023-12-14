@@ -110,9 +110,9 @@ author:
   location         : "Seoul"
   # email            : "f4june777@konkuk.ac.kr"
   links:
-    - label: "f4june77@konkuk.ac.kr"
+    - label: "f4june777@konkuk.ac.kr"
       icon: "fas fa-fw fa-envelope-square"
-      url: "f4june777@konkuk.ac.kr"
+      # url: "f4june777@konkuk.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
