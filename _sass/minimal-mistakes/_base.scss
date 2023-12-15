@@ -42,6 +42,10 @@ h2 {
   font-size: $h-size-2;
 }
 
+h1:after, h2:after {
+    border-bottom: none;
+}
+
 h3 {
   font-size: $h-size-3;
 }
