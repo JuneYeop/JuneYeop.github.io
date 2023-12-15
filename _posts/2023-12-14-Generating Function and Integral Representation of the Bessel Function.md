@@ -10,7 +10,8 @@ comments: true
 <br/>
 <br/>
 
-## <center> Generating Function of the Bessel Function </center>  
+### <center> Generating Function of the Bessel Function </center>  
+<hr/>
 <br/>
 $$ \text{Claim  :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
 <br/>  
@@ -39,7 +40,8 @@ Once we obtained the generating function of the Bessel function, it is a cakewal
 <br/>
 <br/>
 
-## <center> Integral Representation of the Bessel Function </center>  
+### <center> Integral Representation of the Bessel Function </center>  
+<hr/>
 <br/>
 
 $$ \text{Claim  :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$  
