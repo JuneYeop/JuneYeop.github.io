@@ -12,7 +12,7 @@ summary: The Bessel function can be expressed not only in an infinite series for
 <br/>
 <br/>
 
-### <center> Generating Function of the Bessel Function </center>  
+## <center> Generating Function of the Bessel Function </center>  
 <hr/>
 <br/>
 $$ \text{Claim  :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
@@ -42,7 +42,7 @@ Once we obtained the generating function of the Bessel function, it is a cakewal
 <br/>
 <br/>
 
-### <center> Integral Representation of the Bessel Function </center>  
+## <center> Integral Representation of the Bessel Function </center>  
 <hr/>
 <br/>
 
