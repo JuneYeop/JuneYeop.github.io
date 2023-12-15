@@ -286,7 +286,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      # 포스팅을 읽는데 걸린 시간 표출을 대신해서
+      read_time: false
+      # 포스팅 날짜를 표출
+      show_date: true
       comments: # true
       share: true
       related: true
