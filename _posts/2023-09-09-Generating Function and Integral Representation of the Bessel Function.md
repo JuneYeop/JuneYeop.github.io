@@ -1,6 +1,10 @@
 ---
 use_math: true
 comments: true
+title:  "Generating Function and Integral Representation of the Bessel Function"
+summary: The Bessel function can be expressed not only in an infinite series form, but also in an integral from.
+# category: jekyll
+# thumbnail: /assets/img/posts/code.jpg
 ---
 
 <br/>
