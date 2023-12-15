@@ -11,9 +11,8 @@ comments: true
 
 ## <center> Generating Function of the Bessel Function </center> 
 <br/>
-$\mathrm{claim : }$
+$$ \text{Claim  :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
 
-$$ \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
 <br/>
 $\mathrm{proof)}$
 
