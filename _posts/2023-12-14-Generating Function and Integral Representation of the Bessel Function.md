@@ -1,13 +1,20 @@
+---
+layout: post
+title: "Generating function and integral representation of the bessel function"
+tags: [태그]
+use_math: true
+comments: true
+---
+
 <br/>
 &ensp; In general, the Bessel function is expressed as infinite series, since we solve the Bessel equation using the Frobenious method ordinarily. However, we can write the Bessel function not only in the infinite series form, but also in an integral representation. <br/>
 &ensp; In order to obtain the integral form of the Bessel function, we should figure out generating function of the Bessel function beforehand.
 <br/>
 <br/>
+
 ## <center> Generating Function of the Bessel Function </center> 
 <br/>
 $$ \text{Claim  :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
-
-
 
 $\mathrm{proof)}$
 
