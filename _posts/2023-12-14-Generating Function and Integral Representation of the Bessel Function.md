@@ -1,7 +1,4 @@
 ---
-layout: post
-title: "Generating function and integral representation of the bessel function"
-tags: [태그]
 use_math: true
 comments: true
 ---
