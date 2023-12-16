@@ -56,7 +56,7 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
 
 &nbsp;
 
-<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
+<p style="text-align: center; font-size: 24px;">&bull;&ensp;&bull;&ensp;&bull;</p>
 
 &nbsp;
 &nbsp;
@@ -80,7 +80,7 @@ $\mathrm{\underline{proof}}$
 
 
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$
-<br/>
+
 
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).
 
@@ -107,7 +107,7 @@ $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz 
 
 &nbsp;
 
-&ensp; Note that the integrand in the first term is holomorphic on $\mathbb{C}\setminus \left\{ 0 \right\} $ and the integrand in the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! 
+&ensp; Note that the integrand in the first term is holomorphic on $ \mathbb{C}\setminus \{ 0 \} $ and the integrand in the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! 
 
 
 &ensp; The third term is, however, not holomorphic anywhere and has a simple pole at $z=0$. Using the Cauchy residue theorem, we obtain
@@ -127,10 +127,10 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \;=\; i \int_{
 &ensp; Since the $J_{n}(x)$ is a real function, by picking only imaginary parts we obtain
 
 
-$$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)}$$
+$$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)} \; . $$
 
 
-and since $\cos{(x\sin{\theta}-n\theta)}$ has even symmetry w.r.t. $\theta=\pi$, we can conclude that
+&ensp; From the even symmetry of $\cos{(x\sin{\theta}-n\theta)}$ w.r.t. $\theta=\pi$, we can conclude that
 
 
 $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \cos{(x\sin{\theta}-n\theta) } \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$
