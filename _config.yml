@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Junyeop Kim"
   avatar           : "assets/photos/bio-photo.jpg"
-  bio              : "H&vert;Ψ&gt; = E&vert;Ψ&gt;"
+  bio              : 'H|Ψ> = E|Ψ>'
   location         : "Seoul"
   # email            : "f4june777@konkuk.ac.kr"
   links:
