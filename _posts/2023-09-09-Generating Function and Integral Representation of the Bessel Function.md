@@ -40,14 +40,13 @@ $$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{
 
 &nbsp;
 
-&ensp; Let us define $n$ by $n=r-s$. Then, 
+&ensp; Define $n$ as $n=r-s$. Then, 
 
 
 $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left( \frac{x}{2} \right)^{2s+n} \, \right] \; .$$
 
-&nbsp;
 
-&ensp; Note that the $s$ summation term is identical to the 1st kind Bessel function!
+&ensp; Note that the $s$ summation term inside the square brackets above is identical to the usual series representation of 1st kind Bessel function!
 
 
 &ensp; Therefore,
@@ -81,13 +80,13 @@ $\mathrm{\underline{proof}}$
 
 
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$
-
+<br/>
 
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).
 
 &nbsp;
 
-&ensp; Let $ z=e^{i\theta} $ where $\theta$ runs from $0$ to $2\pi$. Then, $\;  dz = ie^{i\theta}d\theta  \;$ and $\;  z-z^{-1} = 2i\sin{\theta} $. By changing the variable, we might obtain
+&ensp; Let $ z=e^{i\theta} $ where $\theta$ runs from $0$ to $2\pi$. Then, $\;  dz = ie^{i\theta}d\theta  \;$ and $\;  z-z^{-1} = 2i\sin{\theta} $. By changing the variable, we obtain
 
 
 $$ \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; \int_{0}^{2\pi} d\theta \, ie^{i\theta} \frac{e^{ix \sin{\theta}}}{e^{i(n+1)\theta}} \;=\; i \int_{0}^{2\pi} d\theta \, \exp{(ix \sin{\theta} - in\theta)} \; . $$
@@ -108,7 +107,10 @@ $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz 
 
 &nbsp;
 
-&ensp; Observe that the integrand of the first term is holomorphic on $\mathbb{C}\setminus \{ 0 \} $ and the integrand of the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! The third term is, however, not holomorphic anywhere and has a simple pole at $z=0$. Using the Cauchy residue theorem, we obtain
+&ensp; Note that the integrand in the first term is holomorphic on $\mathbb{C}\setminus \left\{ 0 \right\} $ and the integrand in the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! 
+
+
+&ensp; The third term is, however, not holomorphic anywhere and has a simple pole at $z=0$. Using the Cauchy residue theorem, we obtain
 
 
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \; . $$
@@ -125,11 +127,10 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \;=\; i \int_{
 &ensp; Since the $J_{n}(x)$ is a real function, by picking only imaginary parts we obtain
 
 
-$$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)} = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \cos{(x\sin{\theta}-n\theta) } \; . $$
+$$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)}$$
 
-&nbsp;
 
-&ensp; Since $\cos{(x\sin{\theta}-n\theta)}$ has even symmetry w.r.t. $\theta=\pi$, we might conclude that
+&ensp; and since $\cos{(x\sin{\theta}-n\theta)}$ has even symmetry w.r.t. $\theta=\pi$, we can conclude that
 
 
 $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \cos{(x\sin{\theta}-n\theta) } \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$
