@@ -122,7 +122,7 @@ $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \
 
 <br/>  
 <br/>  
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style1" />
+<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
 <br/>  
 
 
