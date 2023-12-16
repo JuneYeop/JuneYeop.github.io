@@ -130,7 +130,7 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \;=\; i \int_{
 $$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)}$$
 
 
-&ensp; and since $\cos{(x\sin{\theta}-n\theta)}$ has even symmetry w.r.t. $\theta=\pi$, we can conclude that
+and since $\cos{(x\sin{\theta}-n\theta)}$ has even symmetry w.r.t. $\theta=\pi$, we can conclude that
 
 
 $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \cos{(x\sin{\theta}-n\theta) } \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$
