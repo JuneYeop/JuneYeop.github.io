@@ -29,10 +29,9 @@ last_modified_at: 2023-12-16
 
 $$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
 
-
+&nbsp;
 $\mathrm{\underline{proof}}$
 
-&nbsp;
 
 &ensp; First, let us expand the exponential function as
 
@@ -74,10 +73,9 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
 
 $$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$
 
-
+&nbsp;
 $\mathrm{\underline{proof}}$
 
-&nbsp;
 
 &ensp; Consider a complex closed contour integral
 
