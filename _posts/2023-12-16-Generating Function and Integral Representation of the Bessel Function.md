@@ -47,7 +47,7 @@ $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s
 
 &nbsp;
 
-&ensp; Note that the $s$ summation term inside the square brackets above is identical to the usual series representation of 1st kind Bessel function!
+&ensp; Note that the $s$ summation term inside the square brackets above is identical to the usual infinite series representation of 1st kind Bessel function!
 
 
 &ensp; Therefore,
@@ -83,7 +83,7 @@ $\mathrm{\underline{proof}}$
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \; , $$  
 
 
-where C is defined as a positively oriented unit circle.
+where $C$ is a positively oriented unit circle centered at the origin.
 
 &nbsp;
 
