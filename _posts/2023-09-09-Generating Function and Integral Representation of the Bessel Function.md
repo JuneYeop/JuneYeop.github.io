@@ -24,7 +24,7 @@ last_modified_at: 2023-12-16
 <hr/>  
 <br/>
 
-$$ \mathrm{claim \; :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
+$$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
 
 ${\mathrm{\underline{proof}}}$
 
