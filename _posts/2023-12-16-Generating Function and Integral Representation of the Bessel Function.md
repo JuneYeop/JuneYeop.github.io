@@ -126,7 +126,7 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \;=\; i \int_{
 
 &nbsp;
 
-&ensp; Since the $J_{n}(x)$ is a real function, by picking only imaginary parts we obtain
+&ensp; Since $J_{n}(x)$ is a real-valued function, by picking only imaginary parts we obtain
 
 
 $$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)} \; . $$
