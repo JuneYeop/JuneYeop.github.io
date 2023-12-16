@@ -45,6 +45,7 @@ $$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{
 
 $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left( \frac{x}{2} \right)^{2s+n} \, \right] \; .$$
 
+&nbsp;
 
 &ensp; Note that the $s$ summation term inside the square brackets above is identical to the usual series representation of 1st kind Bessel function!
 
@@ -80,6 +81,7 @@ $\mathrm{\underline{proof}}$
 
 
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$
+
 &nbsp;
 
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).
