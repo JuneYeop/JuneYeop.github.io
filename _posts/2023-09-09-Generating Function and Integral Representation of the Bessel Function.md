@@ -20,17 +20,23 @@ last_modified_at: 2023-12-16
     <br/>
 ### <center> Generating Function of the Bessel Function </center> 
 <hr/> <br/>
+
 $$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$ <br/>
+
 $\mathrm{\underline{proof}}$ <br/>
+
 $$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{r!} \left( \frac{xh}{2} \right)^r } \cdot \sum_{s=0}^{\infty} { \frac{1}{s!} \left( - \frac{x}{2h} \right)^s } = \sum_{r=0}^{\infty} \sum_{s=0}^{\infty} { (-1)^{s} \left( \frac{x}{2} \right)^{r+s} \frac{h^{r-s}}{r!\,s!} } $$ <br/>
 
 &ensp; Let us define $n$ by $n=r-s$. Then, <br/>
+
 $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left( \frac{x}{2} \right)^{2s+n} \, \right] \; .$$ <br/>
 
 &ensp; Note that the $s$ summation term is identical to the 1st kind Bessel function! <br/>
 
 &ensp; Therefore, <br/>
+
 $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$ <br/>
+
     <br/>
 <p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p> <br/>
     <br/>
@@ -39,16 +45,23 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
     <br/>
 ### <center> Integral Representation of the Bessel Function </center>
 <hr/> <br/>
+
 $$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$ <br/>
+
 $\mathrm{\underline{proof}}$ <br/>
+
 &ensp; Consider a complex closed contour integral, <br/>
+
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$ <br/>
+
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$). <br/>
     <br/>
 &ensp; Let $ z=e^{i\theta} $ where $\theta$ runs from $0$ to $2\pi$. Then, $\;  dz = ie^{i\theta}d\theta  \;$ and $\;  z-z^{-1} = 2i\sin{\theta} $. By changing the variable, we might obtain <br/>
+
 $$ \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; \int_{0}^{2\pi} d\theta \, ie^{i\theta} \frac{e^{ix \sin{\theta}}}{e^{i(n+1)\theta}} \;=\; i \int_{0}^{2\pi} d\theta \, \exp{(ix \sin{\theta} - in\theta)} \; . $$ <br/>
     <br/>
 &ensp; Note also that, <br/>
+
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \; . $$ <br/>
     <br/>
 &ensp; Let us split the integral above into three parts. <br/>
