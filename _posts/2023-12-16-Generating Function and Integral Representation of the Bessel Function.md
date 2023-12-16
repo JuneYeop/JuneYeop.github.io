@@ -32,6 +32,7 @@ $$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h
 
 $\mathrm{\underline{proof}}$
 
+&nbsp;
 
 &ensp; First, let us expand the exponential function as
 
@@ -76,6 +77,7 @@ $$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \,
 
 $\mathrm{\underline{proof}}$
 
+&nbsp;
 
 &ensp; Consider a complex closed contour integral
 
