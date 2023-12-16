@@ -109,7 +109,7 @@ $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz 
 
 &nbsp;
 
-&ensp; Note that the integrand in the first term is holomorphic on $ \mathbb{C}\setminus \{ 0 \} $ and the integrand in the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! 
+&ensp; Observe that the integrand in the first term is holomorphic on $ \mathbb{C}\setminus \{ 0 \} $ and the integrand in the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish! 
 
 
 &ensp; The third term is, however, not holomorphic anywhere and has a simple pole at $z=0$. Using the Cauchy residue theorem, we obtain
