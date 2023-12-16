@@ -42,6 +42,9 @@ $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s
 
 $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$  
 
+<br/>  
+<br/>
+<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
 <br/>
 <br/>
 
@@ -85,10 +88,6 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} dz \sum_{m=-\infty}^{\i
 
 $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz \sum_{m=-\infty}^{n-1} \frac{J_{m}(x)}{z^{n-m+1}}  \;+\; \oint_{C} dz \sum_{m=n+1}^{\infty} J_m(x)\, z^{m-n-1}  \;+\; \oint_{C} dz\, \frac{J_{n}(x)}{z}  $$  
 
-<br/>  
-<br/>
-<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
-<br/>
 <br/>
 
 &ensp; Observe that the integrand of the first term is holomorphic on $\mathbb{C}\setminus \{ 0 \} $ and the integrand of the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish!  
@@ -120,6 +119,8 @@ $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \
 <br/>  
 <br/>  
 <p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
+<br/>  
+<br/>  
 <br/>  
 
 
