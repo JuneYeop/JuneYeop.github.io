@@ -6,7 +6,6 @@ summary: The Bessel function can be expressed not only in an infinite series for
 ---
 
 <br/>  
-<br/>  
 &ensp; In general, the Bessel function is expressed as infinite series, since we solve the Bessel equation using the Frobenious method ordinarily. However, we can write the Bessel function not only in the infinite series form, but also in an integral representation.  <br/>  
 
 &ensp; In order to obtain the integral form of the Bessel function, we should figure out generating function of the Bessel function beforehand.
@@ -17,7 +16,7 @@ summary: The Bessel function can be expressed not only in an infinite series for
 <hr/>  
 <br/>  
 
-$$ \text{Claim  :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
+$$ \mathrm{claim \; :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
 
 <br/>  
 
@@ -50,7 +49,7 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
 <hr/>
 <br/>  
 
-$$ \text{Claim  :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$  
+$$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$  
 
 <br/>  
 
