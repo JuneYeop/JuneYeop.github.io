@@ -57,7 +57,7 @@ $\mathrm{proof)}$
 
 &ensp; Consider a complex closed contour integral,  
 
-$$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$  
+$$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$  <br/>
 
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).  
 
@@ -83,7 +83,7 @@ $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz 
 
 <br/>  
 
-&ensp; Observe that the integrand of the first term is holomorphic on $\mathbb{C}\setminus\{0\}$ and the integrand of the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish!  
+&ensp; Observe that the integrand of the first term is holomorphic on $\mathbb{C}\setminus \{ 0 \} $ and the integrand of the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish!  
 
 <br/>  
 
