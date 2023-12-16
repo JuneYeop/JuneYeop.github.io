@@ -82,12 +82,8 @@ $\mathrm{\underline{proof}}$
 
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \; , $$  
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
 
-where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).
+where $C$ is defined as a positively oriented unit circle (i.e. $|z|=1$).
 
 &nbsp;
 
