@@ -20,17 +20,19 @@ last_modified_at: 2023-12-16
 
 ### <center> Generating Function of the Bessel Function </center> 
 <hr/>
-
+<br/>
 $$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
 
 $\mathrm{\underline{proof}}$
 
-$$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{r!} \left( \frac{xh}{2} \right)^r } \cdot \sum_{s=0}^{\infty} { \frac{1}{s!} \left( - \frac{x}{2h} \right)^s } = \sum_{r=0}^{\infty} \sum_{s=0}^{\infty} { (-1)^{s} \left( \frac{x}{2} \right)^{r+s} \frac{h^{r-s}}{r!\,s!} } $$
+&ensp; First, let us expand the exponential function as
 
+$$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{r!} \left( \frac{xh}{2} \right)^r } \cdot \sum_{s=0}^{\infty} { \frac{1}{s!} \left( - \frac{x}{2h} \right)^s } = \sum_{r=0}^{\infty} \sum_{s=0}^{\infty} { (-1)^{s} \left( \frac{x}{2} \right)^{r+s} \frac{h^{r-s}}{r!\,s!} } \; . $$
+<br/>
 &ensp; Let us define $n$ by $n=r-s$. Then, 
 
 $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left( \frac{x}{2} \right)^{2s+n} \, \right] \; .$$
-
+<br/>
 &ensp; Note that the $s$ summation term is identical to the 1st kind Bessel function!
 
 &ensp; Therefore,
