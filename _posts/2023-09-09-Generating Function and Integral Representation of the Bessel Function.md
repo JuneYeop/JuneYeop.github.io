@@ -12,7 +12,8 @@ summary: The Bessel function can be expressed not only in an infinite series for
 <br/>
 <br/>
 
-### <center> Generating Function of the Bessel Function </center>  <hr/>  
+### <center> Generating Function of the Bessel Function </center> 
+<hr/>  
 <br/>  
 
 $$ \mathrm{claim \; :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
@@ -44,7 +45,8 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
 <br/>  
 <br/>  
 
-### <center> Integral Representation of the Bessel Function </center>  <hr/>
+### <center> Integral Representation of the Bessel Function </center>
+<hr/>  
 <br/>  
 
 $$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \qquad \forall x \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} $$  
@@ -54,9 +56,7 @@ $$ \mathrm{claim \; :  } \qquad J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \,
 $\mathrm{proof)}$  
 
 &ensp; Consider a complex closed contour integral,  
-
 $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$  
-  
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).  
 
 <br/>  
