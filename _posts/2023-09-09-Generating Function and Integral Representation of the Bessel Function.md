@@ -1,19 +1,15 @@
 ---
 use_math: true
 comments: true
-
 title:  "Generating Function and Integral Representation of the Bessel Function"
 excerpt: "The Bessel function can be expressed not only in an infinite series form, but also in an integral from."
 writer: Junyeop Kim
-
 categories:
   - Mathematical Physics
 tags:
   - [Bessel function]
- 
 date: 2023-09-09
 last_modified_at: 2023-12-16
-
 ---
 
 <br/>  
@@ -22,14 +18,12 @@ last_modified_at: 2023-12-16
 &ensp; In order to obtain the integral form of the Bessel function, we should figure out generating function of the Bessel function beforehand.
 <br/>
 <br/>
+<br/>
 
 ### <center> Generating Function of the Bessel Function </center> 
 <hr/>  
-<br/>  
 
 $$ \mathrm{claim \; :  } \qquad G(x,h) = \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$  
-
-<br/>  
 
 $\mathrm{proof)}$  
 
@@ -93,6 +87,10 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} dz \sum_{m=-\infty}^{\i
 $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz \sum_{m=-\infty}^{n-1} \frac{J_{m}(x)}{z^{n-m+1}}  \;+\; \oint_{C} dz \sum_{m=n+1}^{\infty} J_m(x)\, z^{m-n-1}  \;+\; \oint_{C} dz\, \frac{J_{n}(x)}{z}  $$  
 
 <br/>  
+<br/>
+<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
+<br/>
+<br/>
 
 &ensp; Observe that the integrand of the first term is holomorphic on $\mathbb{C}\setminus \{ 0 \} $ and the integrand of the second term is entire. Hence, both integrands are analytic on the integration curve $C$ and therefore, both first term and second term vanish!  
 
