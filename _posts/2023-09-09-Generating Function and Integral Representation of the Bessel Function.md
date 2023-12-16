@@ -56,7 +56,7 @@ $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \
 
 &nbsp;
 
-<p style="text-align: center; font-size: 24px;">&bull;&ensp;&bull;&ensp;&bull;</p>
+<p style="text-align: center; font-size: 24px;">&bull;&ensp;&nbsp;&bull;&ensp;&nbsp;&bull;</p>
 
 &nbsp;
 &nbsp;
@@ -79,7 +79,7 @@ $\mathrm{\underline{proof}}$
 &ensp; Consider a complex closed contour integral,
 
 
-$$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$
+$$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} $$  
 
 
 where $C$ is a positively oriented unit circle (i.e. $|z| = 1$).
@@ -102,6 +102,7 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; \oint_{C} dz \sum_{m=-\infty}^{\i
 
 &ensp; Let us split the integral above into three parts.
 
+&nbsp;
 
 $$ \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz \sum_{m=-\infty}^{n-1} \frac{J_{m}(x)}{z^{n-m+1}}  \;+\; \oint_{C} dz \sum_{m=n+1}^{\infty} J_m(x)\, z^{m-n-1}  \;+\; \oint_{C} dz\, \frac{J_{n}(x)}{z}  $$
 
@@ -129,6 +130,7 @@ $$ \oint_{C} dz\, \frac{G(x,z)}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \;=\; i \int_{
 
 $$ J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)} \; . $$
 
+&nbsp;
 
 &ensp; From the even symmetry of $\cos{(x\sin{\theta}-n\theta)}$ w.r.t. $\theta=\pi$, we can conclude that
 
@@ -137,7 +139,7 @@ $$ \therefore \qquad \qquad J_{n}(x) = \frac{1}{\pi} \int_{0}^{\pi} d\theta \, \
 
 &nbsp;
 
-<p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
+<p style="text-align: center; font-size: 24px;">&bull;&ensp;&nbsp;&bull;&ensp;&nbsp;&bull;</p>
 
 &nbsp;
 &nbsp;
