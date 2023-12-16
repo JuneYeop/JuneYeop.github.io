@@ -14,36 +14,48 @@ last_modified_at: 2023-12-16
 
 &nbsp;
 &nbsp;
+
 &ensp; In general, the Bessel function is expressed as infinite series, since we solve the Bessel equation using the Frobenious method ordinarily. However, we can write the Bessel function not only in the infinite series form, but also in an integral representation.
-&nbsp;
+
+
 &ensp; In order to obtain the integral form of the Bessel function, we should figure out generating function of the Bessel function beforehand.
+
 &nbsp;
 &nbsp;
+
 ### <center> Generating Function of the Bessel Function </center> 
 <hr/>
-&nbsp;
+
+
 $$ \mathrm{claim \; :  } \qquad G(x,h) \coloneqq \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } $$
-&nbsp;
+
+
 $\mathrm{\underline{proof}}$
-&nbsp;
+
+
 &ensp; First, let us expand the exponential function as
-&nbsp;
+
+
 $$ G(x,h) = e^{\frac{xh}{2}} e^{-\frac{x}{2h}} = \sum_{r=0}^{\infty} { \frac{1}{r!} \left( \frac{xh}{2} \right)^r } \cdot \sum_{s=0}^{\infty} { \frac{1}{s!} \left( - \frac{x}{2h} \right)^s } = \sum_{r=0}^{\infty} \sum_{s=0}^{\infty} { (-1)^{s} \left( \frac{x}{2} \right)^{r+s} \frac{h^{r-s}}{r!\,s!} } \; . $$
-&nbsp;
-&nbsp;
+
+
 &ensp; Let us define $n$ by $n=r-s$. Then, 
-&nbsp;
+
+
 $$ G(x,h) = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left( \frac{x}{2} \right)^{2s+n} \, \right] \; .$$
-&nbsp;
-&nbsp;
+
+
 &ensp; Note that the $s$ summation term is identical to the 1st kind Bessel function!
-&nbsp;
+
+
 &ensp; Therefore,
-&nbsp;
+
+
 $$ \therefore \qquad \qquad G(x,h) = \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \qquad \qquad \qquad \begin{matrix} {}\\{\blacksquare} \end{matrix} $$
-&nbsp;
-&nbsp;
+
+
 <p style="text-align: center; font-size: 24px;">&bull;&bull;&bull;</p>
+
 &nbsp;
 &nbsp;
 &ensp; Once we obtained the generating function of the Bessel function, it is a cakewalk to obtain the integral representation of the Bessel function.
