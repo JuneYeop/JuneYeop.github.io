@@ -8,7 +8,7 @@ categories:
   - Mathematical Physics
 tags:
   - [Bessel function]
-date: 2023-09-09
+date: 2023-12-16
 last_modified_at: 2023-12-16
 ---
 
