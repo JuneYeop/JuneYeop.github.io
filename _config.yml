@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Junyeop Kim"
   avatar           : "assets/photos/bio-photo.jpg"
-  bio              : 'H|Ψ> = E|Ψ>'
+  bio              : '$ H\vert \psi \rangle = E\vert \psi \rangle $'
   location         : "Seoul"
   # email            : "f4june777@konkuk.ac.kr"
   links:
