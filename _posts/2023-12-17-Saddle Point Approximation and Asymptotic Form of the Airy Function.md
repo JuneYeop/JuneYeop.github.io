@@ -13,7 +13,8 @@ last_modified_at: 2023-12-16
 ---
 
 <p data-ke-size="size16">&nbsp;</p>
-<p style="text-align: justify;" data-ke-size="size14">&nbsp;WKB approximation을 공부하다 보면 Airy function의 asymptotic form이 필요한데 교재에서는 그냥 휙 하고 던져 줄 것이다. 이것 참 맘에 안 드는데...&nbsp;<br />&nbsp;<br />&nbsp;그래서 이번에는 Airy function의 asypmtotic form을 구할 때 사용하는 approximation method인 saddle point approximation에 대해 소개하고, 이것을 이용해서 Airy function의 asymptotic form을 직접 유도해보려고 한다.<br />&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p style="text-align: justify;" data-ke-size="size14">&nbsp; WKB approximation을 공부하다 보면 Airy function의 asymptotic form이 필요한데 교재에서는 그냥 휙 하고 던져 줄 것이다. 이것 참 맘에 안 드는데...&nbsp;<br />&nbsp;<br />&nbsp;그래서 이번에는 Airy function의 asypmtotic form을 구할 때 사용하는 approximation method인 saddle point approximation에 대해 소개하고, 이것을 이용해서 Airy function의 asymptotic form을 직접 유도해보려고 한다.<br />&nbsp;</p>
 <p style="text-align: justify;" data-ke-size="size14"><br />&nbsp;</p>
 <h4 style="text-align: center;" data-ke-size="size20"><b>Derivation of the Saddle Point Approximation</b></h4>
 <hr data-ke-type="horizontalRule" data-ke-style="style5" />
