@@ -35,7 +35,11 @@ last_modified_at: 2023-12-16
  
 &ensp; Let us write the real valued function $f(t)$ in a contour integral form 
 
-$$ f(t) = \int_{C} dz\, F(z,t) $$ where $F$ is an analytic function and $\forall t \in \mathbb{R}$.
+
+$$ f(t) = \int_{C} dz\, F(z,t) $$ 
+
+
+where $F$ is an analytic function and $\forall t \in \mathbb{R}$.
    
 &nbsp;
 
