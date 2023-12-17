@@ -28,21 +28,27 @@ last_modified_at: 2023-12-16
 
 &nbsp;
 
-" How do we obatin an approximation form of a fucntion $f(t), \\forall t \\in \\mathbb{R}$ ? "
+" How do we obatin an approximation form of a fucntion $f(t), \forall t \in \mathbb{R}$ ? "
 
 &nbsp;
 &nbsp;
  
 &ensp; Let us write the real valued function $f(t)$ in a contour integral form 
 
-$$ f(t) = \\int\_{C} dz\\, F(z,t) $$ where $F$ is an analytic function and $\\forall t \\in \\mathbb{R}$.
+$$ f(t) = \int_{C} dz\, F(z,t) $$ where $F$ is an analytic function and $\forall t \in \mathbb{R}$.
    
 &nbsp;
 
 &ensp; Let,
 
 
-$$ F(z,t) = e^{w(z,t)} $$ where $$w(x,y) = u(x,y) + i \\, v(x,y)  \\qquad \\forall x,y \\in \\mathbb{R} \\;\\;. $$  
+$$ F(z,t) = e^{w(z,t)} $$ 
+
+
+where 
+
+
+$$w(x,y) = u(x,y) + i \, v(x,y)  \qquad \forall x,y \in \mathbb{R} \;\;. $$
 
 &nbsp;
 
