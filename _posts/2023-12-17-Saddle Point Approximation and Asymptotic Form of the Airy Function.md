@@ -12,52 +12,86 @@ date: 2023-12-16
 last_modified_at: 2023-12-16
 ---
 
+&nbsp;
+&nbsp;
 
- WKB approximation을 공부하다 보면 Airy function의 asymptotic form이 필요한데 교재에서는 그냥 휙 하고 던져 줄 것이다. 이것 참 맘에 안 드는데...   
+&ensp; WKB approximation을 공부하다 보면 Airy function의 asymptotic form이 필요한데 교재에서는 그냥 휙 하고 던져 줄 것이다. 이것 참 맘에 안 드는데...
+
    
- 그래서 이번에는 Airy function의 asypmtotic form을 구할 때 사용하는 approximation method인 saddle point approximation에 대해 소개하고, 이것을 이용해서 Airy function의 asymptotic form을 직접 유도해보려고 한다.  
- 
+&ensp; 그래서 이번에는 Airy function의 asypmtotic form을 구할 때 사용하는 approximation method인 saddle point approximation에 대해 소개하고, 이것을 이용해서 Airy function의 asymptotic form을 직접 유도해보려고 한다.
 
-  
- 
+&nbsp;
+&nbsp;
 
-#### **Derivation of the Saddle Point Approximation**
-
+### **Derivation of the Saddle Point Approximation**
 ---
+
+&nbsp;
 
 " How do we obatin an approximation form of a fucntion $f(t), \\forall t \\in \\mathbb{R}$ ? "
 
-   
-   
-   
-Let us write the real valued function $f(t)$ in a contour integral form $$ f(t) = \\int\_{C} dz\\, F(z,t) $$ where $F$ is an analytic function and $\\forall t \\in \\mathbb{R}$.  
-   
-   
-Let, $$ F(z,t) = e^{w(z,t)} $$ where $$w(x,y) = u(x,y) + i \\, v(x,y)  \\qquad \\forall x,y \\in \\mathbb{R} \\;\\;. $$  
-   
-   
-Since $F$ is analytic, $w$ should be anayltic as well because an exponential function preserves holomorphism. Thus, both $u$ and $v$ cannot have extremum.  
-   
-Why?  
-Assume that $u(x,y)$ has a local minimum(maximum) at $(x,y) = (x\_0, y\_0)$. Then, the Hessian matrix of $u(x,y)$ at $(x\_0, y\_0)$ shold be positively(negatively) definite, and this implies $\\left.\\frac{\\partial^2 u}{\\partial x^2}\\right|\_{x\_0,y\_0}$ and $\\left.\\frac{\\partial^2 u}{\\partial y^2}\\right|\_{x\_0,y\_0}$ have same signs. Unless, the determinant of Hessian matrix might be negative, which violates the pre-stated condition. Since $w(x,y)$ is analytic, however, $u(x,y)$ must satisfy $ {\\nabla}^2 u(x,y) = 0 $. This implies $\\left.\\frac{\\partial^2 u}{\\partial x^2}\\right|\_{x\_0,y\_0}$ and $\\left.\\frac{\\partial^2 u}{\\partial y^2}\\right|\_{x\_0,y\_0}$ cannot have same signs, and we get a contradiction! Therefore, there is NO extremum for $u$ and $v$ if $ w = u + i v $ is analytic.  
-   
-   
-Although $u(x,y)$ and $v(x,y)$ cannot have extremum, both can have a saddle point (say $z\_0$).  
-   
-   
-Let us expand $w(z,t)$ near the saddle point $z=z\_0$ up to second order of $z$. $$\\begin{equation} w(z,t) = w(z\_0,t) + \\frac{1}{2} \\left.\\frac{\\partial^2 w}{\\partial z^2}\\right|\_{z\_0} (z-z\_0)^2 + \\cdots  \\tag{1} \\end{equation} $$ Note that $ \\left.\\frac{dw}{dz}\\right|\_{z\_0}$ is vanished since $z\_0$ is a saddle point.  
-   
-   
-Let us introduce some abbreviations and denote the phases explicitly. $$ \\left.\\frac{\\partial w}{\\partial z}\\right|\_{z\_0} = w\_0 , \\quad \\left.\\frac{\\partial^2 w}{\\partial z^2}\\right|\_{z\_0} = w''\_0 = \\left|{w''\_0}\\right| e^{i\\alpha} , \\quad z-z\_0 = re^{i\\theta} \\;\\;. $$  
-   
-Then we can rewrite the $w(z,t)$ as $$ \\begin{align\*} w(z,t) &= w\_0 + \\frac{1}{2}\\left|w''\_0\\right| e^{i\\alpha} (r e^{i\\theta})^2 + \\mathrm{O}(r^3) \\\\ &= w\_0 + \\frac{1}{2}\\left|w''\_0\\right| r^2 e^{ i(\\alpha + 2\\theta) } + \\mathrm{O}(r^3) \\\\ &= w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\left\[ \\cos(\\alpha + 2\\theta) + i \\, \\sin(\\alpha + 2\\theta) \\right\] + \\mathrm{O}(r^3) \\\\ &\\approx \\left\[ w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\cos(\\alpha + 2\\theta) \\right\] + i \\, \\left\[ \\frac{1}{2} \\left|w''\_0\\right| r^2 \\sin(\\alpha + 2\\theta) \\right\] \\;\\;. \\end{align\*} $$  
-   
-Remember that we have defined $w(z,t)$ by $ w = u + i v $. Hence we obtain  
-$$ \\begin{cases} \\quad u(z,t) = w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\cos(\\alpha + 2\\theta)  \\\\ {} \\\\  \\quad  v(z,t) = \\frac{1}{2} \\left|w''\_0\\right| r^2 \\sin(\\alpha + 2\\theta)  \\end{cases} $$  
-   
-Consider the situation in which **$z$ departs from $z\_0$** (i.e. as r increases from 0).  
+&nbsp;
+&nbsp;
  
+&ensp; Let us write the real valued function $f(t)$ in a contour integral form 
 
+$$ f(t) = \\int\_{C} dz\\, F(z,t) $$ where $F$ is an analytic function and $\\forall t \\in \\mathbb{R}$.
+   
+&nbsp;
+
+&ensp; Let,
+
+
+$$ F(z,t) = e^{w(z,t)} $$ where $$w(x,y) = u(x,y) + i \\, v(x,y)  \\qquad \\forall x,y \\in \\mathbb{R} \\;\\;. $$  
+
+&nbsp;
+
+
+&ensp; Since $F$ is analytic, $w$ should be anayltic as well because an exponential function preserves holomorphism. Thus, both $u$ and $v$ cannot have extremum. Why?
+
+
+&ensp; Assume that $u(x,y)$ has a local minimum(maximum) at $(x,y) = (x\_0, y\_0)$. Then, the Hessian matrix of $u(x,y)$ at $(x\_0, y\_0)$ shold be positively(negatively) definite, and this implies $\\left.\\frac{\\partial^2 u}{\\partial x^2}\\right|\_{x\_0,y\_0}$ and $\\left.\\frac{\\partial^2 u}{\\partial y^2}\\right|\_{x\_0,y\_0}$ have same signs. Unless, the determinant of Hessian matrix might be negative, which violates the pre-stated condition. Since $w(x,y)$ is analytic, however, $u(x,y)$ must satisfy $ {\\nabla}^2 u(x,y) = 0 $. This implies $\\left.\\frac{\\partial^2 u}{\\partial x^2}\\right|\_{x\_0,y\_0}$ and $\\left.\\frac{\\partial^2 u}{\\partial y^2}\\right|\_{x\_0,y\_0}$ cannot have same signs, and we get a contradiction! Therefore, there is NO extremum for $u$ and $v$ if $ w = u + i v $ is analytic.
+   
+&nbsp;
+
+&ensp; Although $u(x,y)$ and $v(x,y)$ cannot have extremum, both can have a saddle point (say $z\_0$).
+   
+&nbsp;
+
+&ensp; Let us expand $w(z,t)$ near the saddle point $z=z\_0$ up to second order of $z$. 
+
+
+$$\\begin{equation} w(z,t) = w(z\_0,t) + \\frac{1}{2} \\left.\\frac{\\partial^2 w}{\\partial z^2}\\right|\_{z\_0} (z-z\_0)^2 + \\cdots  \\tag{1} \\end{equation} $$ 
+
+
+Note that $ \\left.\\frac{dw}{dz}\\right|\_{z\_0}$ is vanished since $z\_0$ is a saddle point.  
+
+&nbsp;
+   
+&ensp; Let us introduce some abbreviations and denote the phases explicitly. 
+
+
+$$ \\left.\\frac{\\partial w}{\\partial z}\\right|\_{z\_0} = w\_0 , \\quad \\left.\\frac{\\partial^2 w}{\\partial z^2}\\right|\_{z\_0} = w''\_0 = \\left|{w''\_0}\\right| e^{i\\alpha} , \\quad z-z\_0 = re^{i\\theta} \\;\\;. $$
+
+
+&ensp; Then we can rewrite the $w(z,t)$ as 
+
+
+$$ \\begin{align\*} w(z,t) &= w\_0 + \\frac{1}{2}\\left|w''\_0\\right| e^{i\\alpha} (r e^{i\\theta})^2 + \\mathrm{O}(r^3) \\\\ &= w\_0 + \\frac{1}{2}\\left|w''\_0\\right| r^2 e^{ i(\\alpha + 2\\theta) } + \\mathrm{O}(r^3) \\\\ &= w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\left\[ \\cos(\\alpha + 2\\theta) + i \\, \\sin(\\alpha + 2\\theta) \\right\] + \\mathrm{O}(r^3) \\\\ &\\approx \\left\[ w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\cos(\\alpha + 2\\theta) \\right\] + i \\, \\left\[ \\frac{1}{2} \\left|w''\_0\\right| r^2 \\sin(\\alpha + 2\\theta) \\right\] \\;\\;. \\end{align\*} $$
+
+&nbsp;
+   
+&ensp; Remember that we have defined $w(z,t)$ by $ w = u + i v $. Hence we obtain
+
+
+$$ \\begin{cases} \\quad u(z,t) = w\_0 + \\frac{1}{2} \\left|w''\_0\\right| r^2 \\cos(\\alpha + 2\\theta)  \\\\ {} \\\\  \\quad  v(z,t) = \\frac{1}{2} \\left|w''\_0\\right| r^2 \\sin(\\alpha + 2\\theta)  \\end{cases} $$
+
+&nbsp;
+&nbsp;
+   
+&ensp; Consider the situation in which **$z$ departs from $z\_0$** (i.e. as r increases from 0).  
+
+&nbsp;
   
 $\\mathbf{\\cdot}$ For $u(z,t)$  
    
