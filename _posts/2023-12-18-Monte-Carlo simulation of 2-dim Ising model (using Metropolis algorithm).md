@@ -48,7 +48,9 @@ last_modified_at: 2023-12-18
 언제나 그렇듯 PROGRAM ~ 으로 시작하자.
 
 ```fortran
+
 PROGRAM ISING_MODEL
+
 ```   
 
 &nbsp;
@@ -56,6 +58,7 @@ PROGRAM ISING_MODEL
 &ensp;프로그램에 필요한 모든 변수들을 선언해주자. question mark가 있는 곳은 원하는대로 넣어주면 된다.
 
 ```fortran
+
  !---DECLARE VARIABLES---------------------------
 
     IMPLICIT NONE
@@ -97,6 +100,7 @@ PROGRAM ISING_MODEL
 
     !--- VARIABLES FOR THE PROGRAM EXECUATION TIME
     REAL :: START_TIME, END_TIME, TOT_TIME
+
 ```
 
    
