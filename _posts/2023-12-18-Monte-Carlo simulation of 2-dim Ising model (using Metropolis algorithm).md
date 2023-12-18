@@ -22,11 +22,9 @@ last_modified_at: 2023-12-18
 &ensp;사실 포트란은 전혀 쓸 줄 모르는 언어였는데 이번 기회에 한 번 공부해봤다. 아직은 많이 미숙해서 알고리즘(?)이 좀 더러워 보일 수도 있긴 한데 차차 나아지겠지 하핫... 
 
 &nbsp;
-&nbsp;
 
 <p style="text-align: center; font-size: 24px;">&bull;&ensp;&nbsp;&bull;&ensp;&nbsp;&bull;</p>
 
-&nbsp;
 &nbsp;
 
 ### **1.  Evolutions of spin-configuration and magnetization w.r.t. iteration**
@@ -44,22 +42,18 @@ last_modified_at: 2023-12-18
 ---
 
 &nbsp;
-
 언제나 그렇듯 PROGRAM ~ 으로 시작하자.
 
 ```fortran
-
 PROGRAM ISING_MODEL
-
-```   
+```
 
 &nbsp;
    
 &ensp;프로그램에 필요한 모든 변수들을 선언해주자. question mark가 있는 곳은 원하는대로 넣어주면 된다.
 
 ```fortran
-
- !---DECLARE VARIABLES---------------------------
+  !---DECLARE VARIABLES---------------------------
 
     IMPLICIT NONE
 
@@ -100,7 +94,6 @@ PROGRAM ISING_MODEL
 
     !--- VARIABLES FOR THE PROGRAM EXECUATION TIME
     REAL :: START_TIME, END_TIME, TOT_TIME
-
 ```
 
    
