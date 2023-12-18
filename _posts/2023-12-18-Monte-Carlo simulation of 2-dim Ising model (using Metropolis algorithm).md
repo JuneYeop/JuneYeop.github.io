@@ -14,37 +14,48 @@ tags:
 date: 2023-12-18
 last_modified_at: 2023-12-18
 ---
+&nbsp;
+&nbsp;
  
- 요즘 하도 도서관에서 전공 공부만 하다보니 프로그래밍과 사이가 좀 많이 멀어진 것 같기도 하고, 때마침 휴학도 했겠다 시간이 좀 남아서 Fortran95과 Python으로 2-dim Ising model Monte-Carlo simulation 코드를 작성해봤다.
+&ensp;요즘 하도 도서관에서 전공 공부만 하다보니 프로그래밍과 사이가 좀 많이 멀어진 것 같기도 하고, 때마침 휴학도 했겠다 시간이 좀 남아서 Fortran95과 Python으로 2-dim Ising model Monte-Carlo simulation 코드를 작성해봤다.
 
- 사실 포트란은 전혀 쓸 줄 모르는 언어였는데 이번 기회에 한 번 공부해봤다. 아직은 많이 미숙해서 알고리즘(?)이 좀 더러워 보일 수도 있긴 한데 차차 나아지겠지 하핫... 
+&ensp;사실 포트란은 전혀 쓸 줄 모르는 언어였는데 이번 기회에 한 번 공부해봤다. 아직은 많이 미숙해서 알고리즘(?)이 좀 더러워 보일 수도 있긴 한데 차차 나아지겠지 하핫... 
 
+&nbsp;
+&nbsp;
+
+<p style="text-align: center; font-size: 24px;">&bull;&ensp;&nbsp;&bull;&ensp;&nbsp;&bull;</p>
+
+&nbsp;
+&nbsp;
+
+### **1.  Evolutions of spin-configuration and magnetization w.r.t. iteration**
 ---
 
-#### **1.  Evolutions of spin-configuration and magnetization w.r.t. iteration**
+&nbsp;
 
----
+&ensp;우선 iteration에 따라 spin configuration과 magnetisation이 어떻게 변하는지를 보여주는 프로그램을 만들어봤다.
 
-우선 iteration에 따라 spin configuration과 magnetisation이 어떻게 변하는지를 보여주는 프로그램을 만들어봤다.
+&ensp;계산을 수행하고 데이터를 저장하는 부분인 main program은 Fortran95로 작성했고, visualization 부분은 python으로 작성했다. 아! magnetisation vs iteration graph는 그냥 GNUPLOT으로 만들었다.
 
-계산을 수행하고 데이터를 저장하는 부분인 main program은 Fortran95로 작성했고, visualization 부분은 python으로 작성했다. 아! magnetisation vs iteration graph는 그냥 GNUPLOT으로 만들었다.
+&nbsp;
 
 #### **Main Program (Fortran95)**
-
 ---
+
+&nbsp;
 
 언제나 그렇듯 PROGRAM ~ 으로 시작하자.
 
-```
+```fortran
 PROGRAM ISING_MODEL
-```
+```   
 
+&nbsp;
    
-   
-프로그램에 필요한 모든 변수들을 선언해주자.   
-question mark가 있는 곳은 원하는대로 넣어주면 된다.
+&ensp;프로그램에 필요한 모든 변수들을 선언해주자. question mark가 있는 곳은 원하는대로 넣어주면 된다.
 
-```
+```fortran
  !---DECLARE VARIABLES---------------------------
 
     IMPLICIT NONE
@@ -93,7 +104,7 @@ question mark가 있는 곳은 원하는대로 넣어주면 된다.
    
 필수는 아니지만, 프로그래밍 실행시간이 어느정도 나올지 궁금해서 한번 넣어봤다.
 
-```
+```fortran
 !---LOAD CPU_TIME TO EVALUATE THE EXECUATION TIME---------------------------------
     
     CALL CPU_TIME(START_TIME)
@@ -110,7 +121,7 @@ Initial spin configuration을 만들자.
         ii)     completely ordered(?) configuration (low temperature limit)  
 이렇게 두 경우의 코드를 작성해봤다.
 
-```
+```fortran
  !---HIGH TEMPERATURE LIMIT ---------------------
     
     DO I_COL = 1, DIM_COL, +1
@@ -148,7 +159,7 @@ Initial spin configuration을 만들자.
    
 initial spin configuration의 (normalized) magnetisation을 계산하자.
 
-```
+```fortran
  !---CALCULATE THE MAGNETISATION OF INITIAL STATE-------------------------------
     
     ITR = 0
@@ -177,7 +188,7 @@ initial spin configuration의 (normalized) magnetisation을 계산하자.
 앞으로 DO loop를 돌리면서 얻게 될 each iteration step(?)에서의 spin configuration을 txt format으로 저장하려고 한다.  
 이 spin configuration txt 파일들을 새로운 하위폴더를 만들어서 저장을 할 생각인데, 아래에 적어둔 code가 해당 역할을 수행한다.
 
-```
+```fortran
  !--- WRITE THE SPIN CONFIGURATION AS A TXT FILE, and MAGNETISATION DATA IN A NEW FOLDER
 
   ! Specify the folder name you want to create
@@ -220,7 +231,7 @@ initial spin configuration의 (normalized) magnetisation을 계산하자.
    
 Do loop으로 iteration을 시작하자.
 
-```
+```fortran
  !---BEGIN ITERATION--------------------------------
     
     DO ITR = 1, ITERATION, +1
@@ -230,7 +241,7 @@ Do loop으로 iteration을 시작하자.
    
 우선, 무작위로 spin element를 하나 뽑아서 뒤집어보자.
 
-```
+```fortran
     !---PICK A SPIN AT A RANDOM SITE---------------------
         CALL RANDOM_NUMBER(RND_ROW)
         CALL RANDOM_NUMBER(RND_COL)
@@ -249,7 +260,7 @@ spin element의 위치를 matrix element의 것과 같은 형식으로 지정할
    
 위에서 뽑은 spin element의 flipping 전후의 energy difference를 계산하자. 
 
-```
+```fortran
     !--- * CALCULATE THE ENERGY DIFFERENCE BEFORE AND AFTER THE SPIN FLIPPING -----------------
     
         IF ( SPIN_ROW == 1 .AND. SPIN_COL == 1 ) THEN
@@ -321,7 +332,7 @@ spin element의 위치를 matrix element의 것과 같은 형식으로 지정할
 random number <  exp(-beta\*del\_E) 이면,  accept the spin flipping .  
 random number >  exp(-beta\*del\_E) 이면,  reject the spin flipping .
 
-```
+```fortran
         IF ( DEL_ENERGY <= 0. ) THEN ! ACCEPT THE SPIN FLIP
             
             CONTINUE
