@@ -2,7 +2,7 @@
 use_math: true
 comments: true
 title:  "Monte-Carlo simulation of 2-dim Ising model (using Metropolis algorithm)"
-excerpt: "Numerical approache to the 2-dim Ising model"
+excerpt: "Numerical approache to the 2-dim Ising model" 
 writer: Junyeop Kim
 categories:
   - Computer Simulations
