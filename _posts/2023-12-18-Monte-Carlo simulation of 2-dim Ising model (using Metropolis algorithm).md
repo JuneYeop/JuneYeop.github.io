@@ -1,4 +1,21 @@
- 요즘 하도 도서관에서 전공 공부만 하다보니 프로그래밍과 사이가 좀 많이 멀어진 것 같기도 하고, 때마침 휴학도 했겠다 시간이 좀 남아서 Fortran95과 Python으로 2-dim Ising model Monte-Carlo simulation 코드를 작성해봤다.
+---
+use_math: true
+comments: true
+title:  "Monte-Carlo simulation of 2-dim Ising model (using Metropolis algorithm)"
+excerpt: "Numerical approache to the 2-dim Ising model"
+writer: Junyeop Kim
+categories:
+  - Computer Simulations
+tags:
+  - [Ising model]
+  - [Monte-Carlo simulation]
+  - [Fortran]
+  - [Python]
+date: 2023-12-18
+last_modified_at: 2023-12-18
+---
+ 
+ 요즘 하도 도서관에서 전공 공부만 하다보니 프로그래밍과 사이가 좀 많이 멀어진 것 같기도 하고, 때마침 휴학도 했겠다 시간이 좀 남아서 Fortran95과 Python으로 2-dim Ising model Monte-Carlo simulation 코드를 작성해봤다.
 
  사실 포트란은 전혀 쓸 줄 모르는 언어였는데 이번 기회에 한 번 공부해봤다. 아직은 많이 미숙해서 알고리즘(?)이 좀 더러워 보일 수도 있긴 한데 차차 나아지겠지 하핫... 
 
