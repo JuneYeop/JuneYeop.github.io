@@ -1,7 +1,7 @@
 ---
 use_math: true
 comments: true
-title:  "Wiestrass Factorization Theorem and Its Applications"
+title:  "Weiestrass Factorization Theorem and Its Applications"
 excerpt: "We can express a transcendental function which has zeros in terms of infinite multiplications of linear polynomials."
 writer: Junyeop Kim
 categories:
@@ -13,6 +13,15 @@ date: 2024-03-27
 last_modified_at: 2024-03-27
 ---
 
+\usepackage{geometry}
+\geometry{ a4paper, left=20mm, right=20mm, top=13mm, bottom=13mm }
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{MnSymbol}%
+\usepackage{wasysym}%
+
+\setlength{\parindent}{0pt}
+
 \begin{document}
 
 \quad We sometimes need to be able to express transcendental functions in a form of infinite products of linear polynomials.\
@@ -22,7 +31,7 @@ last_modified_at: 2024-03-27
 
 \subsection*{0. Motivation}
 \vspace{2mm}
-\quad From the "Fundamental Theorem of Algebra", we know the fact that\\
+From the "Fundamental Theorem of Algebra", we know the fact that\\
  
 \textit{"Any polynomial $$ P(z) \;=\; a_0 + a_1 z + a_2 z^2 + \cdots + a_n z^n $$ of degree $n$ where each $a_n$ is nonzere has at least one zero."}\\
 \textcolor{gray}{(Can be deriven from  Liouville's theorem)}\\
@@ -37,7 +46,10 @@ Then we may want to ask a question :\\
  
 In order to answer on this question, we need to discuss the convergence of the above infinite product.\\
 
-This notion is a runway for t toward the Weierstrass Factorization Theorem ! \\ \\
+\begin{center} 
+This notion is a runway for t toward the Weierstrass Factorization Theorem ! 
+\end{center}
+{\quad}\\
 
 
 
@@ -46,7 +58,7 @@ This notion is a runway for t toward the Weierstrass Factorization Theorem ! \\ 
 \subsection*{1. Proof}
 \vspace{2mm}
 
-\textbf{Definition 1.(Weierstrass elementary factor). } \\
+\subsubsection*{Definition 1.(Weierstrass elementary factor). \\[-0.6cm]}
 \textit{Let $n$ be a positive integer. An elementary factor $E_n$ (which is a function) is defined as equations below.}
 \begin{align*} 
 &E_0 (z) \;=\; 1-z \\ 
@@ -56,9 +68,8 @@ This notion is a runway for t toward the Weierstrass Factorization Theorem ! \\ 
 Observe that the function $E_n (z/a)$ has an unique zero of order 1 in which $z=a$.\\ \\
 
 
-\textbf{Theorem 1}
-
-\textit{Let $|z| \, \le \, 1$ and $p \,\ge\, 0$. Then $ | E_n (z) - 1 | \; \le \; |z|^{n+1} $}\\
+\subsubsection*{Theorem 1 \\[-0.6cm]}
+\textit{Let $|z| \, \le \, 1$ and $p \,\ge\, 0$. Then $ | E_n (z) - 1 | \; \le \; |z|^{n+1} $.}\\
 
 \textbf{\textit{proof.}}   
 It is trivial for $n=0$ since $ | E_n(z) - 1 | = | (1-z)-1 | = |z| $. Hence, let us focus our attention on positive $n$.
@@ -72,9 +83,8 @@ Hence, for the region in which $|z| \,\le\, 1$, $$ | E_n (z) - 1 | \;=\; \left| 
 and this is what we wanted. $\quad \blacksquare$ \\ \\
 
 
-\textbf{Theorem 2} 
-
-\textit{Let $\{ a_n \}$ be a complex number sequance such that $ \lim_{n \to \infty} | a_n | = \infty $ and anyone is nonzere.}
+\subsubsection*{Theorem 2 \\[-0.6cm]}
+\textit{Let $\{ a_n \}$ be a complex number sequence such that $ \lim_{n \to \infty} | a_n | = \infty $ and anyone is nonzero.}
 
 \textit{Let $\{ \xi_n \}$ be any sequence of non-negative integers for which $$ \sum_{n=1}^{\infty} \left( \frac{r}{|a_n|} \right)^{\xi_n + 1} \qquad (2) $$ converges for all $r>0$.}\\
 
@@ -91,38 +101,41 @@ Consider an infinite sum which is defined by
 
 $$ \sum_{n=1}^{\infty} \left[ {1 - E_{\xi_n} \left( \frac{z}{a_n} \right) } \right] \; .$$
 
-From the just previous inequality(2) and our hypothesis(3), the infinite sum above is convergent uniformly according to the Weierstrass M-test.
+From the just previous inequality(2) and our hypothesis(3), the infinite sum above is convergent uniformly according to the Weierstrass M-test. \\
 
-0
+WILL BE FILLED SOON $\quad \blacksquare$ \\ \\\\
 
-0
+Before proceeding the present proof, however, we need a slight red herring into another topic. \\
 
-0
-
-Before proceeding the present proof, however, we need a slight red herring into aother topic.
-
-0
-
-0
-
-0
+WILL BE FILLED SOON \\ \\ \\
 
 
 
 
 
-
-
-Weierstrass Factorization Theorem.
-
-Let $f$ be an entire function.
-
-Let $\{ a_n \}$ be the set of all non-zero zeros of $f$ repeated according to multiplicity.
-
-Let $f$ has a zero at $z=0$ of order $m \ge 0$.
-
+\subsubsection*{Weierstrass Factorization Theorem \\[-0.6cm]}
+Let $f$ be an entire function. \\
+Let $\{ a_n \}$ be the set of all non-zero zeros of $f$ repeated according to multiplicity. \\
+Let $f$ has a zero at $z=0$ of order $m \ge 0$. \\
 Then, there is an entire function $f$ and a sequance of integers $\{\xi_n\}$ such that
+$$ f(z) \;=\; z^m e^{g(z)} \, \prod_{n=1}^{\infty} E_{\xi_n} \left( \frac{z}{a_n} \right) \; . $$ \\
 
-$$ f(z) \;=\; z^m e^{g(z)} \, \prod_{n=1}^{\infty} E_{\xi_n} \left( \frac{z}{a_n} \right) \; . $$
+\textbf{\textit{proof.}} ALSO WILL BE FILLED SOON...... $\quad \blacksquare$ \\ \\
+
+\subsection*{2. Applications}
+\subsubsection*{Trigonometric Functions}
+blahblah
+
+\subsubsection*{Gamma Function}
+blahblah \\ \\
+
+
+
+\subsection*{References}
+\begin{itemize}
+    \item[-] John B. Conway, Functions of One Complex Variable II, Springer
+\end{itemize}
+
+
 
 \end{document}
