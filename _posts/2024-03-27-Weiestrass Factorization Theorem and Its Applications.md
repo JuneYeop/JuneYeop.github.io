@@ -14,14 +14,15 @@ last_modified_at: 2024-03-27
 ---
 
 <body>
-<p>We sometimes need to be able to express transcendental functions in a
-form of infinite products of linear polynomials. </p>
-<p>For examples, when we attempt to derive a set of eigenstates of 1-dim
+<p> </p>
+<p> We sometimes should be able to express transcendental functions in a
+form of products of infinitely many linear polynomials. </p>
+<p> For examples, when we attempt to derive a set of eigenstates of 1-dim
 quantum harmonic oscillator using Feynmann path integral (Das. Lectures
 on quantum mechanics. p.515), or when deduce a partition function of
 ideal spin-0 Bose gas through Euclidean path integral (Brown. Quantum
-field theory. p.96), it is useful if we can express some trigonometric
-functions in a form of infinite products of linear polynomials.<br />
+field theory. p.96), expressing some trigonometric
+functions in a form of infinite products of linear polynomials is useful.<br />
 </p>
 <h2 class="unnumbered" id="motivation">0. Motivation</h2>
 <p>From the "Fundamental Theorem of Algebra", we know the fact
