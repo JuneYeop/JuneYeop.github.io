@@ -319,8 +319,7 @@ spin element의 위치를 matrix element의 것과 같은 형식으로 지정할
    
    
    
-   
-이제 Metropolis algorithm의 하이라이트(?)이다.  
+
    
 위에서 계산된 energy difference가 0보다 작으면 spin flipping을 accept하자.  
 이건 뭐 당연하지... spin flipping 이후에 에너지가 더 낮아지는데 reject할 이유가 없잖아!  
@@ -358,7 +357,7 @@ random number >  exp(-beta\*del\_E) 이면,  reject the spin flipping .
    
 위의 IF statement가 끝나고 난 뒤의 최종 spin configuration과 normalized magnetisation을 txt file로 저장하자.
 
-```
+```fortran
     !--- WRITE AND SAVE DATA----------------------------
 
         !--- SPIN CONFIGURATION----------
@@ -403,7 +402,7 @@ random number >  exp(-beta\*del\_E) 이면,  reject the spin flipping .
    
 DO LOOP을 닫고,
 
-```
+```fortran
 !--- END ITERATION
     END DO
 ```
@@ -412,7 +411,7 @@ DO LOOP을 닫고,
    
 궁금하니까 프로그래밍 실행 총 소요시간도 한번 계산해보자.
 
-```
+```fortran
 !---PROGRAM EXECUATION TIME-----------------------------------
 
     CALL CPU_TIME(END_TIME)
@@ -428,7 +427,7 @@ DO LOOP을 닫고,
    
 이제 main Fortran program을 다 완성했다.
 
-```
+```fortran
  END PROGRAM ISING_MODEL
 ```
 
@@ -447,7 +446,7 @@ DO loop를 실행하며 계속 update되는 spin configuration을 시각화 하�
    
 우선, 필요한 package들을 가져오자.
 
-```
+```python
 import os
 import numpy as np
 from PIL import Image
@@ -457,7 +456,7 @@ import cv2
    
 위에서 만든 spin configuration txt 파일들의 directory와 내가 만들 mp4 파일을 저장할 directory를 선언하자.
 
-```
+```python
 # Define the input directory and file path
 config_data = "C:\\Users\\f4jun\\OneDrive\\Desktop\\IsingModel_MCS\\spin_config"
 
@@ -474,7 +473,7 @@ video_file = os.path.join(video_directory, "IsingModel_wb.mp4")
    
 up spin (+1) elements는 검정색으로, down spin (-1) elements는 회색 내지 흰색으로 칠해보자.
 
-```
+```python
 iteration = ?????
 
 frames = []
@@ -506,7 +505,7 @@ main code에서  SPIN\_ROW, SPIN\_COL 들을 INTEGER(4)로 declare 했으니까
    
 위에서 만든 이미지 list인 frames를 mp4 format으로 만들어주자.
 
-```
+```python
 # Define the codec and frames per second (adjust as needed)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 fps = ???  # Frames per second
@@ -611,7 +610,7 @@ ITERATION = 10000 // DIM\_ROW, DIM\_COL = 50 // fps = 100
 
 ---
 
-```
+```fortran
 PROGRAM ISING_MODEL
 
 
@@ -926,7 +925,7 @@ well-ordered initial spin configuration 파일 6개 (all spins up 3개, all spin
 
 ---
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -1038,8 +1037,5 @@ plt.show()
 
 만족스러운 결과이군...
 
- 근데, high temperature에서 magnetisation이 완전히 0으로 수렴하지 않은 것은 아마도 fluctuation region에서 평균을 안 내주고 그냥 iteration이 끝나자마자 그때의 magnetisation 값을 plot해서 그럴 것이다... 그것까지 고려하면 더 괜찮은 모양이 나오지 않을까 싶긴 한데, 그 부분은 어떻게 코드를 작성해야 할지 고민 좀 해봐야겠다.
-
- iteration을 계속 돌리다가 어느정도의 표본이 0 +- error 수준의 범위에 들어오면 그때 iteration을 끝내고 그 표본들을 가지고 평균을 만드는 식으로 짜야되나...?
 
 ---
