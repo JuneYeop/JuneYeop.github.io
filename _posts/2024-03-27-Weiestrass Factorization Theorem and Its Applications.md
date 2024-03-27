@@ -152,4 +152,3 @@ blahblah\
 ## References {#references .unnumbered}
 
 -   John B. Conway, Functions of One Complex Variable II, Springer
-
