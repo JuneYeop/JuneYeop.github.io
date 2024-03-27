@@ -1,3 +1,19 @@
+---
+use_math: true
+comments: true
+title:  "Wiestrass Factorization Theorem and Its Applications"
+excerpt: "We can express a transcendental function which has zeros in terms of infinite multiplications of linear polynomials."
+writer: Junyeop Kim
+categories:
+  - Mathematical Physics
+tags:
+  - [complex analysis]
+  - [Wiestrass factorization theorem]
+date: 2024-03-27
+last_modified_at: 2024-03-27
+---
+
+
 We sometimes need to be able to express transcendental functions in a
 form of infinite products of linear polynomials. 
 
