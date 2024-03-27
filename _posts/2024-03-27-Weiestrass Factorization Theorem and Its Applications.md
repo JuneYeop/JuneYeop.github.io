@@ -13,4 +13,5 @@ date: 2024-03-27
 last_modified_at: 2024-03-27
 ---
 
+<a href="JuneYeop.github.io/assets/posts_pdf/Weierstrass_Factorization_Theorem.pdf" target="_blank">PDF.</a>
 
