@@ -24,7 +24,6 @@ last_modified_at: 2024-03-27
 
 
 <body>
-
 <p> &nbsp; </p>
 <p> &nbsp; </p>
 <p> &nbsp; We sometimes need to be able to express a transcendental function in a
@@ -39,10 +38,9 @@ field theory. p.96), expressing some trigonometric functions in forms of
 products of infinite linear polynomials is required. </p>
 <p> &nbsp; </p>
 <p> &nbsp; </p>
-  
-
+<p> &nbsp; </p>
 <h2 class="unnumbered" id="motivation">0. Motivation</h2>
-
+<p> &nbsp; </p>
 <p> From the "Fundamental Theorem of Algebra", we know the fact
 that <br />
 <em> "Any polynomial <span class="math display">\[P(z) \;=\; a_0 + a_1 z
@@ -51,7 +49,7 @@ class="math inline">\(n\)</span> where each <span
 class="math inline">\(a_n\)</span> is nonzere has at least one
 zero."</em><br />
 <span style="color: gray">(Can be deriven from Liouville’s
-theorem)</span><br />
+theorem)</span>
 <p> &nbsp; </p>
 Using the mathematical induction, we may generalize our previous
 statement to<br />
@@ -62,7 +60,7 @@ class="math display">\[P(z) \;=\; c\, (z-z_1)(z-z_2)\cdots
 (z-z_n)\]</span> where <span class="math inline">\(c\)</span> and <span
 class="math inline">\(z_k\)</span> are complex constants."</em><br />
 <span style="color: gray">(Actually, we can directly derive this
-statement from Rouche’s theorem.)</span><br />
+statement from Rouche’s theorem.)</span>
 <p> &nbsp; </p>
 Then we may want to ask a question :<br />
 <em> "Can any entire function, say <span
@@ -71,20 +69,19 @@ class="math display">\[f(z) \;=\; c\,\prod_{i=0}^{\infty} \,
 (z-z_i)\]</span> where <span class="math inline">\(c\)</span> is a
 complex constant and <span class="math inline">\(\{z_i\}\)</span> is a
 set of all zeros of <span
-class="math inline">\(f(z)\)</span>?"</em><br />
+class="math inline">\(f(z)\)</span>?"</em>
 <p> &nbsp; </p>
 In order to answer on this question, we need to discuss the convergence
-of the above infinite product.<br />
-</p>
+of the above infinite product.</p>
 <p> &nbsp; </p>
 <div class="center">
 <p>This notion is the first step toward the Weierstrass Factorization
-Theorem !</p>
-</div>
-<p><br />
-</p>
+Theorem !</p> </div>
+<p> &nbsp; </p>
+<p> &nbsp; </p>
 <h2 class="unnumbered" id="tour-de-weiestrass-factorization-theorem">1.
 Tour De Weiestrass Factorization Theorem</h2>
+<p> &nbsp; </p>
 <p><strong>Definition. Weierstrass elementary factor</strong><br />
 <em>Let <span class="math inline">\(n\)</span> be a positive integer. An
 elementary factor <span class="math inline">\(E_n\)</span> (which is a
@@ -93,16 +90,19 @@ class="math display">\[\begin{aligned}
 &amp;E_0 (z) \;=\; 1-z \\
 &amp;E_n (z) \;=\; (1-z) \, \mathrm{exp}\left(z + \frac{z^2}{2} + \cdots
 + \frac{z^n}{n} \right) \qquad , n \,\ge\, 1
-\end{aligned}\]</span><br />
+\end{aligned}\]</span>
+<p> &nbsp; </p>
 Observe that the function <span class="math inline">\(E_n (z/a)\)</span>
 has an unique zero of order 1 in which <span
-class="math inline">\(z=a\)</span>.<br />
-<br />
+class="math inline">\(z=a\)</span>.
+<p> &nbsp; </p>
+<p> &nbsp; </p>
 <strong>Theorem 1</strong><br />
 <em>Let <span class="math inline">\(|z| \, \le \, 1\)</span> and <span
 class="math inline">\(p \,\ge\, 0\)</span>. Then <span
 class="math inline">\(| E_n (z) - 1 | \; \le \;
 |z|^{n+1}\)</span>.</em><br />
+<p> &nbsp; </p>
 <strong><em>proof.</em></strong> It is trivial for <span
 class="math inline">\(n=0\)</span> since <span class="math inline">\(|
 E_n(z) - 1 | = | (1-z)-1 | = |z|\)</span>. Hence, let us focus our
@@ -142,8 +142,8 @@ class="math inline">\(k \,\ge\, n+1\)</span>.</p>
 <strong>Theorem 2</strong><br />
 <em>Let <span class="math inline">\(\{ a_n \}\)</span> be a complex
 number sequence such that <span class="math inline">\(\lim_{n \to
-\infty} | a_n | = \infty\)</span> and anyone is nonzero.</em></p>
-<p><em>Let <span class="math inline">\(\{ \xi_n \}\)</span> be any
+\infty} | a_n | = \infty\)</span> and anyone is nonzero.</em><br \>
+<em>Let <span class="math inline">\(\{ \xi_n \}\)</span> be any
 sequence of non-negative integers for which <span
 class="math display">\[\sum_{n=1}^{\infty} \left( \frac{r}{|a_n|}
 \right)^{\xi_n + 1} \qquad (2)\]</span> converges for all <span
