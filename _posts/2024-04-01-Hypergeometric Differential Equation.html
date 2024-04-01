@@ -1,41 +1,58 @@
+---
+use_math: true
+comments: true
+title:  "Hypergeometric Differential Equation"
+excerpt: "Another useful ODE"
+writer: Junyeop Kim
+categories:
+  - Mathematical Physics
+tags:
+  - [Bessel function]
+date: 2024-04-01
+last_modified_at: 2024-04-01
+---
+<head>
+    <style>
+        .center {
+            text-align: justify;
+        }
+    </style>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+<head/>
 
-
-<p>In general,<br />
-In order to<br />
-<br />
-</p>
+<body>
+<p>In general, blahblah blah.</p> <br/><br/>
 <h1 class="unnumbered"
 id="hypergeometric-differential-equation">Hypergeometric Differential
-Equation</h1>
+Equation </h1> <br/>
 <p>Consider the hypergeometric differenctial equation.</p>
 <p><span class="math display">\[x\,(1-x) \, y&#39;&#39; \;+\; \left[
 \,c-(a+b+1)\,x\, \right] \,y&#39; \;-\; ab\,y \;=\; 0 \qquad \qquad
-\forall a, b, c \in \mathbb{R} ,\quad c&gt;0\]</span><br />
+\forall a, b, c \in \mathbb{R} ,\quad c&gt;0\]</span><br /> <br/>
 Note that the ODE above has singular points at <span
-class="math inline">\(x=0, 1, \infty\)</span>.<br />
-Since <span class="math inline">\(x=0\)</span> is a regular singularity,
-it ensures at least one solution is in the form of Frobenius series.
-Hence, we may write down the first solution as <span
+class="math inline">\(x=0, 1, \infty\)</span>.<br /> <br/>
+Since <span class="math inline">\(x=0\)</span> is a regular singularity, it ensures at least one solution is in the form of Frobenius series. Hence, we may write down the first solution as <span
 class="math display">\[y(x) = \sum_{n=0}^{\infty} a_n x^{n+s}\]</span>
 and by plugging it into the above differential equaiton, we obtain <span
 class="math display">\[\sum_{n=0}^{\infty} \Biggl[ \, x(1-x) a_n
 (n+s)(n+s-1) x^{n+s-2} + [ c-(a+b+1) x ] a_n (n+s) x^{n+s-1} -ab \, a_n
-x^{n+s} \,\Biggr] = 0 \; .\]</span></p>
-<p>By rescaling <span class="math inline">\(n\)</span> w.r.t. the order
+x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/> <br/>
+By rescaling <span class="math inline">\(n\)</span> w.r.t. the order
 of <span class="math inline">\(x\)</span>, the equation above is reduced
 into <span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
 \Biggl[\, a_n (n+s)(n+s-1+c) - a_{n-1} \Bigl[ (n+s-1)(n+s-2) +
-(n+s-1)(a+b+1) + ab \Bigr] \Biggr] = 0 \; .\]</span></p>
-<p>For <span class="math inline">\(n=0\)</span>, only the first term
-contributes and we obtain the secular equation.</p>
-<p><span class="math display">\[s(s-1+c) = 0 \qquad \Rightarrow \qquad
-s=0 \; , \;\; s=1-c$$\]</span></p>
-<p>For <span class="math inline">\(n \ge 0\)</span>, both terms
+(n+s-1)(a+b+1) + ab \Bigr] \Biggr] = 0 \; .\]</span><br/><br/>
+For <span class="math inline">\(n=0\)</span>, only the first term
+contributes and we obtain the secular equation.
+<span class="math display">\[s(s-1+c) = 0 \qquad \Rightarrow \qquad
+s=0 \; , \;\; s=1-c$$\]</span>
+For <span class="math inline">\(n \ge 0\)</span>, both terms
 contribute and we obtain the recursion relation. <span
 class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 (n+s-1)(n+s-2) + (n+s-1)(a+b+1) + ab \Bigr]\]</span><br />
-<br />
-</p>
+<p/><br /><br/><br/>
 <h2 class="unnumbered" id="first-solution-s0">First Solution (<span
 class="math inline">\(s=0\)</span>)</h2>
 <p>For <span class="math inline">\(s=0\)</span>, the recursion relation
@@ -131,3 +148,4 @@ Press</p></li>
 <li><p>K. F. Riley, Mathematical Methods for Physics and Engineering,
 Cambridge University Press</p></li>
 </ul>
+</body>
