@@ -51,17 +51,17 @@ class="math inline">\(f(t)\)</span> in a form of a contour integral
 along the contour <span class="math inline">\(C\)</span> <span
 class="math display">\[f(t) = \int_{C} dz\, F(z,t)\]</span> where <span
 class="math inline">\(F\)</span> is an analytic function and <span
-class="math inline">\(\forall t \in \mathbb{R}\)</span>.<br />
+class="math inline">\(\forall t \in \mathbb{R}\)</span>.<br /><br/>
 Since <span class="math inline">\(F\)</span> is analytic and an
 exponential function preserves holomorphism, it can be expressed in
 terms of an exponential function whose exponent is an analytic function.
 i.e. <span class="math display">\[F(z,t) = e^{w(z,t)}\]</span> where
 <span class="math display">\[w(x,y) = u(x,y) + i \, v(x,y)  \quad
-\forall x,y \in \mathbb{R} \;\;.\]</span><br />
-<strong>Lemma. <em>Both <span class="math inline">\(u\)</span> and <span
+\forall x,y \in \mathbb{R} \;\;.\]</span><br /><br/>
+<strong>Lemma. &ensp; <em>Both <span class="math inline">\(u\)</span> and <span
 class="math inline">\(v\)</span> cannot have extremum if <span
 class="math inline">\(w = u + i\,v\)</span> is
-analytic.</em></strong><br />
+analytic.</em></strong><br /><br/>
 <em>proof.</em> Assume that <span class="math inline">\(u(x,y)\)</span>
 has a local minimum(maximum) at <span class="math inline">\((x,y) =
 (x_0, y_0)\)</span>. Then the Hessian matrix of <span
@@ -101,7 +101,7 @@ class="math display">\[w(z,t) = w(z_0,t) + \frac{1}{2}
 \cdots  \tag{1}\]</span> Note that <span
 class="math inline">\(\left.\frac{dw}{dz}\right|_{z_0}\)</span> is
 vanished since <span class="math inline">\(z_0\)</span> is a saddle
-point.<br />
+point.<br /><br/>
 For convenience, let us introduce some abbreviations, and let’s denote
 the phases explicitly. <span class="math display">\[\left.\frac{\partial
 w}{\partial z}\right|_{z_0} = w_0 , \quad \left.\frac{\partial^2
@@ -127,12 +127,12 @@ class="math display">\[\begin{cases}
     \quad u(z,t) = w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right| r^2
 \cos(\alpha + 2\theta)  \\ {} \\  \quad  v(z,t) = \frac{1}{2}
 \left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)  
-\end{cases}\]</span><br />
+\end{cases}\]</span><br /><br/>
 Consider the situation in which <span class="math inline">\(z\)</span>
 departs from <span class="math inline">\(z_0\)</span> (i.e. as r
-increases from 0).<br />
+increases from 0).<br /><br/>
 <span class="math inline">\(\mathbf{\cdot}\)</span> For <span
-class="math inline">\(u(z,t)\)</span><br />
+class="math inline">\(u(z,t)\)</span><br /><br/>
 <span class="math inline">\(\qquad\)</span> i) <span
 class="math inline">\(u\)</span> will increase most rapidly when <span
 class="math display">\[\cos(\alpha + 2\theta) = 1 \quad \Rightarrow
@@ -150,7 +150,7 @@ class="math display">\[\cos(\alpha + 2\theta) = 0 \quad \Rightarrow
 \quad \theta = -\frac{\alpha}{2} +
 \left(\frac{n}{2}+\frac{1}{4}\right)\pi\]</span></p>
 <p><span class="math inline">\(\mathbf{\cdot}\)</span> For <span
-class="math inline">\(v(z,t)\)</span><br />
+class="math inline">\(v(z,t)\)</span><br /><br/>
 <span class="math inline">\(\qquad\)</span> i) <span
 class="math inline">\(v\)</span> will increase most rapidly when <span
 class="math display">\[\sin(\alpha + 2\theta) = 1 \quad \Rightarrow
@@ -168,14 +168,14 @@ class="math inline">\(v\)</span> will be invariant when <span
 class="math display">\[\sin(\alpha + 2\theta) = 0 \quad \Rightarrow
 \quad \alpha + 2\theta = n\pi \quad \Rightarrow \quad \theta =
 -\frac{\alpha}{2} + \frac{n\pi}{2}\]</span><br />
-FIGURE FIGURE<br />
-<br />
+FIGURE FIGUR<br />
+<br /><br/>
 Let us discuss about some crucial notions on performing the
 integral.</p>
 <ul>
 <li><p><span><strong>How do we choose an optimum integration
 contour?</strong></span></p>
-<ul>
+<ul style="list-style-type: none">
 <li><p><span>We need to choose a contour that passes through the saddle
 point <span class="math inline">\(z_0\)</span> in the directions of
 maximum rate of decrease in <span class="math inline">\(u\)</span> with
@@ -199,7 +199,7 @@ constant, as <span class="math inline">\(z\)</span> departs from <span
 class="math inline">\(z_0\)</span>. </span></p></li>
 </ul></li>
 <li><p><strong>Evaluation of the integral</strong></p>
-<ul>
+<ul style="list-style-type: none">
 <li><p><span> Let us assume that <span class="math inline">\({\vert
 w&#39;&#39;_0 \vert}\)</span>, the measure of the rate of decrease in
 <span class="math inline">\(\vert F \vert\)</span> as we leave <span
@@ -209,8 +209,8 @@ class="math inline">\(R\)</span>. (i.e. The significant contribution to
 the integral only comes from the immediate vicinity of the saddle point
 <span class="math inline">\(z_0\)</span>.) </span></p></li>
 </ul></li>
-</ul>
-<p>Let us split the integration range as below. <span
+</ul> <br/><br/>
+<p>Split the integral as below. <span
 class="math display">\[\begin{aligned}
 f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
 point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
@@ -230,7 +230,7 @@ e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
 e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
 \vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
 term}\]</span> where <span class="math inline">\(\bar{\theta} = \theta -
-\pi\)</span>.<br />
+\pi\)</span>.<br /><br/>
 Since we’ve set the integration contour to satisfy <span
 class="math inline">\(e^{i(\alpha + 2\theta)} = e^{i(2n+1)\pi} =
 -1\)</span> right near the saddle point, <span
@@ -267,14 +267,15 @@ passes through the saddle point <span
 class="math inline">\(z_0\)</span>.<br />
 <br />
 <br />
-<br />
+<br /></p>
+<p style="text-align: center;">
 Let’s derive asymptotic forms of Airy function applying this
-approximation method!<br />
+approximation method!<br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="the-asymptotic-form-of-airy-function">2. The
-Asymptotic Form of Airy Function</h2>
+Asymptotic Form of Airy Function</h2><br/>
 <p>To apply the saddle point approximation, first we need to express
-Airy function in a form of complex contour integral.<br />
+Airy function in a form of complex contour integral.<br /><br/>
 Consider a differential equation whose solutions are Airy functions.
 <span class="math display">\[\begin{aligned}
     \frac{d^2 f}{d t^2} = t\, f(t)    \tag{1}
@@ -289,10 +290,11 @@ h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;,\]</span>
 and by integrating by parts, R.H.S. becomes <span
 class="math display">\[t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} =
 \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} - \int_{C}
-dz\,e^{tz}\frac{dh}{dz} \;.\]</span></p>
-<p>In order to make sure the equality in eqn(1), we must set <span
+dz\,e^{tz}\frac{dh}{dz} \;.\]</span><br/><br/>
+In order to make sure the equality in eqn(1), we must set <span
 class="math display">\[\left[\, h(z)\,e^{tz} \,\right]_{\text{ends of }
-C} = 0 \;.\]</span> Accepting the constraint above, we can express <span
+C} = 0 \;.\]</span> <br/>
+Accepting the constraint above, we can express <span
 class="math inline">\(h(z)\)</span> as <span class="math display">\[z^2
 h(z) = -\frac{dh}{dz} \quad \Rightarrow \quad h(z) = c \cdot
 e^{-\frac{1}{3}z^3} \; .\]</span><br />
@@ -305,13 +307,13 @@ class="math display">\[\mathrm{Re}{(z^3_{\text{end}})} &gt; 0 \qquad
 \text{and} \qquad \left| \, z_{\text{end}} \, \right| \to
 \infty\]</span> because <span class="math inline">\(z^3\)</span>
 diverges much faster than <span class="math inline">\(z\)</span>, as
-<span class="math inline">\(|z|\)</span> increases.<br />
+<span class="math inline">\(|z|\)</span> increases.<br /><br/>
 From <span
 class="math inline">\(\mathrm{Re}{(z^3_{\text{end}})}&gt;0\)</span>, we
 obtain <span class="math display">\[\frac{2n\pi}{3} - \frac{\pi}{6} \,
 &lt; \, \arg{(z_{\text{end}})} \,&lt;\, \frac{2n\pi}{3} + \frac{\pi}{6}
-\; .   \tag{3}\]</span></p>
-<p>From the above results, the complex plane is divided as below.<br />
+   \tag{3}\]</span><br/>
+and according to this constraint, the complex plane is divided as below.<br />
 FIGURE<br />
 <br />
 Due to the condition (3), we must set our integration curve <span
@@ -321,13 +323,15 @@ that since there are three different sectors that satisfy the condition
 (3), we can make three different contours, say <span
 class="math inline">\(C_1, C_2, C_3\)</span>, and each choice will give
 corresponding solutions <span class="math inline">\(f_1, f_2,
-f_3\)</span>.<br />
+f_3\)</span>.<br /><br/>
 Consequently, the general solutions(in the contour integral form) to the
 differential equation (1) can be written as</p>
-<div class="align*">
-<p>&amp;  (t) = _<span>C_1</span> dz e^<span>zt-</span><br />
-&amp;<br />
-&amp;  (t) = _<span>C_2 - C_3</span> dz  e^<span>zt-</span></p>
+<p><span class="math display">\[\begin{aligned}
+&amp; \qquad \qquad \mathrm{Ai}\,(t) = \frac{1}{2\pi i} \int_{C_1}
+dz\,e^{zt-\frac{z^3}{3}} \\ &amp;{} \\ &amp; \qquad \qquad
+\mathrm{Bi}\,(t) = \frac{1}{2\pi} \int_{C_2 - C_3} dz\,
+e^{zt-\frac{z^3}{3}}
+\end{aligned}\]</span></p>
 </div>
 <p>and we will only focus our attention on <span
 class="math inline">\(\mathrm{Ai}\,(t)\)</span> in today’s post.<br />
