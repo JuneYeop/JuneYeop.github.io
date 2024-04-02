@@ -320,12 +320,12 @@ class="math inline">\(\mathrm{Re}{(z^3_{\text{end}})}&gt;0\)</span>, we
 obtain <span class="math display">\[\frac{2n\pi}{3} - \frac{\pi}{6} \,
 &lt; \, \arg{(z_{\text{end}})} \,&lt;\, \frac{2n\pi}{3} + \frac{\pi}{6}
    \tag{3}\]</span><br/>
-and according to this constraint, the complex plane is divided as below.<br />
+and according to this constraint, the complex plane is divided as below.<br /><br/>
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig2.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig2"
   width="50%" />
-  <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> <br /><br /><br/>
+  <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> <br /><br />
 Due to the condition (3), we must set our integration curve <span
 class="math inline">\(C\)</span> to start from an infinity in one gray
 sector, and terminate at infinity in the other gray sector. Note also
@@ -344,13 +344,12 @@ e^{zt-\frac{z^3}{3}}
 \end{aligned}\]</span></p>
 </div>
 <p style="text-align: justify; ">and we will only focus our attention on <span
-class="math inline">\(\mathrm{Ai}\,(t)\)</span> in today’s post.<br />
-<br />
+class="math inline">\(\mathrm{Ai}\,(t)\)</span> in today’s post.<br /><br /><br/>
 </p>
 <h3 class="unnumbered"
 id="asymptotic-form-of-mathrmait-in-mathbft-gg-0-region">2.1 Asymptotic
 form of <span class="math inline">\(\mathrm{Ai}\,(t)\)</span> in <span
-class="math inline">\(\mathbf{t \gg 0}\)</span> region</h3>
+class="math inline">\(\mathbf{t \gg 0}\)</span> region</h3> <br/>
 <p style="text-align: justify; ">First, we should figure out saddle points of <span
 class="math inline">\(w\)</span>. <span
 class="math display">\[e^{w(z,t)} = e^{tz-\frac{z^3}{3}} \quad
@@ -387,7 +386,7 @@ class="math inline">\(\theta = 0 \, , \; \pi\)</span> as <span
 class="math inline">\(z\)</span> leaves <span
 class="math inline">\(z_0\)</span>. </span></p></li>
 </ul></li>
-</ul>
+</ul><br/>
 <p style="text-align: justify; ">Let us definitize the integration contour in an explicit algebraic
 form. To do so, All we need to do is to find the level lines of <span
 class="math inline">\(v\)</span> that pass through each saddle point of
@@ -412,21 +411,22 @@ However, the real axis cannot be an integration contour since its
 left-end is not located inside the gray color sectors! Furthermore, the
 hyperbola lies in <span class="math inline">\(x&gt;0\)</span> region
 should be neglected as well since its both end-points are not inside the
-gray sectors.<br />
+gray sectors.<br /><br/>
 Hence, the integration contour should be chosen as below. <span
-class="math display">\[C = \left\{ z=x+iy \;\; \left| \quad \forall
-x&lt;0 \; , \; \forall y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
+class="math display">\[C = \left\{ z=x+iy \;\; \left| \quad
+x&lt;0 \; , \; y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
 \frac{1}{3}y^2 = t \; \right. \right\}\]</span></p>
 <p style="text-align: justify; ">Therefore, the integration contour for this case might be drawn as
-below.<br />
+below.<br /> <br/>
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig3.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig3"
   width="50%" />
-  <figcaption> Fig 3. The contour for t>>0 case </figcaption> <br/><br/>
+  <figcaption> Fig 3. The contour for<span
+class="math inline">{t \gg 0}</span> case </figcaption> <br/>
 I chose the direction of the contour be upward in order to ensure that
 the derived asymptotic form of Airy function matches with the
-conventional definition of Airy function. <br /><br />
+conventional definition of Airy function. <br /><br /><br/>
 Plugging <span class="math display">\[{ z_0 = -\sqrt{t} \; , \;\; w_0 =
 -\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w&#39;&#39;_0 = 2\sqrt{t} \; ,
 \;\; \theta = -\frac{1}{2}\mathrm{arg}(w&#39;&#39;_0) + \frac{\pi}{2} =
@@ -439,13 +439,13 @@ class="math inline">\(\mathrm{Ai}\,(t)\)</span> in <span
 class="math inline">\(t \gg 0\)</span> region,</p>
 <p style="text-align: justify; "><span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \,
 \overset{t \to \infty}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}}
-\, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)}\]</span><br />
+\, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)} \; .\]</span><br />
 <br />
 </p>
 <h3 class="unnumbered"
 id="asymptotic-form-of-mathrmait-in-mathbft-ll-0-region">2.2 Asymptotic
 form of <span class="math inline">\(\mathrm{Ai}\,(t)\)</span> in <span
-class="math inline">\(\mathbf{t \ll 0}\)</span> region</h3>
+class="math inline">\(\mathbf{t \ll 0}\)</span> region</h3> <br/>
 <p style="text-align: justify; ">For this case, since <span class="math inline">\(t\)</span> is
 negative, saddle points are given by <span class="math display">\[z_0 =
 \pm i \sqrt{|t|} \;.\]</span></p>
@@ -479,7 +479,7 @@ class="math inline">\(\theta = 3\pi / 4 \, , \; 7\pi / 4\)</span> as
 <span class="math inline">\(z\)</span> leaves <span
 class="math inline">\(z_0\)</span>. </span></p></li>
 </ul></li>
-</ul>
+</ul> <br/>
 <p style="text-align: justify; ">For <span class="math inline">\(z_0 = i\sqrt{|t|}\)</span>, the level
 line of <span class="math inline">\(v\)</span> which passes through the
 saddle this point is <span class="math display">\[v(x,y) = ty +
@@ -493,13 +493,14 @@ class="math display">\[-|t|\,y + \frac{1}{3}y^3 - x^2 y = \frac{2}{3}
 |t|^{\frac{3}{2}} \;\; .\]</span><br />
 By picking appropriate level lines (which end-points are inside the gray
 sectors), and by orienting the picked level lines properly, the
-integration contours can be depicted as below.<br />
+integration contours can be depicted as below.<br /><br/>
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig5.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig5"
   width="50%" </>
-  <figcaption> Fig 4. The contour for t<<0 case </figcaption> <br /><br />
-Through the process analogous to the antecedent case, we obtain the
+  <figcaption> Fig 4. The contour for <span
+class="math inline">{t \ll 0}</span> case </figcaption> <br /><br />
+Following the process analogous to the antecedent case, we obtain the
 asymptotic form of Airy function in <span class="math inline">\(t \ll
 0\)</span> region.</p>
 <p style="text-align: justify; "><span class="math display">\[\mathrm{Ai}\,(t) \;\; \sim \;\;
@@ -528,12 +529,12 @@ orientations as fig.4.<br />
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig6.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig6"
   width="70%" </>
-  <figcaption> Fig 5. </figcaption> <br/><br/>
+  <figcaption> Fig 5. </figcaption> <br/>
 <p style="text-align: justify; ">
 From the adhered figure above, we can observe that the asymptotic
 forms well mimic the original Airy function without significant error
 barring the range <span class="math inline">\(|t|&ll;1\)</span> in
-which the asymptotic forms diverge.<br /><br />
+which the asymptotic forms diverge.<br /><br /><br/>
 </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
@@ -546,6 +547,6 @@ Cambridge University Press</p></li>
 <li><p style="text-align: justify; ">ahahah</p></li>
 </ul><br/><br/><br/>
 <p style="text-align: center;"> 
-I acknowledge to my colleague Sungho Kim for making the figures attatched above, <br/> which is one of the most annoying task when using LaTeX. </p>
-<br/><br/>
+<em>I acknowledge to my colleague Sungho Kim for making the figures attatched above, <br/> which is one of the most annoying task when using LaTeX. </em> </p>
+<br/><br/><br/>
 </body>
