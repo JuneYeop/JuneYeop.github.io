@@ -24,7 +24,7 @@ last_modified_at: 2024-04-01
 
 <body>
 <p style="text-align: justify; "> &ensp; </p>
-<p style="text-align: justify; "> &ensp; In 1-dim quantum scattering problem, there's an interesting potential of which transmission coefficient is exactly 1. This potential is in the form of <span class="math inline">\( \mathrm{sech}^2 \)</span> and called Pöschl–Teller potential. Some knowledges on hypergeometric differential equation will be useful on exloring some properties of this potential. </p> <br/><br/><br/>
+<p style="text-align: justify; "> &ensp; In 1-dim quantum scattering problem, there's an interesting potential of which transmission coefficient is exactly 1. This potential is in the form of <span class="math inline">\( \mathrm{sech}^2 \)</span> and called Pöschl–Teller potential. Some knowledges on hypergeometric differential equation will be useful on exloring some properties of this potential. </p> <br/>
 <h2 class="unnumbered"
 id="hypergeometric-differential-equation">1. Hypergeometric Differential
 Equation </h2> <br/>
@@ -39,7 +39,7 @@ class="math display">\[y(x) = \sum_{n=0}^{\infty} a_n x^{n+s}\]</span>
 and by plugging it into the above differential equaiton, we obtain <span
 class="math display">\[\sum_{n=0}^{\infty} \Biggl[ \, x(1-x) a_n
 (n+s)(n+s-1) x^{n+s-2} + [ c-(a+b+1) x ] a_n (n+s) x^{n+s-1} -ab \, a_n
-x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/> <br/>
+x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/>
 By rescaling <span class="math inline">\(n\)</span> w.r.t. the order
 of <span class="math inline">\(x\)</span>, the equation above is reduced
 into <span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
@@ -48,14 +48,14 @@ into <span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
 For <span class="math inline">\(n=0\)</span>, only the first term
 contributes and we obtain the secular equation.
 <span class="math display">\[s(s-1+c) = 0 \qquad \Rightarrow \qquad
-s=0 \; , \;\; s=1-c$$\]</span>
+s=0 \; , \;\; s=1-c\]</span> <br/>
 For <span class="math inline">\(n \ge 0\)</span>, both terms
 contribute and we obtain the recursion relation. <span
 class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 (n+s-1)(n+s-2) + (n+s-1)(a+b+1) + ab \Bigr]\]</span><br /><br/>
 <p/>
 <h3 class="unnumbered" id="first-solution-s0">1.1 First Solution (<span
-class="math inline">\(s=0\)</span>)</h3><br/>
+class="math inline">\(\,s=0\,\)</span>)</h3><br/>
 <p>For <span class="math inline">\(s=0\)</span>, the recursion relation
 is written as</p>
 <p><span class="math display">\[a_{n+1} =
@@ -91,7 +91,7 @@ class="math inline">\(b\)</span>. <span class="math inline">\(\quad
 \rightarrow \quad F\,(a,b,c:x) = F\,(b,a,c:x)\)</span></span></p></li>
 </ul> <br/>
 <h3 class="unnumbered" id="second-solution-s1-c">1.2 Second Solution (<span
-class="math inline">\(\,s=1-c\,\)</span>)</h3>
+class="math inline">\(\,s=1-c\,\)</span>)</h3> <br/>
 <p>For <span class="math inline">\(s=1-c\)</span>, <span
 class="math display">\[a_{n} (n+1-c)\,n = a_{n-1} \Bigl[ \,
 (n-c)(n+a+b-c) + ab \Bigr]\]</span></p>
@@ -116,15 +116,14 @@ by</p>
 F\,(a,b,c:x) \;+\; B\cdot x^{1-c}\,F\,(a-c+1,\, b-c+1,\, 2-c :
 x)}\]</span> with <span class="math inline">\(c\)</span>, <span
 class="math inline">\(a-b\)</span>, <span
-class="math inline">\(c-a-b\)</span> are all non-integers!<br />
+class="math inline">\(c-a-b\)</span> are all non-integers!<br /><br/>
 If the solution is to be regular at <span
 class="math inline">\(x=0\)</span>, then one requires <span
 class="math inline">\(B=0\)</span>.<br />
 If <span class="math inline">\(c\)</span> is an integer, two solutions
 will coincide or one will blow up. In such the case, we should apply
 other methods such as the Wronskian method in order to derive the second
-solution.<br />
-<br />
+solution.<br /><br /><br/>
 </p>
 <h3 class="unnumbered"
 id="some-properties-of-the-hypergeometric-function">1.3 Some Properties of
@@ -139,7 +138,7 @@ F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 <p><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
 \frac{1}{2} : \sin^2{x} \right) = \cos{x}\]</span></p> <br/>
 <p>You may check other properties of the hypergeometric fuinction on
-Arfken’s or Riley’s textbooks.<br /><br />
+Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="references">2. Application to the Pöschl–Teller potential</h2>
 <h2 class="unnumbered" id="references">References</h2>
