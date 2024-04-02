@@ -318,8 +318,12 @@ obtain <span class="math display">\[\frac{2n\pi}{3} - \frac{\pi}{6} \,
 &lt; \, \arg{(z_{\text{end}})} \,&lt;\, \frac{2n\pi}{3} + \frac{\pi}{6}
    \tag{3}\]</span><br/>
 and according to this constraint, the complex plane is divided as below.<br />
-FIGURE<br />
-<br />
+<img
+  src="assets/photos/posts/Steepest Descent Method/saddle_point_steepest_descent_Airy_fig2png"
+  alt="saddle_point_steepest_descent_Airy_fig2"
+  width="450"
+  <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> 
+/><br /><br /><br/>
 Due to the condition (3), we must set our integration curve <span
 class="math inline">\(C\)</span> to start from an infinity in one gray
 sector, and terminate at infinity in the other gray sector. Note also
@@ -413,11 +417,14 @@ x&lt;0 \; , \; \forall y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
 \frac{1}{3}y^2 = t \; \right. \right\}\]</span></p>
 <p style="text-align: justify; ">Therefore, the integration contour for this case might be drawn as
 below.<br />
-FIGURE<br />
-(I chose the direction of the contour be upward in order to ensure that
+<img
+  src="assets/photos/posts/Steepest Descent Method/saddle_point_steepest_descent_Airy_fig3.png"
+  alt="saddle_point_steepest_descent_Airy_fig3"
+  width="450"
+  <figcaption> Fig 3. The contour for t>>0 case <br/> (I chose the direction of the contour be upward in order to ensure that
 the derived asymptotic form of Airy function matches with the
-conventional definition of Airy function.)<br />
-<br />
+conventional definition of Airy function.) </figcaption> 
+/><br /><br /><br />
 Plugging <span class="math display">\[{ z_0 = -\sqrt{t} \; , \;\; w_0 =
 -\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w&#39;&#39;_0 = 2\sqrt{t} \; ,
 \;\; \theta = -\frac{1}{2}\mathrm{arg}(w&#39;&#39;_0) + \frac{\pi}{2} =
@@ -485,7 +492,11 @@ class="math display">\[-|t|\,y + \frac{1}{3}y^3 - x^2 y = \frac{2}{3}
 By picking appropriate level lines (which end-points are inside the gray
 sectors), and by orienting the picked level lines properly, the
 integration contours can be depicted as below.<br />
-FIGURE<br />
+<img
+  src="assets/photos/posts/Steepest Descent Method/saddle_point_steepest_descent_Airy_fig5.png"
+  alt="saddle_point_steepest_descent_Airy_fig5"
+  width="450"
+  <figcaption> Fig 4. The contour for t<<0 case </figcaption> <br />
 <br />
 Through the process analogous to the antecedent case, we obtain the
 asymptotic form of Airy function in <span class="math inline">\(t \ll
@@ -507,7 +518,7 @@ class="math inline">\(\mathrm{Ai}\,(t)\)</span> becomes an
 imaginary-valued function. Hence, in order to ensure that <span
 class="math inline">\(\mathrm{Ai}\,(t)\)</span> be real, then we should
 take into account every saddle point, and should set the contours’
-orientations as the figure above!<br />
+orientations as fig.4.<br />
 <br />
 <br />
 </p>
@@ -516,9 +527,12 @@ orientations as the figure above!<br />
 forms well mimic the original Airy function without significant error
 barring the range <span class="math inline">\(|t|&ll;1\)</span> in
 which the asymptotic forms diverge.<br />
-FIGURE<br />
-<br />
-<br />
+<img
+  src="assets/photos/posts/Steepest Descent Method/saddle_point_steepest_descent_Airy_fig6.png"
+  alt="saddle_point_steepest_descent_Airy_fig6"
+  width="500"
+  <figcaption> Fig 5. </figcaption> <br />
+<br /><br />
 </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
@@ -529,5 +543,8 @@ Press</p></li>
 <li><p style="text-align: justify; ">K. F. Riley. Mathematical Methods for Physics and Engineering.
 Cambridge University Press</p></li>
 <li><p style="text-align: justify; ">ahahah</p></li>
-</ul>
+</ul><br/><br/><br/>
+<p style="text-align: center;"> 
+I acknowledge to my colleague Sunggho Kim for making the figures avove, which is one of the most annoying task when using LaTeX. </p>
+<br/><br/>
 </body>
