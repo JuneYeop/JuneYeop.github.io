@@ -41,24 +41,20 @@ and by plugging it into the above differential equaiton, we obtain <span
 class="math display">\[\sum_{n=0}^{\infty} \Biggl[ \, x(1-x) a_n
 (n+s)(n+s-1) x^{n+s-2} + [ c-(a+b+1) x ] a_n (n+s) x^{n+s-1} -ab \, a_n
 x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/>
-By rescaling <span class="math inline">\(n\)</span> w.r.t. the order
-of <span class="math inline">\(x\)</span>, the equation above is reduced
-into <span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
+By rescaling <span class="math inline">\(n\)</span> w.r.t. the order of <span class="math inline">\(x\)</span>, the equation above is reduced into 
+<span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
 \Biggl[\, a_n (n+s)(n+s-1+c) - a_{n-1} \Bigl[ (n+s-1)(n+s-2) +
 (n+s-1)(a+b+1) + ab \Bigr] \Biggr] = 0 \; .\]</span><br/><br/>
-For <span class="math inline">\(n=0\)</span>, only the first term
-contributes and we obtain the secular equation.
+For <span class="math inline">\(n=0\)</span>, only the first term contributes and we obtain the secular equation.
 <span class="math display">\[s(s-1+c) = 0 \qquad \Rightarrow \qquad
 s=0 \; , \;\; s=1-c\]</span> <br/>
-For <span class="math inline">\(n \ge 0\)</span>, both terms
-contribute and we obtain the recursion relation. <span
+For <span class="math inline">\(n \ge 0\)</span>, both terms contribute and we obtain the recursion relation. <span
 class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 (n+s-1)(n+s-2) + (n+s-1)(a+b+1) + ab \Bigr]\]</span><br /><br/>
 <p/>
 <h3 class="unnumbered" id="first-solution-s0">1.1 First Solution (<span
 class="math inline">\(\,s=0\,\)</span>)</h3><br/>
-<p style="text-align: justify; ">For <span class="math inline">\(s=0\)</span>, the recursion relation
-is written as</p>
+<p style="text-align: justify; ">For <span class="math inline">\(s=0\)</span>, the recursion relation is written as</p>
 <p style="text-align: justify; "><span class="math display">\[a_{n+1} =
 \frac{(n+a)(n+b)}{(n+1)(n+c)}\, a_n\]</span></p>
 <p style="text-align: justify; ">Let us assume that <span class="math inline">\(a_0 = 1\)</span> for
@@ -110,8 +106,7 @@ constants as below. <span class="math display">\[a \rightarrow a-c+1 \;
 <p style="text-align: justify; "><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
 x^{1-c+n} = (\text{const.})\cdot x^{1-c}\, F\,(a-c+1,\, b-c+1,\, 2-c :
 x)\]</span></p>
-<p style="text-align: justify; ">Therefore, the general solution to the hypergeometric equation which
-is valid for <span class="math inline">\({|x|&lt;1}\)</span> is given
+<p style="text-align: justify; ">Therefore, the general solution to the hypergeometric equation which is valid for <span class="math inline">\({|x|&lt;1}\)</span> is given
 by</p>
 <p style="text-align: justify; "><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
 F\,(a,b,c:x) \;+\; B\cdot x^{1-c}\,F\,(a-c+1,\, b-c+1,\, 2-c :
@@ -121,16 +116,11 @@ class="math inline">\(c-a-b\)</span> are all non-integers!<br /><br/>
 If the solution is to be regular at <span
 class="math inline">\(x=0\)</span>, then one requires <span
 class="math inline">\(B=0\)</span>.<br />
-If <span class="math inline">\(c\)</span> is an integer, two solutions
-will coincide or one will blow up. In such the case, we should apply
-other methods such as the Wronskian method in order to derive the second
-solution.<br /><br /><br/>
+If <span class="math inline">\(c\)</span> is an integer, two solutions will coincide or one will blow up. In such the case, we should apply other methods such as the Wronskian method in order to derive the second solution.<br /><br /><br/>
 </p>
 <h3 class="unnumbered"
-id="some-properties-of-the-hypergeometric-function">1.3 Some Properties of
-the Hypergeometric Function</h3><br/>
-<p style="text-align: justify; ">There are some interesting properties on the hypergeometric function
-which can be derived easily.</p>
+id="some-properties-of-the-hypergeometric-function">1.3 Some Properties of the Hypergeometric Function</h3><br/>
+<p style="text-align: justify; ">There are some interesting properties on the hypergeometric function which can be derived easily.</p>
 <p style="text-align: justify; "><span class="math display">\[\lim_{n\rightarrow \infty} \,
 F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 : \frac{1-x}{2}\right) = P_{m}(x)  \qquad \forall m \in
@@ -138,8 +128,7 @@ F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 <p style="text-align: justify; ">or,</p>
 <p style="text-align: justify; "><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
 \frac{1}{2} : \sin^2{x} \right) = \cos{x}\]</span></p> <br/>
-<p style="text-align: justify; ">You may check other properties of the hypergeometric fuinction on
-Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
+<p style="text-align: justify; ">You may check other properties of the hypergeometric fuinction on Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="references">2. Application to the Pöschl–Teller potential</h2>
 <h2 class="unnumbered" id="references">References</h2>
