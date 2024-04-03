@@ -23,13 +23,14 @@ last_modified_at: 2024-04-01
 <head/>
 
 <body>
+<div style = "width : 1250px;">
 <p style="text-align: justify; "> &ensp; </p>
 <p style="text-align: justify; "> &ensp; In 1-dim quantum scattering problem, there's an interesting potential of which transmission coefficient is exactly 1. This potential is in the form of <span class="math inline">\( \mathrm{sech}^2 \)</span> and called Pöschl–Teller potential. Some knowledges on hypergeometric differential equation will be useful on exloring some properties of this potential. </p> <br/>
 <h2 class="unnumbered"
 id="hypergeometric-differential-equation">1. Hypergeometric Differential
 Equation </h2> <br/>
-<p>Consider the hypergeometric differenctial equation.</p>
-<p><span class="math display">\[x\,(1-x) \, y&#39;&#39; \;+\; \left[
+<p style="text-align: justify; ">Consider the hypergeometric differenctial equation.</p>
+<p style="text-align: justify; "><span class="math display">\[x\,(1-x) \, y&#39;&#39; \;+\; \left[
 \,c-(a+b+1)\,x\, \right] \,y&#39; \;-\; ab\,y \;=\; 0 \qquad \qquad
 \forall a, b, c \in \mathbb{R} ,\quad c&gt;0\]</span><br />
 Note that the ODE above has singular points at <span
@@ -56,35 +57,35 @@ class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 <p/>
 <h3 class="unnumbered" id="first-solution-s0">1.1 First Solution (<span
 class="math inline">\(\,s=0\,\)</span>)</h3><br/>
-<p>For <span class="math inline">\(s=0\)</span>, the recursion relation
+<p style="text-align: justify; ">For <span class="math inline">\(s=0\)</span>, the recursion relation
 is written as</p>
-<p><span class="math display">\[a_{n+1} =
+<p style="text-align: justify; "><span class="math display">\[a_{n+1} =
 \frac{(n+a)(n+b)}{(n+1)(n+c)}\, a_n\]</span></p>
-<p>Let us assume that <span class="math inline">\(a_0 = 1\)</span> for
+<p style="text-align: justify; ">Let us assume that <span class="math inline">\(a_0 = 1\)</span> for
 convenience. Then,</p>
-<p><span class="math display">\[y_{1}(x) = \sum_{n=0}^{\infty} a_{n}
+<p style="text-align: justify; "><span class="math display">\[y_{1}(x) = \sum_{n=0}^{\infty} a_{n}
 x^{n} = 1 + \frac{ab}{c} \frac{x}{1!} + \frac{a(a+1)\,b(b+1)}{c(c+1)}
 \frac{x^2}{2!} + \frac{a(a+1)(a+2)\,b(b+1)(b+2)}{c(c+1)(c+2)}
 \frac{x^3}{3!} + \cdots\]</span></p>
-<p>Therefore, applying mathematical induction, we can generalize our
+<p style="text-align: justify; ">Therefore, applying mathematical induction, we can generalize our
 consequence into</p>
-<p><span class="math display">\[y_{1}(x) \equiv F\,(a,b,c:x) =
+<p style="text-align: justify; "><span class="math display">\[y_{1}(x) \equiv F\,(a,b,c:x) =
 \frac{\Gamma(x)}{\Gamma(a)\,\Gamma(b)} \sum_{n=0}^{\infty}
 \frac{\Gamma(a+n)\,\Gamma(b+n)}{\Gamma(c+n)}\,
 \frac{x^n}{n!}\]</span></p>
-<p>and we refer <span class="math inline">\({F\,(a,b,c:x)}\)</span> as
+<p style="text-align: justify; ">and we refer <span class="math inline">\({F\,(a,b,c:x)}\)</span> as
 Hypergeometric Function.<br />
 Observe that</p>
 <ul>
-<li><p><span class="math inline">\(F\,(a,b,c:x)\)</span> converges in
+<li><p style="text-align: justify; "><span class="math inline">\(F\,(a,b,c:x)\)</span> converges in
 the region <span class="math inline">\(|x|&lt;1\)</span>.</p></li>
-<li><p><span class="math inline">\(F\,(a,b,c:x)\)</span> converges at
+<li><p style="text-align: justify; "><span class="math inline">\(F\,(a,b,c:x)\)</span> converges at
 <span class="math inline">\(x=1\)</span> if <span
 class="math inline">\(c&gt;a+b\)</span>.</p></li>
-<li><p><span class="math inline">\(F\,(a,b,c:x)\)</span> converges at
+<li><p style="text-align: justify; "><span class="math inline">\(F\,(a,b,c:x)\)</span> converges at
 <span class="math inline">\(x=-1\)</span> if <span
 class="math inline">\(c&gt;a+b-1\)</span>.</p></li>
-<li><p><span><span class="math inline">\(F\,(a,b,c:x)\)</span> has a
+<li><p style="text-align: justify; "><span><span class="math inline">\(F\,(a,b,c:x)\)</span> has a
 symmetry in the exchanging parameters <span
 class="math inline">\(a\)</span> and <span
 class="math inline">\(b\)</span>. <span class="math inline">\(\quad
@@ -92,27 +93,27 @@ class="math inline">\(b\)</span>. <span class="math inline">\(\quad
 </ul> <br/>
 <h3 class="unnumbered" id="second-solution-s1-c">1.2 Second Solution (<span
 class="math inline">\(\,s=1-c\,\)</span>)</h3> <br/>
-<p>For <span class="math inline">\(s=1-c\)</span>, <span
+<p style="text-align: justify; ">For <span class="math inline">\(s=1-c\)</span>, <span
 class="math display">\[a_{n} (n+1-c)\,n = a_{n-1} \Bigl[ \,
 (n-c)(n+a+b-c) + ab \Bigr]\]</span></p>
-<p><span
+<p style="text-align: justify; "><span
 class="math display">\[\overset{n\,\rightarrow\,n+1}{\Longrightarrow}
 \qquad a_{n+1}(n+1)(n+2-c) = a_n \Bigl[\, (n+1-c)(n+a+b-c+1)+ab \,\Bigr]
 = a_{n} (n+1-c+a)(n+1-c+b)\]</span></p>
-<p>Thus, a recursion relation for the second solution is given by <span
+<p style="text-align: justify; ">Thus, a recursion relation for the second solution is given by <span
 class="math display">\[a_{n+1} =
 \frac{(n+a-c+1)(n+b-c+1)}{(n+1)(n+2-c)}\, a_n\]</span> and it becomes to
 the recursion relation of the first solution above if we re-scale
 constants as below. <span class="math display">\[a \rightarrow a-c+1 \;
 , \quad b \rightarrow b-c+1 \; , \quad c \rightarrow 2-c\]</span></p>
-<p>Hence, we can write the second solution as</p>
-<p><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
+<p style="text-align: justify; ">Hence, we can write the second solution as</p>
+<p style="text-align: justify; "><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
 x^{1-c+n} = (\text{const.})\cdot x^{1-c}\, F\,(a-c+1,\, b-c+1,\, 2-c :
 x)\]</span></p>
-<p>Therefore, the general solution to the hypergeometric equation which
+<p style="text-align: justify; ">Therefore, the general solution to the hypergeometric equation which
 is valid for <span class="math inline">\({|x|&lt;1}\)</span> is given
 by</p>
-<p><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
+<p style="text-align: justify; "><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
 F\,(a,b,c:x) \;+\; B\cdot x^{1-c}\,F\,(a-c+1,\, b-c+1,\, 2-c :
 x)}\]</span> with <span class="math inline">\(c\)</span>, <span
 class="math inline">\(a-b\)</span>, <span
@@ -128,24 +129,25 @@ solution.<br /><br /><br/>
 <h3 class="unnumbered"
 id="some-properties-of-the-hypergeometric-function">1.3 Some Properties of
 the Hypergeometric Function</h3><br/>
-<p>There are some interesting properties on the hypergeometric function
+<p style="text-align: justify; ">There are some interesting properties on the hypergeometric function
 which can be derived easily.</p>
-<p><span class="math display">\[\lim_{n\rightarrow \infty} \,
+<p style="text-align: justify; "><span class="math display">\[\lim_{n\rightarrow \infty} \,
 F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 : \frac{1-x}{2}\right) = P_{m}(x)  \qquad \forall m \in
 \mathbb{Z}\]</span></p>
-<p>or,</p>
-<p><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
+<p style="text-align: justify; ">or,</p>
+<p style="text-align: justify; "><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
 \frac{1}{2} : \sin^2{x} \right) = \cos{x}\]</span></p> <br/>
-<p>You may check other properties of the hypergeometric fuinction on
+<p style="text-align: justify; ">You may check other properties of the hypergeometric fuinction on
 Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="references">2. Application to the Pöschl–Teller potential</h2>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
-<li><p>George B. Arfken, Mathematical Methods for Physicists, Academic
+<li><p style="text-align: justify; ">George B. Arfken, Mathematical Methods for Physicists, Academic
 Press</p></li>
-<li><p>K. F. Riley, Mathematical Methods for Physics and Engineering,
+<li><p style="text-align: justify; ">K. F. Riley, Mathematical Methods for Physics and Engineering,
 Cambridge University Press</p></li>
 </ul><br/><br/>
+</div>
 </body>
