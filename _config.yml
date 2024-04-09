@@ -132,11 +132,11 @@ author:
       url: "https://www.instagram.com/june_yeop_/"
 
 # Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
+#footer:
+#  links:
+#    - label: "Twitter"
+#      icon: "fab fa-fw fa-twitter-square"
+#      # url:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
