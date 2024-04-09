@@ -7,8 +7,8 @@ docs:
   - title: Study
     children:
       - title: "Mathematical Physics"
-        url: /categories/mathematical_physics
+        url: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md
       - title: "Theoretical Physics"
-        url: /categories/theoretical_physics
+        url: https://juneyeop.github.io/_pages/categories/category-theoretical_physics.md
       - title: "Numerical Simulation"
-        url: /categories/numerics
+        url: https://juneyeop.github.io/_pages/categories/category-numerics.md
