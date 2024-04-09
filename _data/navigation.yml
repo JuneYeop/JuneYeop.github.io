@@ -7,19 +7,19 @@ docs:
   - title: Study
     children:
       - title: "Mathematical Physics"
-        url: mathematical_physics/
+        url:  /categories/mathematical_physics
         category: mathematical_physics
         
       - title: "Theoretical Physics"
-        url: theoretical_physics/
+        url:  /categories/theoretical_physics
         category: theoretical_physics
         
       - title: "Numerical Simulation"
-        url: numerics/
+        url:  /categories/numerics
         category: numerics
         
   - title: Travel
     children: 
       - title: "Tokyo"
-        url: tokyo/
+        url:  /categories/tokyo
         category: tokyo
