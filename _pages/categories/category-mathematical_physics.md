@@ -1,12 +1,13 @@
 ---
-title: "Mathematical Physics"
+title: "Jekyll"
+permalink: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md
 layout: archive
-permalink: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md/
 author_profile: true
-types: posts
+sidebar:
+  nav: "docs"
 ---
 
-{% assign posts = site.categories['mathematical_physics']%}
+{% assign posts = site.categories.mathematical_physics %}
 {% for post in posts %}
-  {% include archive-single.html type=page.entries_layout %}
+  {% include custom-archive-single.html type=entries_layout %}
 {% endfor %}
