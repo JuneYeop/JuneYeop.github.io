@@ -2,9 +2,13 @@
 main:
   - title: "Home"
     url: https://juneyeop.github.io/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+
+docs:
+  - title: Study
+    children:
+      - title: "Mathematical Physics"
+        url: /categories/mathematical_physics
+      - title: "Theoretical Physics"
+        url: /categories/theoretical_physics
+      - title: "Numerical Simulation"
+        url: /categories/numerics
