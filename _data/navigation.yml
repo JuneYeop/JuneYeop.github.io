@@ -8,11 +8,18 @@ docs:
     children:
       - title: "Mathematical Physics"
         url: mathematical_physics/
+        category: mathematical_physics
+        
       - title: "Theoretical Physics"
         url: theoretical_physics/
+        category: theoretical_physics
+        
       - title: "Numerical Simulation"
         url: numerics/
+        category: numerics
+        
   - title: Travel
     children: 
       - title: "Tokyo"
         url: tokyo/
+        category: tokyo
