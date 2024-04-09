@@ -288,9 +288,11 @@ defaults:
       read_time: false
       # 포스팅 날짜를 표출
       show_date: true
-      comments: # true
+      comments: true
       share: true
       related: true
+      sidebar:
+        nav : "docs"
 
 # Math equation
 markdown: kramdown
