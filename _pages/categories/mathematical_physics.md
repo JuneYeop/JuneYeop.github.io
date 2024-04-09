@@ -1,6 +1,6 @@
 ---
-title: "Jekyll"
-permalink: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md
+title: "Mathematical Physics"
+permalink: mathematical_physics
 layout: archive
 author_profile: true
 sidebar:
