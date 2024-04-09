@@ -1,7 +1,7 @@
 ---
 title: "Theoretical Physics"
 layout: archive
-permalink: categories/mathematical_physics
+permalink: categories/theoretical_physics
 author_profile: true
 types: posts
 ---
