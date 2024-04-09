@@ -1,7 +1,7 @@
 ---
-title: "Portfolio"
+title: "CV"
 layout: single
-permalink: /portfolio/
+permalink: /cv/
 author_profile: true
 sidebar:
   nav: "docs"
