@@ -1,7 +1,7 @@
 ---
 title: "Numerical Simulation"
 layout: archive
-permalink: categories/numerical_simulation
+permalink: https://juneyeop.github.io/_pages/categories/category-numerics.md
 author_profile: true
 types: posts
 ---
