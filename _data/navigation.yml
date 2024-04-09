@@ -12,3 +12,7 @@ docs:
         url: https://juneyeop.github.io/_pages/categories/category-theoretical_physics.md
       - title: "Numerical Simulation"
         url: https://juneyeop.github.io/_pages/categories/category-numerics.md
+  - title: Travel
+    children: 
+      - title: "Tokyo"
+        url: https://juneyeop.github.io/_pages/categories/category-tokyo.md
