@@ -1,7 +1,7 @@
 ---
 title: "Theoretical Physics"
 layout: archive
-permalink: categories/theoretical_physics
+permalink: https://juneyeop.github.io/_pages/categories/category-theoretical_physics.md
 author_profile: true
 types: posts
 ---
