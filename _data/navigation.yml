@@ -7,12 +7,12 @@ docs:
   - title: Study
     children:
       - title: "Mathematical Physics"
-        url: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md
+        url: mathematical_physics/
       - title: "Theoretical Physics"
-        url: https://juneyeop.github.io/_pages/categories/category-theoretical_physics.md
+        url: theoretical_physics/
       - title: "Numerical Simulation"
-        url: https://juneyeop.github.io/_pages/categories/category-numerics.md
+        url: numerics/
   - title: Travel
     children: 
       - title: "Tokyo"
-        url: https://juneyeop.github.io/_pages/categories/category-tokyo.md
+        url: tokyo/
