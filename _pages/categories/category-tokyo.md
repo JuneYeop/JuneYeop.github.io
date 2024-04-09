@@ -1,9 +1,10 @@
 ---
 title: "Tokyo"
+permalink: tokyo
 layout: archive
-permalink: https://juneyeop.github.io/_pages/categories/category-tokyo.md
 author_profile: true
-types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories.tokyo %}
