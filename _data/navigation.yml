@@ -3,6 +3,9 @@ main:
   - title: "Home"
     url: /
 
+  - title: "cv"
+    url: /cv/
+
   - title: "Categories"
     url: /categories/
 
