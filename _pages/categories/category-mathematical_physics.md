@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Physics"
 layout: archive
-permalink: categories/mathematical_physics
+permalink: https://juneyeop.github.io/_pages/categories/category-mathematical_physics.md
 author_profile: true
 types: posts
 ---
