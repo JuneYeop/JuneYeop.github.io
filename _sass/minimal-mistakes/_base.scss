@@ -313,6 +313,12 @@ nav {
   }
 }
 
+/* 양쪽 정렬을 위해 추가함*/
+p {
+  text-align: justify;
+  word-break: break-all;
+}
+
 /*
    Global animation transition
    ========================================================================== */
