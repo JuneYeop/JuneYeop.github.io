@@ -35,6 +35,9 @@ last_modified_at: 2024-03-30
             margin-left: auto;
             margin-right: auto;
         }
+        .container {
+          text-align: center;
+        }
     </style>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -153,11 +156,13 @@ class="math display">\[\sin(\alpha + 2\theta) = -1 \quad \Rightarrow
 class="math display">\[\sin(\alpha + 2\theta) = 0 \quad \Rightarrow
 \quad \alpha + 2\theta = n\pi \quad \Rightarrow \quad \theta =
 -\frac{\alpha}{2} + \frac{n\pi}{2}\]</span><br />
+<div class = "container">
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig1.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig1"
   width="95%" />
-  <figcaption> Fig 1. The arrows indicate the directions in which u and v increase. </figcaption> <br /><br /><br/>
+  <figcaption> Fig 1. The arrows indicate the directions in which u and v increase. </figcaption>
+</div> <br /><br /><br/>
 Let us discuss about some crucial notions on performing the
 integral.<br/></p>
 <ul>
@@ -281,11 +286,13 @@ obtain <span class="math display">\[\frac{2n\pi}{3} - \frac{\pi}{6} \,
 &lt; \, \arg{(z_{\text{end}})} \,&lt;\, \frac{2n\pi}{3} + \frac{\pi}{6}
    \tag{3}\]</span><br/>
 and according to this constraint, the complex plane is divided as below.<br /><br/>
+<div class = "container">
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig2.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig2"
   width="60%" />
-  <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> <br /><br />
+  <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> 
+</div> <br /><br />
 <p style="text-align: justify; "> Due to the condition (3), we must set our integration curve $C$ to start from an infinity in one gray
 sector, and terminate at infinity in the other gray sector. Note also
 that since there are three different sectors that satisfy the condition
@@ -359,11 +366,13 @@ x&lt;0 \; , \; y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
 \frac{1}{3}y^2 = t \; \right. \right\}\]</span></p>
 <p style="text-align: justify; ">Therefore, the integration contour for this case might be drawn as
 below.<br /> <br/>
+<div class = "container" >
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig3.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig3"
   width="60%" />
-  <figcaption> Fig 3. The contour for ${t \gg 0}$ case </figcaption> <br/>
+  <figcaption> Fig 3. The contour for ${t \gg 0}$ case </figcaption>
+</div> <br/>
 I chose the direction of the contour be upward in order to ensure that the derived asymptotic form of Airy function matches with the conventional definition of Airy function. <br /><br />
 Plugging <span class="math display">\[{ z_0 = -\sqrt{t} \; , \;\; w_0 =
 -\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w&#39;&#39;_0 = 2\sqrt{t} \; ,
@@ -422,11 +431,13 @@ saddle this point is <span class="math display">\[v(x,y) = ty +
 By picking appropriate level lines (which end-points are inside the gray
 sectors), and by orienting the picked level lines properly, the
 integration contours can be depicted as below.<br /><br/>
+<div class = "container" >
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig5.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig5"
   width="60%" </>
-  <figcaption> Fig 4. The contour for ${t \ll 0}$ case </figcaption> <br /><br />
+  <figcaption> Fig 4. The contour for ${t \ll 0}$ case </figcaption>
+</div> <br /><br />
 Following the process analogous to the antecedent case, we obtain the asymptotic form of Airy function in $t \ll 0$ region.</p>
 <p style="text-align: justify; "><span class="math display">\[\mathrm{Ai}\,(t) \;\; \sim \;\;
 \frac{1}{2\pi i} \; \left[ \, e^{\frac{2\,i}{3} |t|^{\frac{3}{2}}}
@@ -448,11 +459,13 @@ orientations as fig.4.<br />
 <br />
 </p>
 <h3 class="unnumbered" id="conclusion">2.3 Conclusion</h3><br/>
+<div class = "container">
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig6.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig6"
   width="80%" </>
-  <figcaption> Fig 5. </figcaption> <br/>
+  <figcaption> Fig 5. </figcaption> 
+</div> <br/>
 <p style="text-align: justify; ">
 From the adhered figure above, we can observe that the asymptotic
 forms well mimic the original Airy function without significant error
