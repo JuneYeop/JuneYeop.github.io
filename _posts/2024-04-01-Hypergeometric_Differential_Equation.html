@@ -32,13 +32,13 @@ last_modified_at: 2024-04-01
 </head>
 
 <body>
-<p style="text-align: justify; "> &ensp; </p>
-<p style="text-align: justify; "> &ensp; In 1-dim quantum scattering problem, there's an interesting potential of which transmission coefficient is exactly 1. This potential is in the form of $ \mathrm{sech}^2 $ and called Pöschl–Teller potential. Some knowledges on hypergeometric differential equation will be useful on exloring some properties of this potential. </p> <br/>
+<p> &ensp; </p>
+<p> &ensp; In 1-dim quantum scattering problem, there's an interesting potential of which transmission coefficient is exactly 1. This potential is in the form of $ \mathrm{sech}^2 $ and called Pöschl–Teller potential. Some knowledges on hypergeometric differential equation will be useful on exloring some properties of this potential. </p> <br/>
 <h2 class="unnumbered"
 id="hypergeometric-differential-equation">1. Hypergeometric Differential
 Equation </h2> <br/>
-<p style="text-align: justify; ">Consider the hypergeometric differenctial equation.</p>
-<p style="text-align: justify; "><span class="math display">\[x\,(1-x) \, y&#39;&#39; \;+\; \left[
+<p>Consider the hypergeometric differenctial equation.</p>
+<p><span class="math display">\[x\,(1-x) \, y&#39;&#39; \;+\; \left[
 \,c-(a+b+1)\,x\, \right] \,y&#39; \;-\; ab\,y \;=\; 0 \qquad \qquad
 \forall a, b, c \in \mathbb{R} ,\quad c&gt;0\]</span><br />
 Note that the ODE above has singular points at $ x=0, 1, \infty $.<br /> <br/>
@@ -55,48 +55,48 @@ class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 (n+s-1)(n+s-2) + (n+s-1)(a+b+1) + ab \Bigr]\]</span><br /><br/>
 <p/>
 <h3 class="unnumbered" id="first-solution-s0">1.1 First Solution ( $ \,s=0\, $ )</h3><br/>
-<p style="text-align: justify; ">For $ s=0 $, the recursion relation is written as</p>
-<p style="text-align: justify; "><span class="math display">\[a_{n+1} =
+<p>For $ s=0 $, the recursion relation is written as</p>
+<p><span class="math display">\[a_{n+1} =
 \frac{(n+a)(n+b)}{(n+1)(n+c)}\, a_n\]</span></p>
-<p style="text-align: justify; ">Let us assume that $ a_0 = 1 $ for convenience. Then,</p>
-<p style="text-align: justify; "><span class="math display">\[y_{1}(x) = \sum_{n=0}^{\infty} a_{n}
+<p>Let us assume that $ a_0 = 1 $ for convenience. Then,</p>
+<p><span class="math display">\[y_{1}(x) = \sum_{n=0}^{\infty} a_{n}
 x^{n} = 1 + \frac{ab}{c} \frac{x}{1!} + \frac{a(a+1)\,b(b+1)}{c(c+1)}
 \frac{x^2}{2!} + \frac{a(a+1)(a+2)\,b(b+1)(b+2)}{c(c+1)(c+2)}
 \frac{x^3}{3!} + \cdots\]</span></p>
-<p style="text-align: justify; ">Therefore, applying mathematical induction, we can generalize our
+<p>Therefore, applying mathematical induction, we can generalize our
 consequence into</p>
-<p style="text-align: justify; "><span class="math display">\[y_{1}(x) \equiv F\,(a,b,c:x) =
+<p><span class="math display">\[y_{1}(x) \equiv F\,(a,b,c:x) =
 \frac{\Gamma(x)}{\Gamma(a)\,\Gamma(b)} \sum_{n=0}^{\infty}
 \frac{\Gamma(a+n)\,\Gamma(b+n)}{\Gamma(c+n)}\,
 \frac{x^n}{n!}\]</span></p>
-<p style="text-align: justify; ">and we refer $ F\,(a,b,c:x) $ as Hypergeometric Function.<br />
+<p>and we refer $ F\,(a,b,c:x) $ as Hypergeometric Function.<br />
 Observe that</p>
 <ul>
-<li><p style="text-align: justify; "> $ F\,(a,b,c:x) $ converges in the region $ |x|&lt;1 $.</p></li>
-<li><p style="text-align: justify; "> $ F\,(a,b,c:x) $ converges at $ x=1 $ if $ c&gt; a+b $.</p></li>
-<li><p style="text-align: justify; "> $ F\,(a,b,c:x) $ converges at $ x=-1 $ if $ c&gt;a+b-1 $.</p></li>
-<li><p style="text-align: justify; "><span> $ F\,(a,b,c:x) $ has a symmetry in the exchanging parameters $ a $ and $ b $. $ \quad \rightarrow \quad F\,(a,b,c:x) = F\,(b,a,c:x) $ </span></p></li>
+<li><p> $ F\,(a,b,c:x) $ converges in the region $ |x|&lt;1 $.</p></li>
+<li><p> $ F\,(a,b,c:x) $ converges at $ x=1 $ if $ c&gt; a+b $.</p></li>
+<li><p> $ F\,(a,b,c:x) $ converges at $ x=-1 $ if $ c&gt;a+b-1 $.</p></li>
+<li><p><span> $ F\,(a,b,c:x) $ has a symmetry in the exchanging parameters $ a $ and $ b $. $ \quad \rightarrow \quad F\,(a,b,c:x) = F\,(b,a,c:x) $ </span></p></li>
 </ul> <br/>
 <h3 class="unnumbered" id="second-solution-s1-c">1.2 Second Solution ($ \,s=1-c\, $)</h3> <br/>
-<p style="text-align: justify; ">For $ s=1-c $, <span
+<p>For $ s=1-c $, <span
 class="math display">\[a_{n} (n+1-c)\,n = a_{n-1} \Bigl[ \,
 (n-c)(n+a+b-c) + ab \Bigr]\]</span></p>
-<p style="text-align: justify; "><span
+<p><span
 class="math display">\[\overset{n\,\rightarrow\,n+1}{\Longrightarrow}
 \qquad a_{n+1}(n+1)(n+2-c) = a_n \Bigl[\, (n+1-c)(n+a+b-c+1)+ab \,\Bigr]
 = a_{n} (n+1-c+a)(n+1-c+b)\]</span></p>
-<p style="text-align: justify; ">Thus, a recursion relation for the second solution is given by <span
+<p>Thus, a recursion relation for the second solution is given by <span
 class="math display">\[a_{n+1} =
 \frac{(n+a-c+1)(n+b-c+1)}{(n+1)(n+2-c)}\, a_n\]</span> and it becomes to
 the recursion relation of the first solution above if we re-scale
 constants as below. <span class="math display">\[a \rightarrow a-c+1 \;
 , \quad b \rightarrow b-c+1 \; , \quad c \rightarrow 2-c\]</span></p>
-<p style="text-align: justify; ">Hence, we can write the second solution as</p>
-<p style="text-align: justify; "><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
+<p>Hence, we can write the second solution as</p>
+<p><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
 x^{1-c+n} = (\text{const.})\cdot x^{1-c}\, F\,(a-c+1,\, b-c+1,\, 2-c :
 x)\]</span></p>
-<p style="text-align: justify; ">Therefore, the general solution to the hypergeometric equation which is valid for $ |x|&lt;1 $ is given by</p>
-<p style="text-align: justify; "><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
+<p>Therefore, the general solution to the hypergeometric equation which is valid for $ |x|&lt;1 $ is given by</p>
+<p><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
 F\,(a,b,c:x) \;+\; B\cdot x^{1-c}\,F\,(a-c+1,\, b-c+1,\, 2-c :
 x)}\]</span> with $ c $, $ a-b $, $ c-a-b $ are all non-integers!<br /><br/><br/>
 If the solution is to be regular at $ x=0 $, then one requires $ B=0 $.<br /><br/>
@@ -104,20 +104,20 @@ If $ c $ is an integer, two solutions will coincide or one will blow up. In such
 </p>
 <h3 class="unnumbered"
 id="some-properties-of-the-hypergeometric-function">1.3 Some Properties of the Hypergeometric Function</h3><br/>
-<p style="text-align: justify; ">There are some interesting properties on the hypergeometric function which can be derived easily.</p>
-<p style="text-align: justify; "><span class="math display">\[\lim_{n\rightarrow \infty} \,
+<p>There are some interesting properties on the hypergeometric function which can be derived easily.</p>
+<p><span class="math display">\[\lim_{n\rightarrow \infty} \,
 F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 : \frac{1-x}{2}\right) = P_{m}(x)  \qquad \forall m \in
 \mathbb{Z}\]</span></p>
-<p style="text-align: justify; ">or,</p>
-<p style="text-align: justify; "><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
+<p>or,</p>
+<p><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
 \frac{1}{2} : \sin^2{x} \right) = \cos{x}\]</span></p> <br/>
-<p style="text-align: justify; ">You may check other properties of the hypergeometric fuinction on Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
+<p>You may check other properties of the hypergeometric fuinction on Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="references">2. Application to the Pöschl–Teller potential</h2>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
-<li><p style="text-align: justify; ">George B. Arfken, Mathematical Methods for Physicists, Academic Press</p></li>
-<li><p style="text-align: justify; ">K. F. Riley, Mathematical Methods for Physics and Engineering, Cambridge University Press</p></li>
+<li><p>George B. Arfken, Mathematical Methods for Physicists, Academic Press</p></li>
+<li><p>K. F. Riley, Mathematical Methods for Physics and Engineering, Cambridge University Press</p></li>
 </ul><br/><br/>
 </body>
