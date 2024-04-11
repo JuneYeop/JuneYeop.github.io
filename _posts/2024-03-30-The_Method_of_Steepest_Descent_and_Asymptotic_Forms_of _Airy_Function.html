@@ -23,6 +23,12 @@ last_modified_at: 2024-03-30
             text-align: justify;
         }
 
+        /* 양쪽 정렬을 위해 추가함*/
+        .p {
+          text-align: justify;
+          word-break:  keep-all;
+        }
+
         .MathJax, .MathJax_Display, .MJXc-display, .MathJax_SVG_Display, .math {
             display: block;
             overflow-x: auto;
@@ -44,8 +50,8 @@ last_modified_at: 2024-03-30
 </head>
 
 <body>
-<p style="text-align: justify; "> &ensp; </p>
-<p style="text-align: justify; "> &ensp; If you have read some textbooks or have taken any lectures pertaining
+<p> &ensp; </p>
+<p> &ensp; If you have read some textbooks or have taken any lectures pertaining
 to the WKB approximation while studying quantum physics in undergraduate
 level, then you might, with high probability, be irritated from the
 situation that both textbooks and professors just apprise us the formulae
@@ -66,7 +72,7 @@ Method of Steepest Descent (Saddle-Point Approximation)</h2><br/>
 <div class="center">
 <p style="text-align: center;"> <em>" How do we obtain an approximation form of a real-valued function $f(t)$ defined on a real domain? "</em> </p><br/>
 </div>
-<p style="text-align: justify; ">Let us write the real-valued function $f(t)$ in a form of a contour integral
+<p>Let us write the real-valued function $f(t)$ in a form of a contour integral
 along the contour $C$ <span
 class="math display">\[f(t) = \int_{C} dz\, F(z,t)\]</span> where $F$ is an analytic function and $\forall t \in \mathbb{R}$.<br /><br/>
 Since $F$ is analytic and an
@@ -143,7 +149,7 @@ class="math display">\[\cos(\alpha + 2\theta) = 0 \quad \Rightarrow
 \quad \alpha + 2\theta = \left(n+\frac{1}{2}\right)\pi \quad \Rightarrow
 \quad \theta = -\frac{\alpha}{2} +
 \left(\frac{n}{2}+\frac{1}{4}\right)\pi\]</span></p>
-<p style="text-align: justify; ">$\mathbf{\cdot}$ For $v(z,t)$<br /><br/>
+<p>$\mathbf{\cdot}$ For $v(z,t)$<br /><br/>
 $\qquad$ i) $v$ will increase most rapidly when <span
 class="math display">\[\sin(\alpha + 2\theta) = 1 \quad \Rightarrow
 \quad \alpha + 2\theta = \left(2n+\frac{1}{2}\right)\pi \quad
@@ -166,10 +172,10 @@ class="math display">\[\sin(\alpha + 2\theta) = 0 \quad \Rightarrow
 Let us discuss about some crucial notions on performing the
 integral.<br/></p>
 <ul>
-<li><p style="text-align: justify; "><span><strong>How do we choose an optimum integration
+<li><p><span><strong>How do we choose an optimum integration
 contour?</strong></span></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span>We need to choose a contour that passes through the saddle
+<li><p><span>We need to choose a contour that passes through the saddle
 point $z_0$ in the directions of
 maximum rate of decrease in $u$ with
 distance from $z_0$, and therefore
@@ -185,9 +191,9 @@ to construct a curve which passes through $z_0$ that makes $\vert F \vert = e^u$
 the phase of F (i.e. $e^{iv}$)
 constant, as $z$ departs from $z_0$. </span></p></li>
 </ul></li>
-<li><p style="text-align: justify; "><strong>Evaluation of the integral</strong></p>
+<li><p><strong>Evaluation of the integral</strong></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span> Let us assume that ${\vert
+<li><p><span> Let us assume that ${\vert
 w&#39;&#39;_0 \vert}$, the measure of the rate of decrease in
 $\vert F \vert$ as we leave $z_0$, is large enough that the bulk of the
 value of the integral has already been attained for small $R$. (i.e. The significant contribution to
@@ -195,7 +201,7 @@ the integral only comes from the immediate vicinity of the saddle point
 $z_0$.) </span></p></li>
 </ul></li>
 </ul> <br/><br/>
-<p style="text-align: justify; ">Split the integral as below. <span
+<p>Split the integral as below. <span
 class="math display">\[\begin{aligned}
 f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
 point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
@@ -203,7 +209,7 @@ point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
 \;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
 \int_{\text{error contribution}} dz \, F(z,t)
 \end{aligned}\]</span></p>
-<p style="text-align: justify; ">Near the saddle point, $z = z_0 + r
+<p>Near the saddle point, $z = z_0 + r
 e^{i\theta}$ gives $dz = e^{i\theta}
 dr$ since we assumed that "the significant contribution to the
 integral only comes from the immediate vicinity of the saddle point" and
@@ -225,9 +231,9 @@ w&#39;&#39;_0 \vert} } \;+\; \text{error term} \\ &amp;=\; 2 \, e^{w_0 +
 i\theta} \int_{0}^{R} dr\, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert}
 r^2 } \;+\; \text{error term} \;\;.
 \end{aligned}\]</span></p>
-<p style="text-align: justify; ">Note that our assumption enables us to replace $R \to \infty$ without making any
+<p>Note that our assumption enables us to replace $R \to \infty$ without making any
 significant error.</p>
-<p style="text-align: justify; "><span class="math display">\[f(t) \;\approx \; 2\, e^{w_0 + i\theta}
+<p><span class="math display">\[f(t) \;\approx \; 2\, e^{w_0 + i\theta}
 \int_{0}^{\infty} dr \, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert} r^2}
 \;=\; 2\,e^{w_0 + i\theta} \frac{1}{2} \sqrt{ \frac{2\pi}{\vert
 w&#39;&#39;_0 \vert} } \;=\; e^{w(z_0,t)} e^{i\theta} \sqrt{
@@ -249,12 +255,12 @@ approximation method!</em><br /><br/><br/>
 </p>
 <h2 class="unnumbered" id="the-asymptotic-form-of-airy-function">2. The
 Asymptotic Form of Airy Function</h2><br/>
-<p style="text-align: justify; ">To apply the saddle point approximation, first we need to express Airy function in a form of complex contour integral.<br /><br/>
+<p>To apply the saddle point approximation, first we need to express Airy function in a form of complex contour integral.<br /><br/>
 Consider a differential equation whose solutions are Airy functions.
 <span class="math display">\[\begin{aligned}
     \frac{d^2 f}{d t^2} = t\, f(t)    \tag{1}
 \end{aligned}\]</span></p>
-<p style="text-align: justify; ">Let us write the solution $f(t)$
+<p>Let us write the solution $f(t)$
 in a form of <span class="math display">\[f(t) = \int_{C} dz \,
 h(z)\,e^{tz} \quad \forall z \in \mathbb{C}
 \;.    \tag{2}\]</span><br />
@@ -293,7 +299,7 @@ and according to this constraint, the complex plane is divided as below.<br /><b
   width="60%" />
   <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> 
 </div> <br /><br />
-<p style="text-align: justify; "> Due to the condition (3), we must set our integration curve $C$ to start from an infinity in one gray
+<p> Due to the condition (3), we must set our integration curve $C$ to start from an infinity in one gray
 sector, and terminate at infinity in the other gray sector. Note also
 that since there are three different sectors that satisfy the condition
 (3), we can make three different contours, say $C_1, C_2, C_3$, and each choice will give
@@ -311,7 +317,7 @@ and we will only focus our attention on $\mathrm{Ai}\,(t)$ in today’s post.<br
 <h3 class="unnumbered"
 id="asymptotic-form-of-mathrmait-in-mathbft-gg-0-region">2.1 Asymptotic
 form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \gg 0}$ region</h3> 
-<p style="text-align: justify; ">First, we should figure out saddle points of $w$. <span
+<p>First, we should figure out saddle points of $w$. <span
 class="math display">\[e^{w(z,t)} = e^{tz-\frac{z^3}{3}} \quad
 \Rightarrow \quad \frac{dw}{dz}=t-z^2 \quad \Rightarrow \quad
 \text{saddle points of }  w(z,t)  \text{  :  } \;\; z_0 = \pm
@@ -319,29 +325,29 @@ class="math display">\[e^{w(z,t)} = e^{tz-\frac{z^3}{3}} \quad
 For each saddle point, let’s inspect in which direction $\mathrm{Re}(w)$ decreases most
 rapidly.</p>
 <ul>
-<li><p style="text-align: justify; "><span>For $z_0 =
+<li><p><span>For $z_0 =
 -\sqrt{t}$</span></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span> $w&#39;&#39;(z_0,t) =
+<li><p><span> $w&#39;&#39;(z_0,t) =
 2\sqrt{t}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{arg}(w&#39;&#39;_0) = 0$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{Re}(w)$ decreases most rapidly when $\theta = \pi / 2 \, , \; 3\pi / 2$ as
 $z$ leaves $z_0$. </span></p></li>
 </ul></li>
-<li><p style="text-align: justify; "><span>For $z_0 =
+<li><p><span>For $z_0 =
 \sqrt{t}$</span></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span> $w&#39;&#39;(z_0,t) =
+<li><p><span> $w&#39;&#39;(z_0,t) =
 -2\sqrt{t}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{arg}(w&#39;&#39;_0) = \pi$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{Re}(w)$ decreases most rapidly when $\theta = 0 \, , \; \pi$ as $z$ leaves $z_0$. </span></p></li>
 </ul></li>
 </ul><br/>
-<p style="text-align: justify; ">Let us definitize the integration contour in an explicit algebraic
+<p>Let us definitize the integration contour in an explicit algebraic
 form. To do so, All we need to do is to find the level lines of $v$ that pass through each saddle point of
 $w$.<br />
 By plugging $z=x+iy$ into $(w(z)$, we obtain <span
@@ -354,7 +360,7 @@ line, <span class="math display">\[v(x,y) = ty + \frac{1}{3}y^3 - x^2 y
 constant}\]</span> and it must pass through the saddle point(s), <span
 class="math display">\[v(z_0) = v(\pm \sqrt{t}, 0) = 0 = \gamma \;
 .\]</span></p>
-<p style="text-align: justify; ">Then, we obtain some candidates for the integration contour $C$. <span class="math display">\[ty + \frac{1}{3}y^3 - x^2 y = 0 \qquad \implies \qquad C \; : \; \begin{cases} \quad  y=0 &amp; \mbox{:  real axis} \\ {} \\ \quad x^2 - \frac{1}{3}y^2 = t &amp; \mbox{:  hyperbola} \end{cases}\]</span>
+<p>Then, we obtain some candidates for the integration contour $C$. <span class="math display">\[ty + \frac{1}{3}y^3 - x^2 y = 0 \qquad \implies \qquad C \; : \; \begin{cases} \quad  y=0 &amp; \mbox{:  real axis} \\ {} \\ \quad x^2 - \frac{1}{3}y^2 = t &amp; \mbox{:  hyperbola} \end{cases}\]</span>
 However, the real axis cannot be an integration contour since its
 left-end is not located inside the gray color sectors! Furthermore, the
 hyperbola lies in $x&gt;0$ region
@@ -364,7 +370,7 @@ Hence, the integration contour should be chosen as below. <span
 class="math display">\[C = \left\{ z=x+iy \;\; \left| \quad
 x&lt;0 \; , \; y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
 \frac{1}{3}y^2 = t \; \right. \right\}\]</span></p>
-<p style="text-align: justify; ">Therefore, the integration contour for this case might be drawn as
+<p>Therefore, the integration contour for this case might be drawn as
 below.<br /> <br/>
 <div class = "container" >
 <img
@@ -382,7 +388,7 @@ steepest descent <span class="math display">\[\mathrm{Ai}\,(t) \sim
 \frac{1}{2\pi i} F(z_0,t) \, e^{i\theta}
 \sqrt{\frac{2\pi}{|w&#39;&#39;(z_0,t)|}} \; ,\]</span> we finally obtain
 the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $t \gg 0$ region,</p>
-<p style="text-align: justify; "><span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \,
+<p><span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \,
 \overset{t \to \infty}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}}
 \, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)} \; .\]</span><br />
 <br />
@@ -390,42 +396,42 @@ the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $t \gg 0$ region,</p>
 <h3 class="unnumbered"
 id="asymptotic-form-of-mathrmait-in-mathbft-ll-0-region">2.2 Asymptotic
 form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \ll 0}$ region</h3>
-<p style="text-align: justify; ">For this case, since $t$ is
+<p>For this case, since $t$ is
 negative, saddle points are given by <span class="math display">\[z_0 =
 \pm i \sqrt{|t|} \;.\]</span></p>
-<p style="text-align: justify; ">For each saddle point, let’s inspect in which direction $\mathrm{Re}(w)$ decreases most
+<p>For each saddle point, let’s inspect in which direction $\mathrm{Re}(w)$ decreases most
 rapidly.</p>
 <ul>
-<li><p style="text-align: justify; "><span>For $z_0 = -i\sqrt{|t|}$
+<li><p><span>For $z_0 = -i\sqrt{|t|}$
 </span></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span> $w&#39;&#39;(z_0,t) =
+<li><p><span> $w&#39;&#39;(z_0,t) =
 2i\sqrt{|t|}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{arg}(w&#39;&#39;_0) = \frac{\pi}{2}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{Re}(w)$ decreases most rapidly when $\theta = \pi / 4 \, , \; 5\pi / 4$ as
 $z$ leaves $z_0$. </span></p></li>
 </ul></li>
-<li><p style="text-align: justify; "><span>For $z_0 =
+<li><p><span>For $z_0 =
 i\sqrt{|t|}$</span></p>
 <ul style="list-style-type: none">
-<li><p style="text-align: justify; "><span> $w&#39;&#39;(z_0,t) =
+<li><p><span> $w&#39;&#39;(z_0,t) =
 -2i\sqrt{|t|}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{arg}(w&#39;&#39;_0) = -\frac{\pi}{2}$ </span></p></li>
-<li><p style="text-align: justify; "><span> $\Rightarrow \quad
+<li><p><span> $\Rightarrow \quad
 \mathrm{Re}(w)$ decreases most rapidly when $\theta = 3\pi / 4 \, , \; 7\pi / 4$ as
 $z$ leaves $z_0$. </span></p></li>
 </ul></li>
 </ul> <br/>
-<p style="text-align: justify; ">For $z_0 = i\sqrt{|t|}$, the level
+<p>For $z_0 = i\sqrt{|t|}$, the level
 line of $v$ which passes through the
 saddle this point is <span class="math display">\[v(x,y) = ty +
 \frac{1}{3}y^3 - x^2 y = v(0, \sqrt{|t|})  \qquad \Rightarrow \qquad
 -|t|\,y + \frac{1}{3}y^3 - x^2 y = -\frac{2}{3} |t|^{\frac{3}{2}} \;\;
 .\]</span></p>
-<p style="text-align: justify; ">Similarly, for $z_0 =
+<p>Similarly, for $z_0 =
 -i\sqrt{|t|}$, the level line of $v$ that passes through this point is <span class="math display">\[-|t|\,y + \frac{1}{3}y^3 - x^2 y = \frac{2}{3}
 |t|^{\frac{3}{2}} \;\; .\]</span><br />
 By picking appropriate level lines (which end-points are inside the gray
@@ -439,7 +445,7 @@ integration contours can be depicted as below.<br /><br/>
   <figcaption> Fig 4. The contour for ${t \ll 0}$ case </figcaption>
 </div> <br /><br />
 Following the process analogous to the antecedent case, we obtain the asymptotic form of Airy function in $t \ll 0$ region.</p>
-<p style="text-align: justify; "><span class="math display">\[\mathrm{Ai}\,(t) \;\; \sim \;\;
+<p><span class="math display">\[\mathrm{Ai}\,(t) \;\; \sim \;\;
 \frac{1}{2\pi i} \; \left[ \, e^{\frac{2\,i}{3} |t|^{\frac{3}{2}}}
 e^{\frac{\pi}{4} i} \sqrt{\frac{2\pi}{\left|2i \sqrt{|t|}\right|}} \; +
 \; e^{-\frac{2\,i}{3} |t|^{\frac{3}{2}}} e^{\frac{3\pi}{4} i}
@@ -466,7 +472,7 @@ orientations as fig.4.<br />
   width="80%" </>
   <figcaption> Fig 5. </figcaption> 
 </div> <br/>
-<p style="text-align: justify; ">
+<p>
 From the adhered figure above, we can observe that the asymptotic
 forms well mimic the original Airy function without significant error
 barring the range $|t|&ll;1$ in
@@ -474,11 +480,11 @@ which the asymptotic forms diverge.<br /><br /><br/>
 </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
-<li><p style="text-align: justify; ">James Brown. Complex Variables and Application. McGraw
+<li><p>James Brown. Complex Variables and Application. McGraw
 Hill</p></li>
-<li><p style="text-align: justify; ">George B. Arfken. Mathematical Methods for Physicists. Academic
+<li><p>George B. Arfken. Mathematical Methods for Physicists. Academic
 Press</p></li>
-<li><p style="text-align: justify; ">K. F. Riley. Mathematical Methods for Physics and Engineering.
+<li><p>K. F. Riley. Mathematical Methods for Physics and Engineering.
 Cambridge University Press</p></li>
 </ul><br/><br/><br/>
 <p style="text-align: center;"> 
