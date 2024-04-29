@@ -25,8 +25,8 @@ docs:
         url:  /categories/computatinal_physics
         category: computational_physics
         
-  - title: Travel
+  - title: Life
     children: 
-      - title: "Tokyo"
-        url:  /categories/tokyo
-        category: tokyo
+      - title: "Travel"
+        url:  /categories/travel
+        category: travel
