@@ -38,22 +38,22 @@ id="hypergeometric-differential-equation">Hypergeometric Differential Equation <
 \,c-(a+b+1)\,x\, \right] \,y&#39; \;-\; ab\,y \;=\; 0 \qquad \qquad
 \forall a, b, c \in \mathbb{R} ,\quad c&gt;0\]</span><br />
 Note that the ODE above has singular points at $ x=0, 1, \infty $.<br /> <br/>
-Since $ x=0 $ is a regular singularity, it ensures at least one solution is in the form of Frobenius series. Hence, we may write down the first solution as <span class="math display">\[y(x) = \sum_{n=0}^{\infty} a_n x^{n+s}\]</span> and by plugging it into the above differential equaiton, we obtain <span class="math display">\[\sum_{n=0}^{\infty} \Biggl[ \, x(1-x) a_n (n+s)(n+s-1) x^{n+s-2} + [ c-(a+b+1) x ] a_n (n+s) x^{n+s-1} -ab \, a_n x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/>
-By rescaling $ n $ w.r.t. the order of $ x $, the equation above is reduced into 
+Since $ x=0 $ is a regular singularity, it ensures at least one solution is in the form of Frobenius series. Hence, we may write down the first solution as <span class="math display">\[y(x) = \sum_{n=0}^{\infty} a_n x^{n+s}\]</span> and by plugging it into the differential equaiton above, we obtain <span class="math display">\[\sum_{n=0}^{\infty} \Biggl[ \, x(1-x) a_n (n+s)(n+s-1) x^{n+s-2} + [ c-(a+b+1) x ] a_n (n+s) x^{n+s-1} -ab \, a_n x^{n+s} \,\Biggr] = 0 \; .\]</span> <br/>
+By sorting each term to have same order of $ x $, the equation above is reduced into 
 <span class="math display">\[\sum_{n=0}^{\infty} x^{n+s-1}
 \Biggl[\, a_n (n+s)(n+s-1+c) - a_{n-1} \Bigl[ (n+s-1)(n+s-2) +
 (n+s-1)(a+b+1) + ab \Bigr] \Biggr] = 0 \; .\]</span><br/><br/>
 For $ n=0 $, only the first term contributes and we obtain the secular equation.
 <span class="math display">\[s(s-1+c) = 0 \qquad \Rightarrow \qquad
 s=0 \; , \;\; s=1-c\]</span> <br/>
-For $ n \ge 0 $, both terms contribute and we obtain the recursion relation. <span
+For $ n \ge 1 $, we should take into account both terms and therefore we obtain a recursion relation. <span
 class="math display">\[a_n (n+s)(n+s-1+c) = a_{n-1} \Bigl[
 (n+s-1)(n+s-2) + (n+s-1)(a+b+1) + ab \Bigr]\]</span><br /><br/>
 <p/>
-<h3 class="unnumbered" id="first-solution-s0">1. First Solution ( $ \,s=0\, $ )</h3><br/>
+<h3 class="unnumbered" id="first-solution-s0">1. First Solution ( $ s=0 $ )</h3><br/>
 <p>For $ s=0 $, the recursion relation is written as</p>
 <p><span class="math display">\[a_{n+1} =
-\frac{(n+a)(n+b)}{(n+1)(n+c)}\, a_n\]</span></p>
+\frac{(n+a)(n+b)}{(n+1)(n+c)}\, a_n\] \, . </span></p>
 <p>Let us assume that $ a_0 = 1 $ for convenience. Then,</p>
 <p><span class="math display">\[y_{1}(x) = \sum_{n=0}^{\infty} a_{n}
 x^{n} = 1 + \frac{ab}{c} \frac{x}{1!} + \frac{a(a+1)\,b(b+1)}{c(c+1)}
@@ -90,7 +90,7 @@ constants as below. <span class="math display">\[a \rightarrow a-c+1 \;
 <p>Hence, we can write the second solution as</p>
 <p><span class="math display">\[y_{2}(x) = \sum_{n=0}^{\infty} b_n
 x^{1-c+n} = (\text{const.})\cdot x^{1-c}\, F\,(a-c+1,\, b-c+1,\, 2-c :
-x)\]</span></p>
+x) \, . \]</span></p>
 <p>Therefore, the general solution to the hypergeometric equation which is valid for $ |x|&lt;1 $ is given by</p>
 <p><span class="math display">\[\therefore \quad {y(x) \;=\; A\cdot
 F\,(a,b,c:x) \;+\; B\cdot x^{1-c}\,F\,(a-c+1,\, b-c+1,\, 2-c :
@@ -104,9 +104,9 @@ id="some-properties-of-the-hypergeometric-function">Some Properties of the Hyper
 <p><span class="math display">\[\lim_{n\rightarrow \infty} \,
 F\,\left(1,m,1 : \frac{x}{m} \right) = e^x \;, \quad F\,\left(m+1, -m, 1
 : \frac{1-x}{2}\right) = P_{m}(x)  \qquad \forall m \in
-\mathbb{Z}\]</span></p>
-<p>or,</p>
-<p><span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
+\mathbb{Z}\]</span></br>
+or</br>
+<span class="math display">\[F\,\left( \frac{1}{2}, -\frac{1}{2},
 \frac{1}{2} : \sin^2{x} \right) = \cos{x}\]</span></p> <br/>
 <p>You may check other properties of the hypergeometric fuinction on Arfken’s or Riley’s textbooks.<br /><br /><br/><br/>
 </p>
