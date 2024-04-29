@@ -1,5 +1,5 @@
 ---
-title: "Tokyo"
+title: "Travel"
 layout: archive
 permalink: categories/travel
 author_profile: true
