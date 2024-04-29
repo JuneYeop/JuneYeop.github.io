@@ -3,11 +3,11 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Curriculum Vitae"
-    url: /cv/
-
   - title: "Categories"
     url: /categories/
+    
+  - title: "Curriculum Vitae"
+    url: /cv/
 
 
 docs:
