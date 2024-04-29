@@ -22,7 +22,7 @@ docs:
         category: theoretical_physics
         
       - title: "Computational Physics"
-        url:  /categories/computatinal_physics
+        url:  /categories/computational_physics
         category: computational_physics
         
   - title: Life
