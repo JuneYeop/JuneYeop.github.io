@@ -1,0 +1,46 @@
+---
+date    : 2024-05-05
+
+title   : "Path Integral Monte-Carlo and Its Application to 1-dim Quantum Harmonic Oscillator (ongoing)"
+excerpt : "PIMC gives the diagonal element of density matrix of quantum harmonic oscillator in approximate level."
+
+writer  : Junyeop Kim
+use_math: true
+
+categories:
+  - 'Computational Physics'
+
+comments: true
+
+published : true
+---
+
+<head>
+    <style>
+        .center {
+            text-align: justify;
+        }
+
+        .MathJax, .MathJax_Display, .MJXc-display, .MathJax_SVG_Display, .math {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+            min-width: 0 ! important
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+          text-align: center;
+        }
+    </style>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+</body>
