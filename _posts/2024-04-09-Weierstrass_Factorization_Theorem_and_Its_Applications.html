@@ -41,8 +41,7 @@ at each zero. <br />
 &nbsp; For examples, when we derive eigenstates of
 1-dim quantum harmonic oscillator using Feynmann path integral (Das.
 Lectures on quantum mechanics. p.515), or deduce a partition
-function of a system consists of <span class="math inline">\(N\)</span>
-ideal spin-0 bosons through imaginary time path integral technique (Brown. Quantum
+function of a system consists of $N$ ideal spin-0 bosons through imaginary time path integral technique (Brown. Quantum
 field theory. p.96), expressing some trigonometric functions in forms of
 products of infinite linear polynomials is required. <br /><br/> </p>
 <h2 class="unnumbered" id="motivation">0. Motivation</h2>
@@ -50,30 +49,23 @@ products of infinite linear polynomials is required. <br /><br/> </p>
 From the "Fundamental Theorem of Algebra", we know the fact
 that <br />
 <em> "Any polynomial <span class="math display">\[P(z) \;=\; a_0 + a_1 z
-+ a_2 z^2 + \cdots + a_n z^n\]</span> of degree <span
-class="math inline">\(n\)</span> where each <span
-class="math inline">\(a_n\)</span> is nonzere has at least one
++ a_2 z^2 + \cdots + a_n z^n\]</span> of degree $n$ where each $a_n$ is nonzere has at least one
 zero."</em><br />
 <span style="color: gray">(Can be deriven from Liouville’s
 theorem)</span> <br /> <br />
 Using the mathematical induction, we may generalize our previous
 statement to<br />
-<em> "Any polynomial <span class="math inline">\(P(z)\)</span> of degree
-<span class="math inline">\(n\)</span> can be expressed as a product of
-<span class="math inline">\(n\)</span> linear factors : <span
+<em> "Any polynomial $P(z)$ of degree $n$ can be expressed as a product of
+$n$ linear factors : <span
 class="math display">\[P(z) \;=\; c\, (z-z_1)(z-z_2)\cdots
-(z-z_n)\]</span> where <span class="math inline">\(c\)</span> and <span
-class="math inline">\(z_k\)</span> are complex constants."</em><br />
+(z-z_n)\]</span> where $c$ and $z_k$ are complex constants."</em><br />
 <span style="color: gray">(Actually, we can directly derive this
 statement from Rouche’s theorem.)</span> <br /> <br/>
 Then we may want to ask a question :<br />
-<em> "Can any entire function, say <span
-class="math inline">\(f(z)\)</span>, be factorized as <span
+<em> "Can any entire function, say $f(z)$, be factorized as <span
 class="math display">\[f(z) \;=\; c\,\prod_{i=0}^{\infty} \,
-(z-z_i)\]</span> where <span class="math inline">\(c\)</span> is a
-complex constant and <span class="math inline">\(\{z_i\}\)</span> is a
-set of all zeros of <span
-class="math inline">\(f(z)\)</span>?"</em> <br/>
+(z-z_i)\]</span> where $c$ is a complex constant and $\{z_i\}$ is a
+set of all zeros of $f(z)$?"</em> <br/>
 In order to answer on this question, we need to discuss the convergence
 of the above infinite product. <br/></br/> </p>
 <div class="center">
@@ -83,8 +75,8 @@ Theorem !</p> </div><br/><br/>
 Tour De Weierstrass Factorization Theorem</h2>
 <p style="text-align: justify; "> &nbsp; </p>
 <p style="text-align: justify; "><strong><U>Definition.</U> Weierstrass elementary factor</strong><br />
-<em>Let <span class="math inline">\(n\)</span> be a positive integer. An
-elementary factor <span class="math inline">\(E_n\)</span> (which is a
+<em>Let $n$ be a positive integer. An
+elementary factor $E_n$ (which is a
 function) is defined as equations below.</em> <span
 class="math display">\[\begin{aligned}
 &amp;E_0 (z) \;=\; 1-z \\
@@ -92,81 +84,62 @@ class="math display">\[\begin{aligned}
 + \frac{z^n}{n} \right) \qquad , n \,\ge\, 1
 \end{aligned}\]</span>
 <p style="text-align: justify; "> &nbsp; </p>
-Observe that the function <span class="math inline">\(E_n (z/a)\)</span>
-has an unique zero of order 1 in which <span
-class="math inline">\(z=a\)</span>.
+Observe that the function $E_n (z/a)$
+has an unique zero of order 1 in which $z=a$.
 <p style="text-align: justify; "> &nbsp; </p>
 <p style="text-align: justify; "> &nbsp; </p>
 <strong><U>Theorem 1</U></strong><br />
-<em>Let <span class="math inline">\(|z| \, \le \, 1\)</span> and <span
-class="math inline">\(p \,\ge\, 0\)</span>. Then <span
-class="math inline">\(| E_n (z) - 1 | \; \le \;
-|z|^{n+1}\)</span>.</em></br></br>
-<strong><em>proof.</em></strong> It is trivial for <span
-class="math inline">\(n=0\)</span> since <span class="math inline">\(|
-E_n(z) - 1 | = | (1-z)-1 | = |z|\)</span>. Hence, let us focus our
-attention on positive <span class="math inline">\(n\)</span>.</p>
-<p style="text-align: justify; ">Consider a Laurent series expansion of <span
-class="math inline">\(E_n (z)\)</span> about <span
-class="math inline">\(z=0\)</span>. Since <span
-class="math inline">\(E_n (z)\)</span> is non-singular at <span
-class="math inline">\(z=0\)</span> (bcs it is entire), <span
+<em>Let $|z| \, \le \, 1$ and $p \,\ge\, 0$. Then $| E_n (z) - 1 | \; \le \;
+|z|^{n+1}$.</em></br></br>
+<strong><em>proof.</em></strong> It is trivial for $n=0$ since $|E_n(z) - 1 | = | (1-z)-1 | = |z|$. Hence, let us focus our
+attention on positive $n$.</p>
+<p style="text-align: justify; ">Consider a Laurent series expansion of $E_n (z)$ about
+$z=0$. Since $E_n (z)$ is non-singular at $z=0$ (bcs it is entire), <span
 class="math display">\[E_n (z) \;=\; 1 + \sum_{k=1}^{\infty} a_k
-z^k\]</span> By differentiating <span class="math inline">\(E_n
-(z)\)</span> with respect to <span class="math inline">\(z\)</span> we
+z^k\]</span> By differentiating $E_n(z)$ with respect to $z$ we
 obtain <span class="math display">\[E&#39;_n (z) \;=\;
 \sum_{k=1}^{\infty} k\, a_k\, z^{k-1} \;=\; - z^n \,\mathrm{exp}\left( z
 + \cdots + \frac{z^n}{n} \right)\]</span> The second equality comes from
-the definition of <span class="math inline">\(E_n (z)\)</span>. By
-comparing the two expressions of <span class="math inline">\(E&#39;_n
-(z)\)</span> we obtain <span class="math inline">\(a_1 = a_2 = \cdots =
-a_n = 0\)</span> since the lowest order of <span
-class="math inline">\(E&#39;_n (z)\)</span> is 1. Furthermore, since the
-coefficients of the expantions of <span
-class="math inline">\(\mathrm{exp}(z+\cdots+z^p /p)\)</span>, <span
-class="math inline">\(a_k \,\le\, 0\)</span> for <span
-class="math inline">\(k \,\ge\, n+1\)</span>.</p>
+the definition of $E_n (z)$. By
+comparing the two expressions of $E&#39;_n(z)$ we obtain $a_1 = a_2 = \cdots =
+a_n = 0$ since the lowest order of $E&#39;_n (z)$ is 1. Furthermore, since the
+coefficients of the expantions of $\mathrm{exp}(z+\cdots+z^p /p)$, $a_k \,\le\, 0$ for $k \,\ge\, n+1$. </p>
 <p style="text-align: justify; ">Observe that <span class="math display">\[E_n (1) \;=\; 0 \;=\; 1 +
 \sum_{k = n+1}^{\infty} a_k \;=\; - \sum_{k = n+1}^{\infty} |a_k| \qquad
 \longrightarrow \qquad \sum_{k = n+1}^{\infty} |a_k| \;=\;
 1\]</span></p>
-<p style="text-align: justify; ">Hence, for the region in which <span class="math inline">\(|z|
-\,\le\, 1\)</span>, <span class="math display">\[| E_n (z) - 1 | \;=\;
+<p style="text-align: justify; ">Hence, for the region in which $|z|
+\,\le\, 1$, <span class="math display">\[| E_n (z) - 1 | \;=\;
 \left| \sum_{k=n+1}^{\infty} a_k \, z^k \right| \;=\; |z|^{n+1} \,
 \left| \sum_{k = n+1}^{\infty} a_k \, z^{n-p-1} \right| \;\le\;
 |z|^{n+1} \, \sum_{k=n+1}^{\infty} | a_n | \;=\; |z|^{n+1}\]</span></p>
-<p style="text-align: justify; ">and this is what we wanted. <span class="math inline">\(\quad
-\blacksquare\)</span><br /><br /><br/>
+<p style="text-align: justify; ">and this is what we wanted. $\quad
+\blacksquare$ <br /><br /><br/>
 <strong><U>Theorem 2</U></strong><br />
-<em>Let <span class="math inline">\(\{ a_n \}\)</span> be a complex
-number sequence such that <span class="math inline">\(\lim_{n \to
-\infty} | a_n | = \infty\)</span> and anyone is nonzero.</em><br \>
-<em>Let <span class="math inline">\(\{ \xi_n \}\)</span> be any
-sequence of non-negative integers for which <span
+<em>Let $\{ a_n \}$ be a complex
+number sequence such that $\lim_{n \to
+\infty} | a_n | = \infty\$ and anyone is nonzero.</em><br \>
+<em>Let $\{ \xi_n \}$ be any sequence of non-negative integers for which <span
 class="math display">\[\sum_{n=1}^{\infty} \left( \frac{r}{|a_n|}
-\right)^{\xi_n + 1} \qquad (2)\]</span> converges for all <span
-class="math inline">\(r&gt;0\)</span>.</em><br />
+\right)^{\xi_n + 1} \qquad (2)\]</span> converges for all $r&gt;0$.</em><br />
 <em>Then <span class="math display">\[f(z) \;=\; \prod_{n=1}^{\infty}
 E_{\xi_n} \left( \frac{z}{a_n} \right)\]</span> converges uniformly
-absolutely and entire with zeros only at points <span
-class="math inline">\(a_n\)</span>.</em></br></br>
-<strong><em>proof.</em></strong> Suppose that there are integers <span
-class="math inline">\(\xi_n\)</span> such that eqn(1) is satisfied.
+absolutely and entire with zeros only at points $a_n$.</em></br></br>
+<strong><em>proof.</em></strong> Suppose that there are integers $\xi_n$ such that eqn(1) is satisfied.
 Then, according to the previous theorem,</p>
 <p style="text-align: justify; "><span class="math display">\[\left| 1 - E_{\xi_n}
 \left(\frac{z}{a_n}\right) \right| \; \le \; \left| \frac{z}{a_n}
 \right|^{\xi_n + 1} \; \le \; \left( \frac{r}{|a_n|} \right)^{\xi_n + 1}
 \qquad (3)\]</span></p>
-<p style="text-align: justify; ">whenever <span class="math inline">\(|z| \,\le\, r\)</span> and <span
-class="math inline">\(r/|a_n| \,\le\, 1\)</span>.</p>
+<p style="text-align: justify; ">whenever $|z| \,\le\, r$ and $r/|a_n| \,\le\, 1$. </p>
 <p style="text-align: justify; ">Consider an infinite sum which is defined by</p>
 <p style="text-align: justify; "><span class="math display">\[\sum_{n=1}^{\infty} \left[ {1 -
 E_{\xi_n} \left( \frac{z}{a_n} \right) } \right] \; .\]</span></p>
 <p style="text-align: justify; ">From the just previous inequality(2) and our hypothesis(3), the
 infinite sum above is convergent uniformly according to the Weierstrass
 M-test.<br />
-WILL BE FILLED SOON <span class="math inline">\(\quad
-\blacksquare\)</span><br />
+WILL BE FILLED SOON $\quad
+\blacksquare$ <br />
 <br />
 <br />
 Before proceeding the present proof, however, we need a slight red
@@ -175,20 +148,13 @@ WILL BE FILLED SOON<br />
 <br />
 <br />
 <strong><U>Weierstrass Factorization Theorem</U></strong><br />
-Let <span class="math inline">\(f\)</span> be an entire function.<br />
-Let <span class="math inline">\(\{ a_n \}\)</span> be the set of all
-non-zero zeros of <span class="math inline">\(f\)</span> repeated
-according to multiplicity.<br />
-Let <span class="math inline">\(f\)</span> has a zero at <span
-class="math inline">\(z=0\)</span> of order <span
-class="math inline">\(m \ge 0\)</span>.<br />
-Then, there is an entire function <span class="math inline">\(f\)</span>
-and a sequance of integers <span
-class="math inline">\(\{\xi_n\}\)</span> such that <span
+Let $f$ be an entire function. <br />
+Let $\{ a_n \}$ be the set of all non-zero zeros of $f$ repeated according to multiplicity.<br />
+Let $f$ has a zero at $z=0$ of order $m \ge 0$.<br />
+Then, there is an entire function $f$ and a sequance of integers $\xi_n\} such that <span
 class="math display">\[f(z) \;=\; z^m e^{g(z)} \, \prod_{n=1}^{\infty}
 E_{\xi_n} \left( \frac{z}{a_n} \right) \; .\]</span><br />
-<strong><em>proof.</em></strong> ALSO WILL BE FILLED SOON...... <span
-class="math inline">\(\quad \blacksquare\)</span><br />
+<strong><em>proof.</em></strong> ALSO WILL BE FILLED SOON...... $\quad \blacksquare$ <br />
 <br />
 </p>
 <h2 class="unnumbered" id="applications">2. Applications</h2>
