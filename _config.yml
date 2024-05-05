@@ -294,7 +294,7 @@ defaults:
       show_date: true
       comments: true
       share: false
-      related: true
+      related: false
       sidebar:
         nav : "docs"
   - scope:
