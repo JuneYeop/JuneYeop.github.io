@@ -15,18 +15,22 @@ docs:
     children:
       - title: "Mathematical Physics"
         url:  /categories/mathematical_physics
-        category: mathematical_physics
+        category: Mathematical Physics
         
       - title: "Theoretical Physics"
         url:  /categories/theoretical_physics
-        category: theoretical_physics
+        category: Theoretical Physics
         
       - title: "Computational Physics"
         url:  /categories/computational_physics
-        category: computational_physics
+        category: Computational Physics
         
   - title: Life
     children: 
+      - title: "Daily Life"
+        url: /categories/life
+        category: Daily Life
+        
       - title: "Travel"
         url:  /categories/travel
-        category: travel
+        category: Travel
