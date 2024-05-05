@@ -191,27 +191,30 @@ value of the integral has already been attained for small $R$. (i.e. The signifi
 the integral only comes from the immediate vicinity of the saddle point
 $z_0$.) </span></p></li>
 </ul></li>
-</ul> <br/><br/>
-<p>Split the integral as below. $$ \begin{aligned}
-f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
-point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
-\\ &amp;{} \\ &amp;= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t)
-\;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
-\int_{\text{error contribution}} dz \, F(z,t)
-\end{aligned} $$ </p>
-<p>Near the saddle point, $z = z_0 + r
-e^{i\theta}$ gives $dz = e^{i\theta}
-dr$ since we assumed that "the significant contribution to the
+</ul> <br/><br/><br/>
+Split the integral as below. 
+$$ 
+  \begin{aligned}
+    f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
+    point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
+    \\ &amp;{} \\ &amp;= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t)
+    \;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
+    \int_{\text{error contribution}} dz \, F(z,t)
+  \end{aligned} 
+$$ <br/>
+Near the saddle point, $z = z_0 + re^{i\theta}$ gives $dz = e^{i\theta} dr$ since 
+we assumed that "the significant contribution to the
 integral only comes from the immediate vicinity of the saddle point" and
 this allows us to approximate the integration contour be a straight line
 right near the saddle point without making significant error. Hence,
-$$ f(t) \;=\; \int_{0}^{R} dr \, r^2
-e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0 \vert}
-e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
-e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
-\vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
-term} $$ where $\bar{\theta} = \theta -
-\pi$.<br /><br/>
+$$ 
+  f(t) \;=\; \int_{0}^{R} dr \, r^2 e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0 \vert}
+  e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
+  e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
+  \vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
+  term} 
+$$ 
+where $\bar{\theta} = \theta - \pi$. <br /><br/>
 Since we’ve set the integration contour to satisfy $e^{i(\alpha + 2\theta)} = e^{i(2n+1)\pi} =
 -1$ right near the saddle point, $$ \begin{aligned}
 f(t) \;&amp;=\; e^{w_0 + i\theta} \int_{0}^{R} dr \, r^2 e^{ -
