@@ -3,8 +3,8 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Categories"
-    url: /categories/
+  #- title: "Categories"
+  #  url: /categories/
     
   - title: "Curriculum Vitae"
     url: /cv/
