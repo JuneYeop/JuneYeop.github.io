@@ -292,8 +292,8 @@ defaults:
       read_time: false
       # 포스팅 날짜를 표출
       show_date: true
-      comments: true
-      share: true
+      comments: false
+      share: false
       related: true
       sidebar:
         nav : "docs"
