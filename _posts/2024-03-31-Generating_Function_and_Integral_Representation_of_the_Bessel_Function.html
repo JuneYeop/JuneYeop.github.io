@@ -40,82 +40,81 @@ id="generating-function-of-the-1st-kind-bessel-function">Generating
 Function of the 1st Kind Bessel Function</h2>
 <p> <br/> <strong><U>Proposition.</U></strong> <em>The function below generates the
 1st kind Bessel function as 
-$$ 
+<span class="math display">\[
   \exp \left[\frac{x}{2} \left(h-\frac{1}{h}\right) \right] =
   \sum_{n=-\infty}^{\infty} { J_{n}(x) \, h^n } \; . 
-$$ </em>
+\]</span> </em>
 <strong><em>proof.</em></strong> First, let us expand the exponential
 function as 
-$$ 
+<span class="math display">\[
   \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = e^{\frac{xh}{2}} e^{-\frac{x}{2h}}
   = \sum_{r=0}^{\infty} { \frac{1}{r!} \left( \frac{xh}{2} \right)^r }
   \cdot \sum_{s=0}^{\infty} { \frac{1}{s!} \left( - \frac{x}{2h} \right)^s
   } = \sum_{r=0}^{\infty} \sum_{s=0}^{\infty} { (-1)^{s} \left(
   \frac{x}{2} \right)^{r+s} \frac{h^{r-s}}{r!\,s!} } \; . 
-$$ <br/>
+\]</span> <br/>
 Replace $n$ by $n=r-s$. Then, 
-$$
+<span class="math display">\[
   \exp \left[ \frac{x}{2} \left(h-\frac{1}{h}\right) \right] = \sum_{n=-\infty}^{\infty} h^n \,\left[ \, \sum_{s=0}^{\infty} (-1)^s \frac{1}{s!\,(n+s)!} \left(\frac{x}{2} \right)^{2s+n} \, \right] \; .
-$$ <br/>
+\]</span> <br/>
 Note that the $s$ summation term inside the square brackets above is identical to the usual infinite
 series representation of 1st kind Bessel function!<br /> <br/>
 Therefore, 
-$$ 
+<span class="math display">\[
   \therefore \qquad \exp \left[\frac{x}{2} \left(h-\frac{1}{h}\right) \right] =
   \sum_{n=-\infty}^{\infty} J_{n}(x) \, h^n \qquad \qquad \blacksquare 
-$$ <br /><br /></p>
+\]</span> <br /><br /></p>
 <h2 class="unnumbered"
 id="integral-representation-of-the-1st-kind-bessel-function">Integral
 Representation of the 1st Kind Bessel Function</h2>
 <p> <br/> <strong><U>Propostion.</U></strong> <em>The 1st kind Bessel Function can be
 written as 
-$$ 
+<span class="math display">\[
   J_{n}(x) = \frac{1}{n} \int_{0}^{\pi} d\theta \, \cos(x\sin{\theta} - n\theta)  \quad \forall x
   \in \mathbb{R} \; , \; \forall n \in \mathbb{Z} \; . 
-$$ </em>
+\]</span> </em>
 <strong><em>proof.</em></strong> Consider an integral of the generating
 function on complex plane along a closed contour 
-$$ 
+<span class="math display">\[
   \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \; , 
-$$ 
+\]</span>
 where $C$ is a positively oriented unit circle centered at the origin.<br /><br/>
 Let $z=e^{i\theta}$ where $\theta$ runs from $0$ to $2\pi$. Then, $\;  dz = ie^{i\theta}d\theta  \; $ and $\;  z-z^{-1} = 2i\sin{\theta} $. By changing the variable, we obtain
-$$ 
+<span class="math display">\[
   \oint_{C}\frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; \int_{0}^{2\pi} d\theta \, ie^{i\theta} \frac{e^{ix \sin{\theta}}}{e^{i(n+1)\theta}}
   \;=\; i \int_{0}^{2\pi} d\theta \, \exp{(ix \sin{\theta} - in\theta)} \; . 
-$$ <br />
+\]</span> <br />
 Note also that, 
-$$ 
+<span class="math display">\[
   \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; \oint_{C} dz
   \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \; . 
-$$ <br />
+\]</span> <br />
 Split the integral above into three parts as below. 
-$$ 
+<span class="math display">\[
   \oint_{C} dz \sum_{m=-\infty}^{\infty} J_m(x)\, z^{m-n-1} \;=\; \oint_{C} dz \sum_{m=-\infty}^{n-1}
   \frac{J_{m}(x)}{z^{n-m+1}}  \;+\; \oint_{C} dz \sum_{m=n+1}^{\infty}
   J_m(x)\, z^{m-n-1}  \;+\; \oint_{C} dz\, \frac{J_{n}(x)}{z} 
-$$ <br/>
+\]</span> <br/>
 For the right hand side, observe that both integrands inside the first and the second integrals are holomorphic on and inside the integration contour $C$. Hence, both first and second term vanish! The third term is, however, not holomorphic anywhere and has a simple pole at $z=0$.<br /> <br/>
 Applying the Cauchy residue theorem, we obtain 
-$$ 
+<span class="math display">\[
   \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x) \; . 
-$$ <br/>
+\]</span> <br/>
 Consequently, 
-$$ 
+<span class="math display">\[
   \oint_{C} \frac{e^{\frac{x}{2}(z-\frac{1}{z})}}{z^{n+1}} \;=\; 2\pi i \, J_{n}(x)
   \;=\; i \int_{0}^{2\pi} d\theta \, \exp{(ix \sin{\theta} - in\theta)} \; . 
-$$ <br />
+\]</span> <br />
 Note that $ J_{n}(x) $ is a real-valued function. Hence, by picking only imaginary parts, we obtain 
-$$ 
+<span class="math display">\[
   J_{n}(x) \;=\; \frac{1}{2\pi} \int_{0}^{2\pi} d\theta \, \cos{(x\sin{\theta} - n\theta)} \; . 
-$$ <br />
+\]</span> <br />
 From the even symmetry of $ \, \cos{(x\sin{\theta}-n\theta)} \, $ w.r.t. $ \, \theta=\pi \,$, we can conclude that 
-$$
+<span class="math display">\[
   \therefore \qquad J_{n}(x) = \frac{1}{\pi}
   \int_{0}^{\pi} d\theta \, \cos{(x\sin{\theta}-n\theta) } \qquad \qquad
   \blacksquare 
-$$ 
-<br /> <br /> </p>
+\]</span> <br /> <br /> </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
 <li><p>George B. Arfken, Mathematical Methods for Physicists, Academic Press</p></li>
