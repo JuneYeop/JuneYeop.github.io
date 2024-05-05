@@ -45,40 +45,27 @@ comments: true
 
 <body>
 <p> &ensp; </p>
-<p> &ensp; If you have read some textbooks or have taken any lectures pertaining to the 
-WKB approximation while studying quantum physics in undergraduate level, then you might, 
-with high probability, be irritated from the situation that both textbooks and professors 
-just apprise us the formulae of asymptotic forms of Airy function without any sophisticated 
-explanations. (Of course I know it is inevitable bcz of deficient space of textbooks and 
-insufficient time for explaning every underlying mathematics in lectures. Hahaha...). 
-Nevertheless, if you are a student who majors in theoretical physics, then you are obliged to 
-ask a question "WHY?" albeit nobody tells you any underlying reasons!!!<br /><br/>
+<p> &ensp; If you have read some textbooks or have taken any lectures pertaining to the WKB approximation while studying quantum physics in undergraduate level, then you might, with high probability, be irritated from the situation that both textbooks and professors just apprise us the formulae of asymptotic forms of Airy function without any sophisticated explanations. (Of course I know it is inevitable bcz of deficient space of textbooks and insufficient time for explaning every underlying mathematics in lectures. Hahaha...). Nevertheless, if you are a student who majors in theoretical physics, then you are obliged to ask a question "WHY?" albeit nobody tells you any underlying reasons!!!<br /><br/>
 &ensp; Hence, in this post, we are going to derive an approximation method
 which is called <em>The Method of Steepest Descent (or Saddle-Point
 Approximation)</em>, and will apply it to Airy function in purpose to
-obtain its asymptotic forms.<br /><br /> 
+obtain its asymptotic forms.<br /><br />
 </p>
-
 <h2 class="unnumbered"
-id="the-method-of-steepest-descent-saddle-point-approximation">
-  1. The Method of Steepest Descent (Saddle-Point Approximation)
-</h2><br/>
+id="the-method-of-steepest-descent-saddle-point-approximation">1. The
+Method of Steepest Descent (Saddle-Point Approximation)</h2><br/>
 <div class="center">
-  <p style="text-align: center;"> 
-    <em>" How do we obtain an approximation form of a real-valued function $f(t)$ defined on a real domain? "</em> 
-  </p><br/>
+<p style="text-align: center;"> <em>" How do we obtain an approximation form of a real-valued function $f(t)$ defined on a real domain? "</em> </p><br/>
 </div>
-<p>Let us write the real-valued function $f(t)$ in a form of a contour integral along the contour $C$ 
-$$
-  f(t) = \int_{C} dz\, F(z,t)
-$$ 
-where $F$ is an analytic function and $\forall t \in \mathbb{R}$.<br /><br/>
-Since $F$ is analytic and an exponential function preserves holomorphism, it can be expressed in
+<p>Let us write the real-valued function $f(t)$ in a form of a contour integral
+along the contour $C$ <span
+class="math display">\[f(t) = \int_{C} dz\, F(z,t)\]</span> where $F$ is an analytic function and $\forall t \in \mathbb{R}$.<br /><br/>
+Since $F$ is analytic and an
+exponential function preserves holomorphism, it can be expressed in
 terms of an exponential function whose exponent is an analytic function.
-i.e. $$ F(z,t) = e^{w(z,t)} $$ where 
-$$ 
-  w(x,y) = u(x,y) + i \, v(x,y) \quad \forall x,y \in \mathbb{R} \;\;. 
-$$ <br /><br/>
+i.e. <span class="math display">\[F(z,t) = e^{w(z,t)}\]</span> where
+<span class="math display">\[w(x,y) = u(x,y) + i \, v(x,y)  \quad
+\forall x,y \in \mathbb{R} \;\;.\]</span><br /><br/>
 <strong><U>Lemma.</U> <em>Both $u$ and $v$ cannot have extremum if $w = u + i\,v$ is
 analytic.</em></strong><br /><br/>
 <em><strong>proof.</strong></em> Assume that $u(x,y)$
@@ -100,39 +87,41 @@ Although $u(x,y)$ and $v(x,y)$ cannot have extremum, both can
 have a saddle point(say $z_0$), and
 this point has a crucial rule for developing this methodology.<br />
 <br />
-Let us expand $w(z,t)$ near the saddle point $z=z_0$ up to second order of $z$. 
-$$ 
-  w(z,t) = w(z_0,t) + \frac{1}{2} \left.\frac{\partial^2 w}{\partial z^2}\right|_{z_0} (z-z_0)^2 + \cdots 
-$$ 
-Note that $\left.\frac{dw}{dz}\right|_{z_0}$ is vanished since $z_0$ is a saddle point.<br /><br/>
+Let us expand $w(z,t)$ near the
+saddle point $z=z_0$ up to second
+order of $z$. <span
+class="math display">\[w(z,t) = w(z_0,t) + \frac{1}{2}
+\left.\frac{\partial^2 w}{\partial z^2}\right|_{z_0} (z-z_0)^2 +
+\cdots \]</span> Note that $\left.\frac{dw}{dz}\right|_{z_0}$ is
+vanished since $z_0$ is a saddle
+point.<br /><br/>
 For convenience, let us introduce some abbreviations, and let’s denote
-the phases explicitly. 
-$$ 
-  w(z_0,t) = w_0 , \quad \left.\frac{\partial^2w}{\partial z^2}\right|_{z_0} = w&#39;&#39;_0 = \left|{w&#39;&#39;_0}\right| e^{i\alpha} , \quad z-z_0 = re^{i\theta} \;\;. 
-$$ <br />
+the phases explicitly. <span class="math display">\[w(z_0,t) = w_0 , \quad \left.\frac{\partial^2
+w}{\partial z^2}\right|_{z_0} = w&#39;&#39;_0 =
+\left|{w&#39;&#39;_0}\right| e^{i\alpha} , \quad z-z_0 = re^{i\theta}
+\;\;.\]</span><br />
 Then we can rewrite the $w(z,t)$ as
-$$
-  \begin{aligned} 
+<span class="math display">\[\begin{aligned}
     w(z,t) &amp;= w_0 + \frac{1}{2}\left|w&#39;&#39;_0\right|
-    e^{i\alpha} (r e^{i\theta})^2 + \mathrm{O}(r^3) \\ &amp;= w_0 +
-    \frac{1}{2}\left|w&#39;&#39;_0\right| r^2 e^{ i(\alpha + 2\theta) } +
-    \mathrm{O}(r^3) \\ &amp;= w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right|
-    r^2 \left[ \cos(\alpha + 2\theta) + i \, \sin(\alpha + 2\theta) \right]
-    + \mathrm{O}(r^3) \\ &amp;\approx \left[ w_0 + \frac{1}{2}
-    \left|w&#39;&#39;_0\right| r^2 \cos(\alpha + 2\theta) \right] + i \,
-    \left[ \frac{1}{2} \left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)
-    \right] \;\;.
-  \end{aligned}
-$$ <br />
-Remember that we have defined $w(z,t)$ by $w = u + i v$. Hence we obtain
-$$
-  \begin{cases}
+e^{i\alpha} (r e^{i\theta})^2 + \mathrm{O}(r^3) \\ &amp;= w_0 +
+\frac{1}{2}\left|w&#39;&#39;_0\right| r^2 e^{ i(\alpha + 2\theta) } +
+\mathrm{O}(r^3) \\ &amp;= w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right|
+r^2 \left[ \cos(\alpha + 2\theta) + i \, \sin(\alpha + 2\theta) \right]
++ \mathrm{O}(r^3) \\ &amp;\approx \left[ w_0 + \frac{1}{2}
+\left|w&#39;&#39;_0\right| r^2 \cos(\alpha + 2\theta) \right] + i \,
+\left[ \frac{1}{2} \left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)
+\right] \;\;.
+\end{aligned}\]</span><br />
+Remember that we have defined $w(z,t)$ by $w =
+u + i v$. Hence we obtain <span
+class="math display">\[\begin{cases}
     \quad u(z,t) = w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right| r^2
-    \cos(\alpha + 2\theta)  \\ {} \\  \quad  v(z,t) = \frac{1}{2}
-    \left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)  
-  \end{cases}
-$$ <br /><br/>
-Consider the situation in which $z$ departs from $z_0$ (i.e. as r increases from 0).<br /><br/>
+\cos(\alpha + 2\theta)  \\ {} \\  \quad  v(z,t) = \frac{1}{2}
+\left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)  
+\end{cases}\]</span><br /><br/>
+Consider the situation in which $z$
+departs from $z_0$ (i.e. as r
+increases from 0).<br /><br/>
 $\mathbf{\cdot}$ For $u(z,t)$<br /><br/>
 $\qquad$ i) $u$ will increase most rapidly when <span
 class="math display">\[\cos(\alpha + 2\theta) = 1 \quad \Rightarrow
@@ -196,52 +185,50 @@ value of the integral has already been attained for small $R$. (i.e. The signifi
 the integral only comes from the immediate vicinity of the saddle point
 $z_0$.) </span></p></li>
 </ul></li>
-</ul> <br/><br/><br/>
-Split the integral as below. 
-$$ 
-  \begin{aligned}
-    f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
-    point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
-    \\ &amp;{} \\ &amp;= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t)
-    \;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
-    \int_{\text{error contribution}} dz \, F(z,t)
-  \end{aligned} 
-$$ <br/>
-Near the saddle point, $z = z_0 + re^{i\theta}$ gives $dz = e^{i\theta} dr$ since 
-we assumed that "the significant contribution to the
+</ul> <br/><br/>
+<p>Split the integral as below. <span
+class="math display">\[\begin{aligned}
+f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
+point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
+\\ &amp;{} \\ &amp;= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t)
+\;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
+\int_{\text{error contribution}} dz \, F(z,t)
+\end{aligned}\]</span></p>
+<p>Near the saddle point, $z = z_0 + r
+e^{i\theta}$ gives $dz = e^{i\theta}
+dr$ since we assumed that "the significant contribution to the
 integral only comes from the immediate vicinity of the saddle point" and
 this allows us to approximate the integration contour be a straight line
 right near the saddle point without making significant error. Hence,
-$$ 
-  f(t) \;=\; \int_{0}^{R} dr \, r^2 e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0 \vert}
-  e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
-  e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
-  \vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
-  term} 
-$$ 
-where $\bar{\theta} = \theta - \pi$. <br /><br/>
+<span class="math display">\[f(t) \;=\; \int_{0}^{R} dr \, r^2
+e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0 \vert}
+e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
+e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
+\vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
+term}\]</span> where $\bar{\theta} = \theta -
+\pi$.<br /><br/>
 Since we’ve set the integration contour to satisfy $e^{i(\alpha + 2\theta)} = e^{i(2n+1)\pi} =
--1$ right near the saddle point, $$ \begin{aligned}
+-1$ right near the saddle point, <span class="math display">\[\begin{aligned}
 f(t) \;&amp;=\; e^{w_0 + i\theta} \int_{0}^{R} dr \, r^2 e^{ -
 \frac{1}{2} {\vert w&#39;&#39;_0 \vert}^2 } \;+\; e^{w_0 +
 i(\theta-\pi)} \int_{R}^{0} dr \, r^2 e^{ - \frac{1}{2} {\vert
 w&#39;&#39;_0 \vert} } \;+\; \text{error term} \\ &amp;=\; 2 \, e^{w_0 +
 i\theta} \int_{0}^{R} dr\, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert}
 r^2 } \;+\; \text{error term} \;\;.
-\end{aligned} $$ </p>
+\end{aligned}\]</span></p>
 <p>Note that our assumption enables us to replace $R \to \infty$ without making any
 significant error.</p>
-<p> $$ f(t) \;\approx \; 2\, e^{w_0 + i\theta}
+<p><span class="math display">\[f(t) \;\approx \; 2\, e^{w_0 + i\theta}
 \int_{0}^{\infty} dr \, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert} r^2}
 \;=\; 2\,e^{w_0 + i\theta} \frac{1}{2} \sqrt{ \frac{2\pi}{\vert
 w&#39;&#39;_0 \vert} } \;=\; e^{w(z_0,t)} e^{i\theta} \sqrt{
-\frac{2\pi}{\vert{ w&#39;&#39;(z_0,t) \vert} } } $$ <br />
+\frac{2\pi}{\vert{ w&#39;&#39;(z_0,t) \vert} } }\]</span><br />
 Therefore, for $\vert t \vert \to
-\infty$, we can approximate the $f(t)$ by $$ \therefore \qquad f(t) \overset{|t| \to
+\infty$, we can approximate the $f(t)$ by <span class="math display">\[\therefore \qquad f(t) \overset{|t| \to
 \infty}{\approx} F(z_0,t) \, e^{i\theta} \sqrt{ \frac{2\pi}{\vert
-w&#39;&#39;(z_0,t) \vert} } $$ where $z_0$ is a saddle point of $w(z,t)$ and $$ \theta = -\frac{1}{2}
+w&#39;&#39;(z_0,t) \vert} }\]</span> where $z_0$ is a saddle point of $w(z,t)$ and <span class="math display">\[\theta = -\frac{1}{2}
 \mathrm{arg}{\left[w&#39;&#39;(z_0,t)\right]} + { \left( { \frac{\pi}{2}
-\text{ or } \frac{3\pi}{2} } \right)\,. } $$ Choice of $\theta$ (which affects only the sign of
+\text{ or } \frac{3\pi}{2} } \right)\,. }\]</span> Choice of $\theta$ (which affects only the sign of
 the final result) is determined from the sense in which the contour
 passes through the saddle point $z_0$.<br />
 <br />
@@ -255,27 +242,30 @@ approximation method!</em><br /><br/><br/>
 Asymptotic Form of Airy Function</h2><br/>
 <p>To apply the saddle point approximation, first we need to express Airy function in a form of complex contour integral.<br /><br/>
 Consider a differential equation whose solutions are Airy functions.
-$$ \begin{aligned}
+<span class="math display">\[\begin{aligned}
     \frac{d^2 f}{d t^2} = t\, f(t)    \tag{1}
-\end{aligned} $$ </p>
+\end{aligned}\]</span></p>
 <p>Let us write the solution $f(t)$
-in a form of $$ f(t) = \int_{C} dz \,
+in a form of <span class="math display">\[f(t) = \int_{C} dz \,
 h(z)\,e^{tz} \quad \forall z \in \mathbb{C}
-\;.    \tag{2} $$ <br />
-By plugging (2) into (1), L.H.S. becomes $$ \frac{d^2 f}{d t^2} = \int_{C} dz \,
-h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;, $$
-and by integrating by parts, R.H.S. becomes $$ t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} =
+\;.    \tag{2}\]</span><br />
+By plugging (2) into (1), L.H.S. becomes <span
+class="math display">\[\frac{d^2 f}{d t^2} = \int_{C} dz \,
+h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;,\]</span>
+and by integrating by parts, R.H.S. becomes <span
+class="math display">\[t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} =
 \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} - \int_{C}
-dz\,e^{tz}\frac{dh}{dz} \;. $$ <br/><br/>
-In order to make sure the equality in eqn(1), we must set $$ \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of }
-C} = 0 \;. $$ <br/>
-Accepting the constraint above, we can express $h(z)$ as $$ z^2
+dz\,e^{tz}\frac{dh}{dz} \;.\]</span><br/><br/>
+In order to make sure the equality in eqn(1), we must set <span
+class="math display">\[\left[\, h(z)\,e^{tz} \,\right]_{\text{ends of }
+C} = 0 \;.\]</span> <br/>
+Accepting the constraint above, we can express $h(z)$ as <span class="math display">\[z^2
 h(z) = -\frac{dh}{dz} \quad \Rightarrow \quad h(z) = c \cdot
-e^{-\frac{1}{3}z^3} \; . $$ <br />
+e^{-\frac{1}{3}z^3} \; .\]</span><br />
 Since we’ve set the square bracket term to be annihilated, each end
 point of the integration contour $C$
-must satisfy $$ \exp{\left[ -\frac{1}{3}
-{z^3_\text{end}} + t\, z_{\text{end}} \right]} = 0 \;. $$ <br />
+must satisfy <span class="math display">\[\exp{\left[ -\frac{1}{3}
+{z^3_\text{end}} + t\, z_{\text{end}} \right]} = 0 \;.\]</span><br />
 This condition implies <span
 class="math display">\[\mathrm{Re}{(z^3_{\text{end}})} &gt; 0 \qquad
 \text{and} \qquad \left| \, z_{\text{end}} \, \right| \to
@@ -384,7 +374,7 @@ steepest descent <span class="math display">\[\mathrm{Ai}\,(t) \sim
 \sqrt{\frac{2\pi}{|w&#39;&#39;(z_0,t)|}} \; ,\]</span> we finally obtain
 the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $t \gg 0$ region,</p>
 <p><span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \,
-\overset{t \gg \infty}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}}
+\overset{t \to \infty}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}}
 \, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)} \; .\]</span><br />
 <br />
 </p>
@@ -448,7 +438,7 @@ e^{\frac{\pi}{4} i} \sqrt{\frac{2\pi}{\left|2i \sqrt{|t|}\right|}} \; +
 \frac{1}{\sqrt{\pi} \, |t|^{\frac{1}{4}}} \; \sin{\left( \frac{2}{3}
 |t|^{\frac{3}{2}} + \frac{\pi}{4} \right)}\]</span><br />
 <span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \;\;
-\overset{t \ll 0}{\sim} \;\;  \frac{1}{\sqrt{\pi} \,
+\overset{t \to -\infty}{\sim} \;\;  \frac{1}{\sqrt{\pi} \,
 |t|^{\frac{1}{4}}} \;\sin{\left( \frac{2}{3} |t|^{\frac{3}{2}} +
 \frac{\pi}{4} \right)}\]</span><br />
 Note that, if we included only one saddle point or if we set the
@@ -482,6 +472,10 @@ Press</p></li>
 <li><p>K. F. Riley. Mathematical Methods for Physics and Engineering.
 Cambridge University Press</p></li>
 </ul><br/><br/><br/>
+<p style="text-align: center;"> 
+<em>I acknowledge to my colleague Sungho Kim for making the figures attatched above, <br/> which is one of the most annoying task when using LaTeX. </em> </p>
+<br/><br/><br/>
+</body>
 <p style="text-align: center;"> 
 <em>I acknowledge to my colleague Sungho Kim for making the figures attatched above, <br/> which is one of the most annoying task when using LaTeX. </em> </p>
 <br/><br/><br/>
