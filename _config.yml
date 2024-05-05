@@ -42,7 +42,7 @@ comments:
     num_posts            : # 10 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : "light" # (default), "github-dark"
+    theme                : "github-light" # (default), "github-dark"
     issue_term           : "pathname" # (default)
   giscus:
     repo                 : #"JuneYeop/JuneYeop.github.io"
