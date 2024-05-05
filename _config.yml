@@ -292,7 +292,7 @@ defaults:
       read_time: false
       # 포스팅 날짜를 표출
       show_date: true
-      comments: false
+      comments: true
       share: false
       related: true
       sidebar:
