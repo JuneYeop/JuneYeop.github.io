@@ -293,8 +293,8 @@ defaults:
       # 포스팅 날짜를 표출
       show_date: true
       comments: true
-      share: false
-      related: false
+      share: true
+      related: true
       sidebar:
         nav : "docs"
   - scope:
