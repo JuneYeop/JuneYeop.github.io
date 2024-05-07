@@ -44,104 +44,117 @@ Lectures on quantum mechanics. p.515), or deduce a partition
 function of a system consists of $N$ ideal spin-0 bosons through imaginary time path integral technique (Brown. Quantum
 field theory. p.96), expressing some trigonometric functions in forms of
 products of infinite linear polynomials is required. <br /><br/> </p>
+  
 <h2 class="unnumbered" id="motivation">
   0. Motivation
 </h2>
 <p> &nbsp; <br/>
-From the "Fundamental Theorem of Algebra", we know the fact
-that <br />
-<em> "Any polynomial <span class="math display">\[
+From the "Fundamental Theorem of Algebra", we know the fact that <br />
+<em> "Any polynomial 
+<span class="math display">\[
   P(z) \;=\; a_0 + a_1 z + a_2 z^2 + \cdots + a_n z^n
-\]</span> of degree $n$ where each $a_n$ is nonzere has at least one zero."</em><br />
-<span style="color: gray">(Can be deriven from Liouville’s
-theorem)</span> <br /> <br />
-Using the mathematical induction, we may generalize our previous
-statement to<br />
+\]</span> 
+of degree $n$ where each $a_n$ is nonzere has at least one zero."</em><br />
+<span style="color: gray">(Can be deriven from Liouville’s theorem)</span> <br /> <br />
+Using the mathematical induction, we may generalize our previous statement as<br />
 <em> "Any polynomial $P(z)$ of degree $n$ can be expressed as a product of
-$n$ linear factors : <span class="math display">\[
+$n$ linear factors : 
+<span class="math display">\[
   P(z) \;=\; c\, (z-z_1)(z-z_2)\cdots (z-z_n)
-\]</span> where $c$ and $z_k$ are complex constants."</em><br />
-<span style="color: gray">(Actually, we can directly derive this
-statement from Rouche’s theorem.)</span> <br /> <br/>
-Then we may want to ask a question :<br />
-<em> "Can any entire function, say $f(z)$, be factorized as <span class="math display">\[
+\]</span> 
+where $c$ and $z_k$ are complex constants."</em><br />
+<span style="color: gray">(Actually, we can directly derive this statement from Rouche’s theorem.)</span> <br /> <br/>
+Then we may want to ask a question : <br />
+<em> "Can any entire function, say $f(z)$, be factorized as 
+<span class="math display">\[
   f(z) \;=\; c\,\prod_{i=0}^{\infty} \, (z-z_i)
-\]</span> where $c$ is a complex constant and $\{z_i\}$ is a set of all zeros of $f(z)$?"</em> <br/>
+\]</span> 
+where $c$ is a complex constant and $\{z_i\}$ is a set of all zeros of $f(z)$?"</em> <br/>
 In order to answer to this question, we need to check whether the infinite product above converges to $f(z)$ or not. <br/></br/> </p>
 <div class="center">
   <p>This notion is the first step toward the Weierstrass Factorization Theorem !</p> 
 </div><br/><br/>
+  
 <h2 class="unnumbered" id="tour-de-Weierstrass-factorization-theorem">
   1. Tour De Weierstrass Factorization Theorem
-</h2>
-<p> &nbsp; </p>
-<p><strong><U>Definition.</U> Weierstrass elementary factor</strong><br />
-<em>Let $n$ be a positive integer. An elementary factor $E_n$ (which is a
-function) is defined as equations below.</em> <span class="math display">\[
-  \begin{aligned}
-    &amp;E_0 (z) \;=\; 1-z \\
-    &amp;E_n (z) \;=\; (1-z) \, \mathrm{exp}\left(z + \frac{z^2}{2} + \cdots + \frac{z^n}{n} \right) \qquad , n \,\ge\, 1
-  \end{aligned}\]
-</span>
-<p> &nbsp; </p>
-Observe that the function $E_n (z/a)$ has an unique zero of order 1 in which $z=a$.
-<p> &nbsp; </p>
-<p> &nbsp; </p>
-<strong><U>Theorem 1</U></strong><br />
-<em>Let $|z| \, \le \, 1$ and $p \,\ge\, 0$. Then $| E_n (z) - 1 | \; \le \; |z|^{n+1}$.</em></br></br>
-<strong><em>proof.</em></strong> It is trivial for $n=0$ since $|E_n(z) - 1 | = | (1-z)-1 | = |z|$. Hence, let us focus our
-attention on positive $n$.</p>
-<p>Consider a Laurent series expansion of $E_n (z)$ about
-$z=0$. Since $E_n (z)$ is non-singular at $z=0$ (bcs it is entire), <span
-class="math display">\[E_n (z) \;=\; 1 + \sum_{k=1}^{\infty} a_k
-z^k\]</span> By differentiating $E_n(z)$ with respect to $z$ we
-obtain <span class="math display">\[E&#39;_n (z) \;=\;
-\sum_{k=1}^{\infty} k\, a_k\, z^{k-1} \;=\; - z^n \,\mathrm{exp}\left( z
-+ \cdots + \frac{z^n}{n} \right)\]</span> The second equality comes from
-the definition of $E_n (z)$. By
-comparing the two expressions of $E&#39;_n(z)$ we obtain $a_1 = a_2 = \cdots =
-a_n = 0$ since the lowest order of $E&#39;_n (z)$ is 1. Furthermore, since the
-coefficients of the expantions of $\mathrm{exp}(z+\cdots+z^p /p)$, $a_k \,\le\, 0$ for $k \,\ge\, n+1$. </p>
-<p style="text-align: justify; ">Observe that <span class="math display">\[E_n (1) \;=\; 0 \;=\; 1 +
-\sum_{k = n+1}^{\infty} a_k \;=\; - \sum_{k = n+1}^{\infty} |a_k| \qquad
-\longrightarrow \qquad \sum_{k = n+1}^{\infty} |a_k| \;=\;
-1\]</span></p>
-<p style="text-align: justify; ">Hence, for the region in which $|z|
-\,\le\, 1$, <span class="math display">\[| E_n (z) - 1 | \;=\;
-\left| \sum_{k=n+1}^{\infty} a_k \, z^k \right| \;=\; |z|^{n+1} \,
-\left| \sum_{k = n+1}^{\infty} a_k \, z^{n-p-1} \right| \;\le\;
-|z|^{n+1} \, \sum_{k=n+1}^{\infty} | a_n | \;=\; |z|^{n+1}\]</span></p>
-<p style="text-align: justify; ">and this is what we wanted. $\quad
-\blacksquare$ <br /><br /><br/>
-<strong><U>Theorem 2</U></strong><br />
-<em>Let $\{ a_n \}$ be a complex
-number sequence such that $ \lim_{n \to \infty} | a_n | = \infty\ $ and anyone is nonzero.</em><br \>
-<em>Let $\{ \xi_n \}$ be any sequence of non-negative integers for which <span
-class="math display">\[\sum_{n=1}^{\infty} \left( \frac{r}{|a_n|}
-\right)^{\xi_n + 1} \qquad (2)\]</span> converges for all $r&gt;0$.</em><br />
-<em>Then <span class="math display">\[f(z) \;=\; \prod_{n=1}^{\infty}
-E_{\xi_n} \left( \frac{z}{a_n} \right)\]</span> converges uniformly
-absolutely and entire with zeros only at points $a_n$.</em></br></br>
-<strong><em>proof.</em></strong> Suppose that there are integers $\xi_n$ such that eqn(1) is satisfied.
-Then, according to the previous theorem,</p>
-<p style="text-align: justify; "><span class="math display">\[\left| 1 - E_{\xi_n}
-\left(\frac{z}{a_n}\right) \right| \; \le \; \left| \frac{z}{a_n}
-\right|^{\xi_n + 1} \; \le \; \left( \frac{r}{|a_n|} \right)^{\xi_n + 1}
-\qquad (3)\]</span></p>
-<p style="text-align: justify; ">whenever $|z| \,\le\, r$ and $r/|a_n| \,\le\, 1$. </p>
-<p style="text-align: justify; ">Consider an infinite sum which is defined by</p>
-<p style="text-align: justify; "><span class="math display">\[\sum_{n=1}^{\infty} \left[ {1 -
-E_{\xi_n} \left( \frac{z}{a_n} \right) } \right] \; .\]</span></p>
-<p style="text-align: justify; ">From the just previous inequality(2) and our hypothesis(3), the
-infinite sum above is convergent uniformly according to the Weierstrass
-M-test.<br />
-WILL BE FILLED SOON $\quad
-\blacksquare$ <br />
-<br />
-<br />
-Before proceeding the present proof, however, we need a slight red
-herring into another topic.<br />
-WILL BE FILLED SOON<br />
+</h2> <br/><br/>
+  
+<p>
+  <strong><U>Definition.</U> Weierstrass elementary factor</strong><br />
+  <em>Let $n$ be a positive integer. An elementary factor $E_n$ (which is a
+  function) is defined as equations below.</em> 
+  <span class="math display">\[
+    \begin{aligned}
+      &amp;E_0 (z) \;=\; 1-z \\
+      &amp;E_n (z) \;=\; (1-z) \, \mathrm{exp}\left(z + \frac{z^2}{2} + \cdots + \frac{z^n}{n} \right) \qquad , n \,\ge\, 1
+    \end{aligned}\]
+  </span> <br/><br/>
+  Observe that the function $E_n (z/a)$ has an unique zero of order 1 in which $z=a$.
+</p> <br/><br/>
+
+<p>
+  <strong><U>Theorem 1</U></strong><br />
+  <em>Let $|z| \, \le \, 1$ and $p \,\ge\, 0$. Then $| E_n (z) - 1 | \; \le \; |z|^{n+1}$.</em></br></br>
+  <strong><em>proof.</em></strong> It is trivial for $n=0$ since $|E_n(z) - 1 | = | (1-z)-1 | = |z|$. Hence, let us focus our
+  attention on positive $n$. <br/><br/>
+  Consider a Laurent series expansion of $E_n (z)$ about $z=0$. 
+  Since $E_n (z)$ is non-singular at $z=0$ (bcs it is entire), 
+  <span class="math display">\[
+    E_n (z) \;=\; 1 + \sum_{k=1}^{\infty} a_k z^k
+  \]</span> 
+  By differentiating $E_n(z)$ with respect to $z$ we obtain 
+  <span class="math display">\[
+    E&#39;_n (z) \;=\; \sum_{k=1}^{\infty} k\, a_k\, z^{k-1} \;=\; - z^n \,\mathrm{exp}\left( z
+    + \cdots + \frac{z^n}{n} \right)
+  \]</span> 
+  The second equality comes from the definition of $E_n (z)$. 
+  By comparing the two expressions of $E&#39;_n(z)$ we obtain $a_1 = a_2 = \cdots = a_n = 0$ 
+  since the lowest order of $E&#39;_n (z)$ is 1. 
+  Furthermore, since the coefficients of the expantions of $\mathrm{exp}(z+\cdots+z^p /p)$, $a_k \,\le\, 0$ for $k \,\ge\, n+1$. <br/><br/>
+  Observe that 
+  <span class="math display">\[
+    E_n (1) \;=\; 0 \;=\; 1 + \sum_{k = n+1}^{\infty} a_k \;=\; - \sum_{k = n+1}^{\infty} |a_k| \qquad
+    \longrightarrow \qquad \sum_{k = n+1}^{\infty} |a_k| \;=\; 1 
+  \]</span> <br/><br/>
+  Hence, for the region in which $|z|\,\le\, 1$, 
+  <span class="math display">\[
+    | E_n (z) - 1 | \;=\; \left| \sum_{k=n+1}^{\infty} a_k \, z^k \right| \;=\; |z|^{n+1} \,
+    \left| \sum_{k = n+1}^{\infty} a_k \, z^{n-p-1} \right| \;\le\;
+    |z|^{n+1} \, \sum_{k=n+1}^{\infty} | a_n | \;=\; |z|^{n+1}
+  \]</span> <br/><br/>
+  and this is what we wanted. $\quad \blacksquare $ 
+</p> <br /><br/>
+
+<p>
+  <strong><U>Theorem 2</U></strong><br />
+  <em>Let $\{ a_n \}$ be a complex number sequence such that 
+  $ \lim_{n \to \infty} | a_n | = \infty\ $ and anyone is nonzero.</em><br \>
+  <em>Let $\{ \xi_n \}$ be any sequence of non-negative integers for which 
+  <span class="math display">\[
+    \sum_{n=1}^{\infty} \left( \frac{r}{|a_n|} \right)^{\xi_n + 1} \qquad (2)
+  \]</span> 
+  converges for all $r&gt;0$.</em><br />
+  <em>Then 
+  <span class="math display">\[
+    f(z) \;=\; \prod_{n=1}^{\infty} E_{\xi_n} \left( \frac{z}{a_n} \right)
+  \]</span> 
+  converges uniformly absolutely and entire with zeros only at points $a_n$.</em></br></br>
+  <strong><em>proof.</em></strong> Suppose that there are integers $\xi_n$ such that eqn(1) is satisfied.
+  Then, according to the previous theorem, <br/><br/>
+  <span class="math display">\[
+    \left| 1 - E_{\xi_n} \left(\frac{z}{a_n}\right) \right| \; \le \; \left| \frac{z}{a_n}
+    \right|^{\xi_n + 1} \; \le \; \left( \frac{r}{|a_n|} \right)^{\xi_n + 1} \qquad (3)
+  \]</span> <br/><br/>
+  whenever $|z| \,\le\, r$ and $r/|a_n| \,\le\, 1$. <br/><br/>
+  Consider an infinite sum which is defined by<br/><br/>
+  <span class="math display">\[
+    \sum_{n=1}^{\infty} \left[ {1 - E_{\xi_n} \left( \frac{z}{a_n} \right) } \right] \; .
+  \]</span> <br/><br/>
+  From the just previous inequality(2) and our hypothesis(3), 
+  the infinite sum above is convergent uniformly according to the Weierstrass M-test. <br /><br/>
+  What we need to show is, however, the convergence of $f(z)$. Hence, we need to set up a strategy so as to proceed the present proof.
+</p>
+
 <br />
 <br />
 <strong><U>Weierstrass Factorization Theorem</U></strong><br />
@@ -157,14 +170,14 @@ E_{\xi_n} \left( \frac{z}{a_n} \right) \; .\]</span><br />
 <h2 class="unnumbered" id="applications">2. Applications</h2>
 <h3 class="unnumbered" id="trigonometric-functions">Trigonometric
 Functions</h3>
-<p style="text-align: justify; ">blahblah</p>
+<p>blahblah</p>
 <h3 class="unnumbered" id="gamma-function">Gamma Function</h3>
-<p style="text-align: justify; ">blahblah<br />
+<p>blahblah<br />
 <br />
 </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
-<li><p style="text-align: justify; ">John B. Conway, Functions of One Complex Variable II,
+<li><p>John B. Conway, Functions of One Complex Variable II,
 Springer</p></li>
 </ul>
 </body>
