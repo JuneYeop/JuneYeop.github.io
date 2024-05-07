@@ -10,6 +10,8 @@ html {
   background-color: $background-color;
   font-size: 15px;
 
+  /* tab의 size에 따른 글씨 크기 설정 */
+  
   @include breakpoint($medium) {
     font-size: 15px;
   }
@@ -21,10 +23,12 @@ html {
   @include breakpoint($x-large) {
     font-size: 15px;
   }
-
-  -webkit-text-size-adjust: none /* default: 100% */;
-  -ms-text-size-adjust: none /* default: 100% */ ;
-}
+   /* none : 화면의 크키게 따라 크기를 조정하지 않음을 명시 */
+  -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
+  -ms-text-size-adjust : none;  /* IE */
+  -moz-text-size-adjust : none;  /* 파이어폭스 */
+  -o-text-size-adjust : none;  /* 오페라 구버전 */
+  }
 
 /* Remove margin */
 
