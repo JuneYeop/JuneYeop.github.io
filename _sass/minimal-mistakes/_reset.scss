@@ -22,8 +22,8 @@ html {
     font-size: 15px;
   }
 
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none /* default: 100% */;
+  -ms-text-size-adjust: none /* default: 100% */ ;
 }
 
 /* Remove margin */
