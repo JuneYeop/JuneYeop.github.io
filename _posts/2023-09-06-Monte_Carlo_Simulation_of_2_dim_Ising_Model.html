@@ -1,5 +1,5 @@
 ---
-date    : 2024-05-01
+date    : 2023-09-06
 
 title   : "Monte-Carlo Simulation of 2-dim Ising Model"
 excerpt : "Power of numerical simulation"
@@ -83,12 +83,12 @@ published : true
 <p>
   &nbsp; <br/> 
   Let us begin with "PROGRAM ~" as usual.
-  <code class="codeblock">
+  <pre><code class="codeblock">
     PROGRAM ISING_MODEL
-  </code> <br/> <br/>
+  </code></pre> <br/> <br/>
 
   Let us declare variables. For the place marked by question marks, just put any values as you want.
-  <code class="codeblock">
+  <pre><code class="codeblock">
     !---DECLARE VARIABLES---------------------------
 
     IMPLICIT NONE
@@ -130,22 +130,22 @@ published : true
 
     !--- VARIABLES FOR THE PROGRAM EXECUATION TIME
     REAL :: START_TIME, END_TIME, TOT_TIME
-  </code> <br/> <br/>
+  </code></pre> <br/> <br/>
 
   Let's call the cpu time to estimate the execuation time, cuz im curious kkk.
-  <code class="codeblock">
+  <pre><code class="codeblock">
     !---LOAD CPU_TIME TO EVALUATE THE EXECUATION TIME---------------------------------
     
     CALL CPU_TIME(START_TIME)
 
     !---------------------------------------------------
-  </code> <br/> <br/>
+  </code></pre> <br/> <br/>
 
   Let us set up the initial spin configuration. <br/> <br/>
   We are gonna consider only two cases for the initial configurations, <br/>
-    i) high temperature limit (completely random configuration) <br/>
-    ii) 0 temperature limit (completely ordered configuration)
-  <code class="codeblock">
+  &nbsp; i) high temperature limit (completely random configuration) <br/>
+  &nbsp; ii) 0 temperature limit (completely ordered configuration)
+  <pre><code class="codeblock">
      !---HIGH TEMPERATURE LIMIT ---------------------
     
       DO I_COL = 1, DIM_COL, +1
@@ -167,8 +167,6 @@ published : true
     
       END DO
 
-    
-
 
       !---LOW TEMPERATURE LIMIT
 
@@ -177,11 +175,11 @@ published : true
       !        SPIN_CONFIG(I_ROW, I_COL) = +1
       !    END DO
       !END DO
-  </code> <br/><br/>
+  </code></pre> <br/><br/>
 
   Let us calculate the normalised magnetisation of the initial spin configuration.
 
-  <code class="codeblock">
+  <pre><code class="codeblock">
     !---CALCULATE THE MAGNETISATION OF INITIAL STATE-------------------------------
     
     ITR = 0
@@ -200,7 +198,7 @@ published : true
     
     NORMALISED_MAGNETISATION(ITR) = 1. * PRE_MAGNETISATION / NUMBER_TOTAL_SPIN 
     !--- I PUT (1.*) TERM TO PREVENT FROME THE MAGNETISATION BECOMING INTEGER...!
-  </code> <br/><br/>
+  </code></pre> <br/><br/>
 
   사실 코드를 처음부터 python이나 julia로 작성했으면, spin configuration의 data를 
   바로 이미지로 변환해서 이미지 자체를 list에 차곡차곡 하나씩 쌓을 수 있기 때문에, 
