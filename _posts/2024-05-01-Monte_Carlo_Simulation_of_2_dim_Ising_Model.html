@@ -83,12 +83,12 @@ published : true
 <p>
   &nbsp; <br/> 
   Let us begin with "PROGRAM ~" as usual.
-  <code>
+  <code class="codeblock">
     PROGRAM ISING_MODEL
   </code> <br/> <br/>
 
   Let us declare variables. For the place marked by question marks, just put any values as you want.
-  <code>
+  <code class="codeblock">
     !---DECLARE VARIABLES---------------------------
 
     IMPLICIT NONE
@@ -133,7 +133,7 @@ published : true
   </code> <br/> <br/>
 
   Let's call the cpu time to estimate the execuation time, cuz im curious kkk.
-  <code>
+  <code class="codeblock">
     !---LOAD CPU_TIME TO EVALUATE THE EXECUATION TIME---------------------------------
     
     CALL CPU_TIME(START_TIME)
@@ -145,7 +145,7 @@ published : true
   We are gonna consider only two cases for the initial configurations, <br/>
     i) high temperature limit (completely random configuration)
     ii) 0 temperature limit (completely ordered configuration)
-  <code>
+  <code class="codeblock">
      !---HIGH TEMPERATURE LIMIT ---------------------
     
       DO I_COL = 1, DIM_COL, +1
@@ -181,7 +181,7 @@ published : true
 
   Let us calculate the normalised magnetisation of the initial spin configuration.
 
-  <code>
+  <code class="codeblock">
     !---CALCULATE THE MAGNETISATION OF INITIAL STATE-------------------------------
     
     ITR = 0
@@ -209,7 +209,7 @@ published : true
  
   앞으로 DO loop를 돌리면서 얻게 될 each iteration step(?)에서의 spin configuration을 txt format으로 저장하려고 한다.
   이 spin configuration txt 파일들을 새로운 하위폴더를 만들어서 저장을 할 생각인데, 아래에 적어둔 code가 해당 역할을 수행한다.
-  <code>
+  <code class="codeblock">
      !--- WRITE THE SPIN CONFIGURATION AS A TXT FILE, and MAGNETISATION DATA IN A NEW FOLDER
 
       ! Specify the folder name you want to create
