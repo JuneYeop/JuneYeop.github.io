@@ -212,14 +212,14 @@ published : true
     !--- I PUT (1.*) TERM TO PREVENT FROME THE MAGNETISATION BECOMING INTEGER...!
   </code></pre> <br/><br/>
 
-  사실 코드를 처음부터 python이나 julia로 작성했으면, spin configuration의 data를 
-  바로 이미지로 변환해서 이미지 자체를 list에 차곡차곡 하나씩 쌓을 수 있기 때문에, 
-  후술할 과정은 다른 언어라면 불필요한 과정일 수 있겠으나... 
-  (우리의 Fortran은 그런 packages 없기 때문에...) <br/><br/>
+  Actually, the following procedure is unneccesary if we programmed using other advanced languages such as Python or Julia 
+  because these langueges support to make a list consists of a bunch of images. 
+  However, there's no package for Fortran that disdplay images as far as i know, we need the follwoing procedure. <br/><br/>
  
-  앞으로 DO loop를 돌리면서 얻게 될 each iteration step(?)에서의 spin configuration을 txt format으로 저장하려고 한다.
-  이 spin configuration txt 파일들을 새로운 하위폴더를 만들어서 저장을 할 생각인데, 아래에 적어둔 code가 해당 역할을 수행한다.
-  <code class="codeblock">
+  I'm gonna save the spin configuration for each Monte-Carlo time step as a txt file 
+  while running a DO LOOP in a new folder in a folder that present code exists. The code below conducts these stuffs.
+  
+  <pre><code class="codeblock">
      !--- WRITE THE SPIN CONFIGURATION AS A TXT FILE, and MAGNETISATION DATA IN A NEW FOLDER
 
       ! Specify the folder name you want to create
@@ -255,9 +255,11 @@ published : true
 
         OPEN( 10, FILE = "magnetisation.txt", STATUS = "new" )    
         WRITE(10 ,*) ITR, NORMALISED_MAGNETISATION(ITR)
-  </code> <br/>
-  마지막 두 줄은 magnetisation을 기록하기 위한 새로운 txt file을 만들고, 파일을 열어서 데이터를 입력하도록 하는 코드이다. 
-                이 파일은 그냥 main Fortran code와 동일한 directory에 저장할 생각이다.
+  </code></pre> <br/>
+  The last two lines are for making a new text file and openning it to jot down the magnetisation date. <br/> 
+  The file is gonna be saved in the same directory of the present Fortran code.
+
+  
 
 
                 
