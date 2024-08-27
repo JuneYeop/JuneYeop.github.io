@@ -17,4 +17,4 @@ published : true
 
 <https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/graduation.pdf>
 
-<iframe src="/assets/graduation.pdf" style="width:600px; height:600px;" frameborder="0"></iframe>
+<iframe src="/assets/graduation.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
