@@ -15,4 +15,6 @@ comments: true
 published : true
 ---
 
-<https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/files/graduation_thesis.pdf>
+<https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/graduation.pdf>
+
+<iframe src="assets/graduation.pdf" style="width:95%; height:600px;" frameborder="0"></iframe>
