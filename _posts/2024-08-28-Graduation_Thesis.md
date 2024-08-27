@@ -15,6 +15,5 @@ comments: true
 published : true
 ---
 
-<object data="myfile.pdf" width="1000" height="1000" type='application/pdf'/>
-assets/Graduation_Thesis.pdf
+<object data="assets/Graduation_Thesis.pdf" width="95%" height="90%"/>
 
