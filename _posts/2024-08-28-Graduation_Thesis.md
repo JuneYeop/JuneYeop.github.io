@@ -16,8 +16,6 @@ published : true
 ---
 
 
-<object data="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/Graduation_Thesis.pdf" type="thesis/pdf" width="95%" height="95%">
-    <embed src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/Graduation_Thesis.pdf">
-        <p>IDONTWANTTOWRITEMYGRADUATIONTHESIS: <a href="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/Graduation_Thesis.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<object data="" type="thesis/pdf" width="95%" 
+
+<iframe src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/Graduation_Thesis.pdf" style="width:95%; height:95%;" frameborder="0"></iframe>
