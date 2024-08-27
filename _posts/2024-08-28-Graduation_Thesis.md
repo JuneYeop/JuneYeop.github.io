@@ -15,4 +15,4 @@ comments: true
 published : true
 ---
 
-<iframe src="assets/Graduation_Thesis.pdf" style="width:95%; height:95%;" frameborder="0"></iframe>
+<iframe src="assets/graduation_thesis.pdf" style="width:95%; height:600px;" frameborder="0"></iframe>
