@@ -15,5 +15,5 @@ comments: true
 published : true
 ---
 
-<object data="assets/Graduation_Thesis.pdf" width="95%" height="90%"/>
+<object data="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/Graduation_Thesis.pdf" width="95%" height="90%" type="graduation_thesis/pdf"/>
 
