@@ -1,0 +1,146 @@
+---
+date    : 2024-04-29
+
+title   : "Non-Relativistic Path-Integral Quantum Field Theory - Formalism (ongoing)"
+excerpt : " "
+
+writer  : Junyeop Kim
+use_math: true
+
+categories:
+  - 'Theoretical Physics'
+
+comments: false
+---
+
+<head>
+    <style>
+        .center {
+            text-align: justify;
+        }
+
+        .MathJax, .MathJax_Display, .MJXc-display, .MathJax_SVG_Display, .math {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+            min-width: 0 ! important
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+          text-align: center;
+        }
+    </style>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+
+
+\section{Formalism}\label{sec2}
+
+
+\subsection{Bosonic field operators}\label{sec2.1}
+
+Let $\ket{\Psi}$ denote a system consists of N identical particles. A wave function of this system is written as \[
+\Psi(\mathbf{r_1}, \mathbf{r_2}, \cdots, \mathbf{r_N} ) = \braket{\mathbf{r_1}, \mathbf{r_2}, \cdots, \mathbf{r_N} | \Psi} \, . 
+\tag{2.1.1}
+\] in which each $\mathbf{r_i}$ can denote not only a position of i-th particle but also its spin or other physical variables. For a system consists of bosonic particles, the wave function above should be symmetric under the particle interchange. \[
+\Psi(\mathbf{r_1}, \ldots , \mathbf{r_i} , \ldots , \mathbf{r_j}, \ldots, \mathbf{r_N}) = \Psi(\mathbf{r_1}, \ldots , \mathbf{r_j} , \ldots , \mathbf{r_i}, \ldots, \mathbf{r_N}) 
+\tag{2.1.2}
+\] Meanwhile, for a system consists of fermionic particles, the wave function should be antisymmetric under the particle interchange. \[
+\Psi(\mathbf{r_1}, \ldots , \mathbf{r_i} , \ldots , \mathbf{r_j}, \ldots, \mathbf{r_N}) = - \Psi(\mathbf{r_1}, \ldots , \mathbf{r_j} , \ldots , \mathbf{r_i}, \ldots, \mathbf{r_N})
+\] 
+
+In this paper, however, we'll focus our attention only to bosonic particle systems from now onwards. Thus any readers interested in the formalism apropos to fermionic particle systems, refer the references 1, 2, and 3. \\
+
+From (2.1.1) and (2.1.2), we obtain \[
+\bra{\mathbf{r_1}, \ldots , \mathbf{r_i} , \ldots , \mathbf{r_j}, \ldots, \mathbf{r_N}} = \bra{\mathbf{r_1}, \ldots , \mathbf{r_j} , \ldots , \mathbf{r_i}, \ldots, \mathbf{r_N}}
+\tag{2.1.3}\] and the normalisation condition is given by \[
+\braket{\mathbf{r_1}, \ldots, \mathbf{r_N} | \mathbf{r'_1}, \ldots, \mathbf{r'_N}} \quad = \sum_{\text{all permutations}} \left[\; \prod_{a=1}^{N} \delta(\mathbf{r_a}-\mathbf{r'_{P(a)}}) \;\right]
+\] where each $\mathrm{a}$ is sent to $\mathrm{P(a)}$ while executing the summation over all permutations. It is, however, inefficient to pursue to use this eigenbasis, fixed number of particle. Instead, consider a collection of states \[
+\Big\{ \ket{\mathbf{0}}, \, \ket{\mathbf{r}}, \,\ket{\mathbf{r_1},\mathbf{r_2}}, \, \cdots \, , \, \ket{\mathbf{r'_1},\ldots,\mathbf{r'_n}} , \cdots \Big\}
+\] where $\ket{\mathbf{0}}$ denotes a vacuum state in which possesses no particle. Focusing on this eigenbasis (of all the various states with a fixed number of particle) enables us to settle down in the grand canonical ensemble, meanwhile pursuing to develop our formalism using the former basis implies we are in the canonical ensemble. In this enlarged space, the inner product is defined as \[
+\braket{\mathbf{r_1}, \ldots, \mathbf{r_M} | \mathbf{r'_1}, \ldots, \mathbf{r'_N}} = \delta_{\mathrm{MN}} \braket{\mathbf{r_1}, \ldots, \mathbf{r_M} | \mathbf{r'_1}, \ldots, \mathbf{r'_M}} \, .
+\] For examples, \[
+\braket{\mathbf{0} | \mathbf{0}} = 1 \, , \; \braket{\mathbf{0} | \mathbf{r_1}, \mathbf{r_2}} = 0 \, , \; \braket{\mathbf{r} | \mathbf{r'}} = \delta(\mathbf{r}-\mathbf{r'}) \, .
+\] \\
+
+Consider an operator defined by \[
+{\hat{\psi}}^\dag (\mathbf{r}) = \sum_{n=0}^{\infty} \frac{1}{n!} \int d\mathbf{r_1} \cdots d\mathbf{r_n} \ket{\mathbf{r}, \mathbf{r_1}, \ldots ,\mathbf{r_n}} \bra{\mathbf{r_1}, \ldots ,\mathbf{r_n}}
+\] and observe that
+\begin{align*}
+    {\hat{\psi}}^\dag (\mathbf{r}) \ket{\mathbf{r_1}, \ldots ,\mathbf{r_n}} 
+    &= \sum_{m=0}^{\infty} \frac{1}{m!} \int d\mathbf{r'_1} \cdots d\mathbf{r'_m}  \ket{\mathbf{r}, \mathbf{r'_1}, \ldots ,\mathbf{r'_n}} \braket{\mathbf{r'_1}, \ldots ,\mathbf{r'_m} | \mathbf{r_1}, \ldots ,\mathbf{r_n}} \\
+    &= \sum_{m=0}^{\infty} \frac{1}{m!} \int d\mathbf{r'_1} \cdots d\mathbf{r'_m} \ket{\mathbf{r}, \mathbf{r'_1}, \ldots ,\mathbf{r'_m}} \delta_{mn} \braket{\mathbf{r'_1}, \ldots ,\mathbf{r'_n} | \mathbf{r_1}, \ldots ,\mathbf{r_n}} \\
+    \cdots
+\end{align*} 
+Since the ${\hat{\psi}}^\dag (\mathbf{r})$ appends a state to the original state with an additional particle, we call this operator a "creation operator". Note that \[
+\ket{\mathbf{r_1}, \ldots ,\mathbf{r_n}} = {\hat{\psi}}^\dag (\mathbf{r_1}) \ket{\mathbf{r_2}, \ldots ,\mathbf{r_n}} = {\hat{\psi}}^\dag (\mathbf{r_1}) {\hat{\psi}}^\dag (\mathbf{r_2}) \ket{\mathbf{r_3}, \ldots ,\mathbf{r_n}} = \cdots = {\hat{\psi}}^\dag (\mathbf{r_1}) \cdots {\hat{\psi}}^\dag (\mathbf{r_n}) \ket{\mathbf{0}} \,.
+\] Hence, every state can be expressed by acting creation operators of each particle to the vacuum state ket vector. \\
+
+Let us take the hermitian conjugate to the creation operator. \[
+\hat{\psi} (\mathbf{r}) = \sum_{n=0}^{\infty} \frac{1}{n!} \int d\mathbf{r_1} \cdots d\mathbf{r_n} \ket{\mathbf{r_1}, \ldots ,\mathbf{r_n}} \bra{\mathbf{r}, \mathbf{r_1}, \ldots ,\mathbf{r_n}}
+\] Since $\hat{\psi} (\mathbf{r})$ does not incorporate the vacuum state $\ket{\mathbf{0}}$ itself, it is axiomatic that \[
+\hat{\psi}(\mathbf{r})\ket{\mathbf{0}} = 0 \,.
+\] In general,
+\begin{align*}
+    \hat{\psi}(\mathrm{r}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}} &= {} \\
+    &= \cdots \\
+    &= \sum_{i=1}^{n} \delta(\mathbf{r}-\mathbf{r_i}) \ket{\mathbf{r_1} \ldots \mathbf{r_{i-1}} \mathbf{r_{i+1}} \ldots \mathbf{r_n}}
+\end{align*}
+Since the ${\hat{\psi}} (\mathbf{r})$ decreases the dimension of the corresponding ket vectors by 1 (i.e. the number of particles : $n \rightarrow n-1$), we call this operator an "annihilation operator". \\
+
+Let us derive commutation relations. First of all, observe \[
+    {\hat{\psi}}^\dag (\mathbf{r}) {\hat{\psi}}^\dag (\mathbf{r'}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}} 
+    = \ket{\mathbf{r} \, \mathbf{r'} \, \mathbf{r_1} \ldots \mathbf{r_n}} 
+    = \ket{\mathbf{r'} \, \mathbf{r} \, \mathbf{r_1} \ldots \mathbf{r_n}}
+    = {\hat{\psi}}^\dag (\mathbf{r'}) {\hat{\psi}}^\dag (\mathbf{r}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}}
+\] \[
+    \Rightarrow \quad \left[ {\hat{\psi}}^\dag (\mathbf{r}) {\hat{\psi}}^\dag (\mathbf{r'}) - {\hat{\psi}}^\dag (\mathbf{r'}) {\hat{\psi}}^\dag (\mathbf{r}) \right] \ket{\mathbf{r_1} \ldots \mathbf{r_n}} = 0  
+\] where the second equality comes from the (2.1.3) and the completeness of eigenbasis guarantees \[
+[ {\hat{\psi}}^\dag (\mathbf{r}), {\hat{\psi}}^\dag (\mathbf{r'}) ] = 0 \, .
+\]
+By taking the Hermitian adjoint, we obtain \[
+[ {\hat{\psi}} (\mathbf{r}) , {\hat{\psi}} (\mathbf{r'}) ] = 0 \, .
+\] Any creation and annihilation operators do commute with other creation and annihilation operators, respectively.
+
+Secondly, so as to derive the commutation relation between a creation operator and an annihilation operator, consider
+\begin{align*}
+    {\hat{\psi}} (\mathbf{r}) {\hat{\psi}}^\dag (\mathbf{r'}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}} &= {\hat{\psi}} (\mathbf{r}) \ket{\mathbf{r'} \, \mathbf{r_1} \ldots \mathbf{r_n}} \\ 
+    &= \delta(\mathbf{r}-\mathbf{r'}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}} + \sum_{i=1}^{n} \delta(\mathbf{r}-\mathbf{r_i}) \ket{\mathbf{r'} \, \mathbf{r_1} \ldots \mathbf{r_{i-1}} \mathbf{r_{i+1}} \ldots \mathbf{r_n}}
+\end{align*}
+and
+\begin{align*}
+    {\hat{\psi}}^\dag (\mathbf{r'}) {\hat{\psi}} (\mathbf{r}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}} 
+    &= {\hat{\psi}}^\dag (\mathbf{r'}) 
+       \sum_{i=1}^{n} \delta(\mathbf{r}-\mathbf{r_i}) \ket{\mathbf{r_1} \ldots \mathbf{r_{i-1}} \mathbf{r_{i+1}} \ldots \mathbf{r_n}} \\ 
+    &= \sum_{i=1}^{n} \delta(\mathbf{r}-\mathbf{r_i}) \ket{\mathbf{r'} \, \mathbf{r_1} \ldots \mathbf{r_{i-1}} \mathbf{r_{i+1}} \ldots \mathbf{r_n}} \, . \qquad \qquad 
+\end{align*}
+Subtracting two equations above, we obtain \[
+    \left[ {\hat{\psi}} (\mathbf{r}) {\hat{\psi}}^\dag (\mathbf{r'}) - {\hat{\psi}}^\dag (\mathbf{r'}) {\hat{\psi}} (\mathbf{r}) \right] \ket{\mathbf{r_1} \ldots \mathbf{r_n}} = \delta(\mathbf{r}-\mathbf{r'}) \ket{\mathbf{r_1} \ldots \mathbf{r_n}}    
+\] and therefore \[
+[ {\hat{\psi}} (\mathbf{r}), {\hat{\psi}}^\dag (\mathbf{r'}) ]= \delta(\mathbf{r}-\mathbf{r'}) \, .
+\] These are the fundamental commutation relations of bosonic field operators. \\
+
+In summary, for bosonic many-particle systems, all we need to keep in mind from now onwards are only
+\begin{align*}
+    & \ket{\mathbf{r_1} \ldots \mathbf{r_n}} = {\hat{\psi}}^\dag (\mathbf{r_1}) \cdots {\hat{\psi}}^\dag (\mathbf{r_n}) \ket{\mathbf{0}} \\ \\
+    & \hat{\psi}(\mathbf{r})\ket{\mathbf{0}} = 0 \\ \\
+    & [ {\hat{\psi}}^{\dag} (\mathbf{r}) , {\hat{\psi}}^{\dag} (\mathbf{r'}) ] = 0 = [ {\hat{\psi}} (\mathbf{r}) , {\hat{\psi}} (\mathbf{r'}) ] \\ \\
+    & [ {\hat{\psi}} (\mathbf{r}), {\hat{\psi}}^\dag (\mathbf{r'}) ]= \delta(\mathbf{r}-\mathbf{r'})
+\end{align*}
+and all the other properties between bosonic field operators or state vectors can be deduced from these four fundamental properties without taking into account the antecedent complex definitions of bosonic field operators in forms of explicit integrals. \\ \\
+
+
+
+
+
+  
+</body>
