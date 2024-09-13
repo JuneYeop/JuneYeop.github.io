@@ -12,7 +12,7 @@ categories:
 
 comments: true
 
-published : true
+published : false
 ---
 
 <https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/graduation.pdf>
