@@ -5,7 +5,7 @@ permalink: /cv/
 author_profile: true
 sidebar:
   nav: "docs"
-share : true
+share : false
 ---
 
 <https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/cv_application.pdf>
