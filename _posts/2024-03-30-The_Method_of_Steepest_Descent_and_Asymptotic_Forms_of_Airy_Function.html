@@ -50,9 +50,9 @@ categories:
   function of a linear potential. Its asymptotic forms are particularly significant 
   in the WKB approximation because this approximation technique demands understanding 
   the limiting behaviors of the Airy function. Despite their importance, detailed 
-  derivations of these asymptotic forms are seldom discussed in textbooks. <br/>
+  derivations of these asymptotic forms are seldom discussed in textbooks. <br/><br/>
   
-  This paper bridges this gap by utilizing the method of steepest descent, a powerful 
+  &ensp; This paper bridges this gap by utilizing the method of steepest descent, a powerful 
   integral approximation technique, to derive the asymptotic forms of the Airy function 
   of the first kind.<br /><br />
 </p>
@@ -164,35 +164,32 @@ categories:
   This alludes us that we can set the $C$ however we want. Before proceeding, therefore, 
   we should agonize for a while what contour will give us the most reasonable consequence.
   
-<ul><li>
+<ul style="list-style-type: none"><li>
   <p><span>
-    <center><strong>Why are we specifically working with the saddle point?</strong>
-  </span></center></p>
-  <ul style="list-style-type: none">
-<li><p><span>
-  If $z_0$ is any point other than the saddle point, the series expansion of $w_t$ contains a non-zero linear term in $r$ (i.e. $z-z_0$) because $ \left.\frac{\partial u}{\partial z}\right|_{z_0} $ doesn't vanish this time. Then, it is almost impossible to find a contour that passes through $z_0$ making $\vert F \vert = e^u $ decreases and keeping the phase term of $F$ (i.e. $e^{iv}$) invariant, as $z$ departs from $z_0$. This is why we are dealing with the saddle point. Thus, it is natural to set $z_0$ to the saddle point. 
-</span></p></li>
-</ul>
-
-<ul><li>
-  <p><span>
-    <strong>What is the most adequate integration contour?</strong>
+    <center><strong>Why are we specifically working with the saddle point?</strong></center>
   </span></p>
   <ul style="list-style-type: none">
-<li><p><span>
-  We should pick a contour which passes through the saddle point $z_0$ along the directions that $u$ decreases most rapidly as $z$ leaves from $z_0$. Observe that this contour is exactly the level line of $v_t$ (see the fig.1). Hence, $|F|=exp(u_t)$ decreases most rapidly along this contour keeping the phase contribution of $F$, $exp(i v_t)$, constant.
-</span></p></li>
-</ul>
-
-<ul><li>
+  <li> <p><span>If $z_0$ is any point other than the saddle point, the series expansion of $w_t$ contains a non-zero linear term in $r$ (i.e. $z-z_0$) because $ \left.\frac{\partial u}{\partial z}\right|_{z_0} $ doesn't vanish this time. Then, it is almost impossible to find a contour that passes through $z_0$ making $\vert F \vert = e^u $ decreases and keeping the phase term of $F$ (i.e. $e^{iv}$) invariant, as $z$ departs from $z_0$. This is why we are dealing with the saddle point. Thus, it is natural to set $z_0$ to the saddle point. </span></p> </li>
+  </ul>
+</li></ul>
+    
+<ul style="list-style-type: none"><li>
   <p><span>
-    <strong>Evaluation of the integral</strong>
+    <center><strong>What is the most adequate integration contour?</strong></center>
   </span></p>
   <ul style="list-style-type: none">
-<li><p><span>
-  From now onwards, we assume that ${\vert w''_0 \vert}$ (the measure of the rate of decrease in $|F|$ as we leave $z_0$) is large enough that the value of the integral has already been attained only from the vicinity of the saddle point. (i.e. The significant contribution to the integral comes from the tiny segment of the contour near the saddle point where $R\ll1$.)
-</span></p></li>
-</ul>
+  <li> <p><span>We should pick a contour which passes through the saddle point $z_0$ along the directions that $u$ decreases most rapidly as $z$ leaves from $z_0$. Observe that this contour is exactly the level line of $v_t$ (see the fig.1). Hence, $|F|=exp(u_t)$ decreases most rapidly along this contour keeping the phase contribution of $F$, $exp(i v_t)$, constant. </span></p> </li>
+  </ul>
+</li></ul>
+
+<ul style="list-style-type: none"><li>
+  <p><span>
+    <center><strong>Evaluation of the integral</strong></center>
+  </span></p>
+  <ul style="list-style-type: none">
+  <li> <p><span>From now onwards, we assume that ${\vert w''_0 \vert}$ (the measure of the rate of decrease in $|F|$ as we leave $z_0$) is large enough that the value of the integral has already been attained only from the vicinity of the saddle point. (i.e. The significant contribution to the integral comes from the tiny segment of the contour near the saddle point where $R\ll1$.) </span></p> </li>
+  </ul>
+</li></ul>
     
 <p>
   Let us split the integration contour $C$ as below. 
@@ -366,7 +363,8 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
   <li><p><span> $w''_t (z_0) = 2\sqrt{t} $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = 0 $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = \pi / 2 \, , \; 3\pi / 2 $ as $z$ leaves $z_0$. </span></p></li>
-</ul></li>
+  </ul>
+</li></ul>
   
 <ul><li>
   <p><span>For $ z_0 = \sqrt{t} $</span></p>
@@ -374,8 +372,8 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
   <li><p><span> $w''_t (z_0) = -2\sqrt{t} $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = \pi $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = 0 \, , \; \pi $ as $z$ leaves $z_0$. </span></p></li> 
-</ul></li>
-</ul><br/>
+  </ul>
+</li></ul> <br/>
   
 <p>
   Let us definitize the integration contour in an explicit algebraic form. To do so, we should find the level lines of $v_t$ which pass through each saddle point of $w_t$. <br />
@@ -463,7 +461,8 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
   <li><p><span> $ w''_t (z_0) = 2i\sqrt{|t|} $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = \frac{\pi}{2}$ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = \pi / 4 \, , \; 5\pi / 4 $ as $z$ leaves $z_0$. </span></p></li>
-</ul></li>
+  </ul>
+</li></ul>
   
 <ul><li>
   <p><span>For $ z_0 = i\sqrt{|t|} $</span></p>
@@ -471,8 +470,8 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
   <li><p><span> $w''_t (z_0) = -2i\sqrt{|t|} $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = -\frac{\pi}{2} $ </span></p></li>
   <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = 3\pi / 4 \, , \; 7\pi / 4 $ as $z$ leaves $z_0$. </span></p></li> 
-</ul></li>
-</ul><br/>
+  </ul>
+</li></ul><br/>
   
 <p>
   For $z_0 = i\sqrt{|t|}$, the level line of $v_t$ that passes through this point is give by 
