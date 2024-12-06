@@ -8,20 +8,20 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: 15px;
+  font-size: 16px;
 
   /* tab의 size에 따른 글씨 크기 설정 */
   
   @include breakpoint($medium) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   @include breakpoint($large) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   @include breakpoint($x-large) {
-    font-size: 15px;
+    font-size: 16px;
   }
    /* none : 화면의 크키게 따라 크기를 조정하지 않음을 명시 */
   -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
