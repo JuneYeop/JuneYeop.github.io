@@ -1,5 +1,5 @@
 ---
-title: "Travel"
+title: "Daily Life"
 layout: archive
 permalink: categories/life
 author_profile: true
