@@ -1,5 +1,5 @@
 ---
-date    : 2024-03-30
+date    : 2023-09-21
 
 title   : "The Method of Steepest Descent and Asymptotic Forms of Airy Function"
 excerpt : "The most powerful tool when obtaining an asymptotic approximation of a real-valued function"
@@ -45,239 +45,274 @@ categories:
 
 <body>
 <p> &ensp; <br/>
-&ensp; If you have read some textbooks or have taken any lectures pertaining 
-to the WKB approximation while studying quantum physics in undergraduate level, 
-then you might, with high probability, be irritated from the situation that both 
-textbooks and professors just apprise us the formulae of asymptotic forms of Airy 
-function without any sophisticated explanations. (Of course I know it is inevitable 
-bcz of deficient space of textbooks and insufficient time for explaning every 
-underlying mathematics in lectures. Hahaha...). Nevertheless, if you are a student 
-who majors in theoretical physics, then you are obliged to ask a question "WHY?" 
-albeit nobody tells you any underlying reasons!!!<br /><br/>
-&ensp; Hence, in this post, we are going to derive an approximation method
-which is called <em>The Method of Steepest Descent (or Saddle-Point
-Approximation)</em>, and will apply it to Airy function in purpose to
-obtain its asymptotic forms.<br /><br />
+  &ensp; The Airy function is crucial to quantum physics as it represents the wave 
+  function of a linear potential. Its asymptotic forms are particularly significant 
+  in the WKB approximation because this approximation technique demands understanding 
+  the limiting behaviors of the Airy function. Despite their importance, detailed 
+  derivations of these asymptotic forms are seldom discussed in textbooks. 
+  This paper bridges this gap by utilizing the method of steepest descent, a powerful 
+  integral approximation technique, to derive the asymptotic forms of the Airy function 
+  of the first kind.<br /><br />
 </p>
-<h2 class="unnumbered"
-id="the-method-of-steepest-descent-saddle-point-approximation">1. The
-Method of Steepest Descent (Saddle-Point Approximation)</h2><br/>
+  
+<h2 class="unnumbered" id="the-method-of-steepest-descent-saddle-point-approximation">
+  1. The Method of Steepest Descent </h2><br/>
 <div class="center">
-<p style="text-align: center;"> <em>" How do we obtain an approximation form of a real-valued function $f(t)$ defined on a real domain? "</em> </p><br/>
+  <p style="text-align: center;"> 
+    <em>" How do we obtain an asymptotic form of a real-valued function $f:\mathbb{R}\to\mathbb{R}$? "</em> 
+  </p><br/>
 </div>
-<p>Let us write the real-valued function $f(t)$ in a form of a contour integral
-along the contour $C$ <span
-class="math display">\[f(t) = \int_{C} dz\, F(z,t)\]</span> where $F$ is an analytic function and $\forall t \in \mathbb{R}$.<br /><br/>
-Since $F$ is analytic and an
-exponential function preserves holomorphism, it can be expressed in
-terms of an exponential function whose exponent is an analytic function.
-i.e. <span class="math display">\[F(z,t) = e^{w(z,t)}\]</span> where
-<span class="math display">\[w(x,y) = u(x,y) + i \, v(x,y)  \quad
-\forall x,y \in \mathbb{R} \;\;.\]</span><br /><br/>
-<strong><U>Lemma.</U> <em>Both $u$ and $v$ cannot have extremum if $w = u + i\,v$ is
-analytic.</em></strong><br /><br/>
-<em><strong>proof.</strong></em> Assume that $u(x,y)$
-has a local minimum(maximum) at $(x,y) =
-(x_0, y_0)$. Then the Hessian matrix of $u(x,y)$ at $(x_0, y_0)$ should be
-positively(negatively) definite, and this implies $\left.\frac{\partial^2 u}{\partial
-x^2}\right|_{x_0,y_0}$ and $\left.\frac{\partial^2 u}{\partial
-y^2}\right|_{x_0,y_0}$ have same signs. (If not, then the
-determinant of Hessian matrix becomes negative and this violates the
-condition of positively(negatively) definite Hessian matrix since
-determinant should be positive in both cases.) Since $w(x,y)$ is analytic, however, $u(x,y)$ must satisfy ${\nabla}^2 u(x,y) = 0$. This implies $\left.\frac{\partial^2 u}{\partial
-x^2}\right|_{x_0,y_0}$ and $\left.\frac{\partial^2 u}{\partial
-y^2}\right|_{x_0,y_0}$ cannot have same signs, and we get a
-contradiction. By applying the identical procedure to $v(x,y)$, we may show that there is NO
-extremum for $u$ and $v$ if $w = u +
-i v$ is analytic.$\quad
-\blacksquare$ <br /><br /><br/>
-Although $u(x,y)$ and $v(x,y)$ cannot have extremum, both can
-have a saddle point(say $z_0$), and
-this point has a crucial rule for developing this methodology.<br />
-<br />
-Let us expand $w(z,t)$ near the saddle point $z=z_0$ up to second order of $z$. <span
-class="math display">\[w(z,t) = w(z_0,t) + \frac{1}{2}
-\left.\frac{\partial^2 w}{\partial z^2}\right|_{z_0} (z-z_0)^2 +
-\cdots \]</span> Note that $\left.\frac{dw}{dz}\right|_{z_0}$ is vanished since $z_0$ is a saddle point.<br /><br/>
-For convenience, let us introduce some abbreviations, and let’s denote
-the phases explicitly. <span class="math display">\[w(z_0,t) = w_0 , \quad \left.\frac{\partial^2
-w}{\partial z^2}\right|_{z_0} = w&#39;&#39;_0 =
-\left|{w&#39;&#39;_0}\right| e^{i\alpha} , \quad z-z_0 = re^{i\theta}
-\;\;.\]</span><br />
-Then we can rewrite the $w(z,t)$ as
-<span class="math display">\[\begin{aligned}
-    w(z,t) &amp;= w_0 + \frac{1}{2}\left|w&#39;&#39;_0\right|
-e^{i\alpha} (r e^{i\theta})^2 + \mathrm{O}(r^3) \\ &amp;= w_0 +
-\frac{1}{2}\left|w&#39;&#39;_0\right| r^2 e^{ i(\alpha + 2\theta) } +
-\mathrm{O}(r^3) \\ &amp;= w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right|
-r^2 \left[ \cos(\alpha + 2\theta) + i \, \sin(\alpha + 2\theta) \right]
-+ \mathrm{O}(r^3) \\ &amp;\approx \left[ w_0 + \frac{1}{2}
-\left|w&#39;&#39;_0\right| r^2 \cos(\alpha + 2\theta) \right] + i \,
-\left[ \frac{1}{2} \left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)
-\right] \;\;.
-\end{aligned}\]</span><br />
-Remember that we have defined $w(z,t)$ by $w =
-u + i v$. Hence we obtain <span
-class="math display">\[\begin{cases}
-    \quad u(z,t) = w_0 + \frac{1}{2} \left|w&#39;&#39;_0\right| r^2
-\cos(\alpha + 2\theta)  \\ {} \\  \quad  v(z,t) = \frac{1}{2}
-\left|w&#39;&#39;_0\right| r^2 \sin(\alpha + 2\theta)  
-\end{cases}\]</span><br /><br/>
-Consider the situation in which $z$
-departs from $z_0$ (i.e. as r
-increases from 0).<br /><br/>
-$\mathbf{\cdot}$ For $u(z,t)$<br /><br/>
-$\qquad$ i) $u$ will increase most rapidly when <span
-class="math display">\[\cos(\alpha + 2\theta) = 1 \quad \Rightarrow
-\quad \alpha + 2\theta = 2n\pi \quad \Rightarrow \quad \theta =
--\frac{\alpha}{2} +n\pi\]</span> $\qquad$ ii) $u$ will decrease most rapidly when <span
-class="math display">\[\cos(\alpha + 2\theta) = -1 \quad \Rightarrow
-\quad \alpha + 2\theta = (2n+1)\pi \quad \Rightarrow \quad \theta =
--\frac{\alpha}{2} + \left(n+\frac{1}{2}\right)\pi\]</span> $\qquad$ iii) $u$ will be invariant when <span
-class="math display">\[\cos(\alpha + 2\theta) = 0 \quad \Rightarrow
-\quad \alpha + 2\theta = \left(n+\frac{1}{2}\right)\pi \quad \Rightarrow
-\quad \theta = -\frac{\alpha}{2} +
-\left(\frac{n}{2}+\frac{1}{4}\right)\pi\]</span></p>
-<p>$\mathbf{\cdot}$ For $v(z,t)$<br /><br/>
-$\qquad$ i) $v$ will increase most rapidly when <span
-class="math display">\[\sin(\alpha + 2\theta) = 1 \quad \Rightarrow
-\quad \alpha + 2\theta = \left(2n+\frac{1}{2}\right)\pi \quad
-\Rightarrow \quad \theta = -\frac{\alpha}{2}
-+\left(n+\frac{1}{4}\right)\pi\]</span> $\qquad$ ii) $v$ will decrease most rapidly when <span
-class="math display">\[\sin(\alpha + 2\theta) = -1 \quad \Rightarrow
-\quad \alpha + 2\theta = \left(2n+\frac{3}{2}\right)\pi \quad
-\Rightarrow \quad \theta = -\frac{\alpha}{2} +
-\left(n+\frac{3}{4}\right)\pi\]</span> $\qquad$ iii) $v$ will be invariant when <span
-class="math display">\[\sin(\alpha + 2\theta) = 0 \quad \Rightarrow
-\quad \alpha + 2\theta = n\pi \quad \Rightarrow \quad \theta =
--\frac{\alpha}{2} + \frac{n\pi}{2}\]</span><br />
-<div class = "container">
-<img
-  src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig1.png?raw=true"
-  alt="saddle_point_steepest_descent_Airy_fig1"
-  width="95%" />
-  <figcaption> Fig 1. The arrows indicate the directions in which u and v increase. </figcaption>
-</div> <br /><br /><br/>
-Let us discuss about some crucial notions on performing the
-integral.<br/></p>
-<ul>
-<li><p><span><strong>How do we choose an optimum integration
-contour?</strong></span></p>
-<ul style="list-style-type: none">
-<li><p><span>We need to choose a contour that passes through the saddle
-point $z_0$ in the directions of
-maximum rate of decrease in $u$ with
-distance from $z_0$, and therefore
-also in $\vert F \vert$ (since $\vert F \vert = e^{u}$). These directions
-are level lines of $v(x,y)$, so the
-phase factor of $F$ (i.e. $e^{iv}$) will not change as we leave tha
-saddle point. If we chose $z_0$ to be
-a point other than a saddle point, then the expansion of $w$ (eqn. (1)) would have contained a
-non-zero linear term in $r$ (since
-$\left.\frac{\partial u}{\partial
-z}\right|_{z_0}$ does not vanish.), and it might be impossible
-to construct a curve which passes through $z_0$ that makes $\vert F \vert = e^u$ to decrease and keeps
-the phase of F (i.e. $e^{iv}$)
-constant, as $z$ departs from $z_0$. </span></p></li>
-</ul></li>
-<li><p><strong>Evaluation of the integral</strong></p>
-<ul style="list-style-type: none">
-<li><p><span> Let us assume that ${\vert
-w&#39;&#39;_0 \vert}$, the measure of the rate of decrease in
-$\vert F \vert$ as we leave $z_0$, is large enough that the bulk of the
-value of the integral has already been attained for small $R$. (i.e. The significant contribution to
-the integral only comes from the immediate vicinity of the saddle point
-$z_0$.) </span></p></li>
-</ul></li>
-</ul> <br/><br/>
-<p>Split the integral as below. <span
-class="math display">\[\begin{aligned}
-f(t) \;=\; \int_{C} dz\,F(z,t) \; &amp;= \; \int_{\text{near the saddle
-point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t)
-\\ &amp;{} \\ &amp;= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t)
-\;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\;
-\int_{\text{error contribution}} dz \, F(z,t)
-\end{aligned}\]</span></p>
-<p>Near the saddle point, $z = z_0 + r e^{i\theta}$ gives $dz = e^{i\theta} dr$ since we assumed 
-that "the significant contribution to the integral only comes from the immediate vicinity of the saddle point" and
-this allows us to approximate the integration contour be a straight line right near the saddle point without making significant error. Hence,
-<span class="math display">\[f(t) \;=\; \int_{0}^{R} dr \, r^2
-e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0 \vert}
-e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2
-e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w&#39;&#39;_0
-\vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error
-term}\]</span> where $\bar{\theta} = \theta -
-\pi$.<br /><br/>
-Since we’ve set the integration contour to satisfy $e^{i(\alpha + 2\theta)} = e^{i(2n+1)\pi} =
--1$ right near the saddle point, <span class="math display">\[\begin{aligned}
-f(t) \;&amp;=\; e^{w_0 + i\theta} \int_{0}^{R} dr \, r^2 e^{ -
-\frac{1}{2} {\vert w&#39;&#39;_0 \vert}^2 } \;+\; e^{w_0 +
-i(\theta-\pi)} \int_{R}^{0} dr \, r^2 e^{ - \frac{1}{2} {\vert
-w&#39;&#39;_0 \vert} } \;+\; \text{error term} \\ &amp;=\; 2 \, e^{w_0 +
-i\theta} \int_{0}^{R} dr\, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert}
-r^2 } \;+\; \text{error term} \;\;.
-\end{aligned}\]</span></p>
-<p>Note that our assumption enables us to replace $R \to \infty$ without making any
-significant error.</p>
-<p><span class="math display">\[f(t) \;\approx \; 2\, e^{w_0 + i\theta}
-\int_{0}^{\infty} dr \, e^{-\frac{1}{2} {\vert w&#39;&#39;_0 \vert} r^2}
-\;=\; 2\,e^{w_0 + i\theta} \frac{1}{2} \sqrt{ \frac{2\pi}{\vert
-w&#39;&#39;_0 \vert} } \;=\; e^{w(z_0,t)} e^{i\theta} \sqrt{
-\frac{2\pi}{\vert{ w&#39;&#39;(z_0,t) \vert} } }\]</span><br />
-Therefore, for $\vert t \vert \to
-\infty$, we can approximate the $f(t)$ by <span class="math display">\[\therefore \qquad f(t) \overset{|t| \to
-\infty}{\approx} F(z_0,t) \, e^{i\theta} \sqrt{ \frac{2\pi}{\vert
-w&#39;&#39;(z_0,t) \vert} }\]</span> where $z_0$ is a saddle point of $w(z,t)$ and <span class="math display">\[\theta = -\frac{1}{2}
-\mathrm{arg}{\left[w&#39;&#39;(z_0,t)\right]} + { \left( { \frac{\pi}{2}
-\text{ or } \frac{3\pi}{2} } \right)\,. }\]</span> Choice of $\theta$ (which affects only the sign of
-the final result) is determined from the sense in which the contour
-passes through the saddle point $z_0$.<br />
+
+<p>
+  Write a real-valued function $f(t)$ be in a form of a contour integral, along the contour $C$, by 
+  <span class="math display">
+    \[ f(t) = \int_{C} dz\, F_t (z) \]
+  </span> where $F_t$ is an analytic function for each ${t} \in \mathbb{R}$.<br /><br/>
+  Since $F_t$ is analytic and an exponential function preserves holomorphicity, 
+  $F_t$ can be rewritten by 
+  <span class="math display">
+    \[ F_t (z) = e^{w_t (z)} \]
+  </span> where
+  <span class="math display">
+    \[w_t (x,y) = u_t (x,y) + i \, v_t (x,y)  \quad \forall x,y \in \mathbb{R}\]
+  </span> is also analytic. <br /><br/>
+  
+  Observe that neither $u_t$ nor $v_t$ can have extremum. <br /><br/> 
+  
+  <strong>
+    <U>Lemma.</U> <em>Neither $u_t$ nor $v_t$ can have extremum if $w_t = u_t + i\,v_t$ is analytic.</em>
+  </strong> <br /><br/>
+  <em><strong>proof.</strong></em> Assume that $u_t (x,y)$ becomes locally minimum(maximum) at $(x_0, y_0)$. 
+  Then Hessian matrix of $u_t$ at $(x_0, y_0)$ should be positively(negatively) definite. 
+  This implies $\left.\frac{\partial^2 u_t}{\partial x^2}\right|_{x_0,y_0}$ and 
+  $\left.\frac{\partial^2 u_t}{\partial y^2}\right|_{x_0,y_0}$ have same signs. 
+  (If not, the determinant of Hessian matrix becomes negative and this violates the 
+  condition of positively(negatively) definite.) Since $w_t (x,y)$ is analytic, however, 
+  $u_t (x,y)$ must satisfy $ {\nabla}^2 u_t (x,y) = 0 $. This implies 
+  $\left.\frac{\partial^2 u_t}{\partial x^2}\right|_{x_0,y_0}$ and 
+  $\left.\frac{\partial^2 u_t}{\partial y^2}\right|_{x_0,y_0}$ cannot have same signs and we get 
+  a contradiction! Applying the same logic to $v_t (x,y)$, we can check $v_t$ has no extremum. 
+  $\blacksquare$ <br /><br /><br/>
+
+  Although $u_t (x,y)$ and $v_t (x,y)$ cannot have any extremum, both can have a saddle point.<br /><br />
+  
+  Let us expand $w_t (z)$ near the saddle point, say $z=z_0$, up to second order of $z$. 
+  <span class="math display">
+    \[w_t (z) = w_t (z_0) + \frac{1}{2} \left.\frac{\partial^2 w_t}{\partial z^2}\right|_{z_0} (z-z_0)^2 + \cdots  \tag{1} \]
+  </span> Note that $ \left.\frac{dw}{dz}\right|_{z_0} $ vanished since $z_0$ is a saddle point. 
+  Moreover, the holomorphicity of $w_t(z)$ assures no existence of singular terms.<br /><br/>
+
+  For convenience, let us denote 
+  <span class="math display">
+    \[w_t (z_0) = w_0 , \quad \left.\frac{\partial^2 w}{\partial z^2}\right|_{z_0} = w''_0 = \left|{w''_0}\right| e^{i\alpha} , \quad z-z_0 = re^{i\theta} \;\;.\]
+  </span><br />
+  Then we can rewrite the $w_t (z)$ as
+  <span class="math display">\[
+    \begin{aligned} 
+    w_t (z) &= w_0 + \frac{1}{2}\left|w''_0\right| e^{i\alpha} (r e^{i\theta})^2 + \mathrm{O}(r^3) \\ &= w_0 + \frac{1}{2}\left|w''_0\right| r^2 e^{ i(\alpha + 2\theta) } + \mathrm{O}(r^3) \\ &= w_0 + \frac{1}{2} \left|w''_0\right| r^2 \left[ \cos(\alpha + 2\theta) + i \, \sin(\alpha + 2\theta) \right] + \mathrm{O}(r^3) \\ &\approx \left[ w_0 + \frac{1}{2} \left|w''_0\right| r^2 \cos(\alpha + 2\theta) \right] + i \, \left[ \frac{1}{2} \left|w''_0\right| r^2 \sin(\alpha + 2\theta) \right] \;. 
+    \end{aligned}\]
+  </span><br />
+
+  Since we defined $w_t (z)$ by $ w_t = u_t + i v_t $, we obtain 
+  <span class="math display">
+    \[u_t (z) = w_0 + \frac{1}{2} \left|w''_0\right| r^2 \cos(\alpha + 2\theta)\]
+  </span> and 
+  <span class="math display">
+    \[v_t (z) = \frac{1}{2} \left|w''_0\right| r^2 \sin(\alpha + 2\theta) \;.\]
+  </span><br/><br/>
+  
+  Consider a situation that $z$ leaves from $z_0$ (i.e. $r$ increases from 0) and observe the followings: <br /><br/>
+  $\mathbf{\cdot}$ For $u_t (z)$$<br /><br/>
+  $\qquad$ i) $u_t$ increases most rapidly when 
+  <span class="math display">\[
+    \cos(\alpha + 2\theta) = 1 \quad \Rightarrow \quad \alpha + 2\theta = 2n\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} +n\pi \; .
+  \]</span> 
+  $\qquad$ ii) $u_t$ decreases most rapidly when
+  <span class="math display">\[
+    \cos(\alpha + 2\theta) = -1 \quad \Rightarrow \quad \alpha + 2\theta = (2n+1)\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} + \left(n+\frac{1}{2}\right)\pi \; .
+  \]</span> 
+  $\qquad$ iii) $u_t$ doesn't change when 
+  <span class="math display">\[
+    \cos(\alpha + 2\theta) = 0 \quad \Rightarrow \quad \alpha + 2\theta = \left(n+\frac{1}{2}\right)\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} + \left(\frac{n}{2}+\frac{1}{4}\right)\pi \; .
+  \]</span><br/><br/>
+  
+  $\mathbf{\cdot}$ For $v_t (z)$<br /><br/>
+  $\qquad$ i) $v_t$ increases most rapidly when 
+  <span class="math display">
+    \[ \sin(\alpha + 2\theta) = 1 \quad \Rightarrow \quad \alpha + 2\theta = \left(2n+\frac{1}{2}\right)\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} +\left(n+\frac{1}{4}\right)\pi \; . \]
+  </span> 
+  $\qquad$ ii) $v_t$ decreases most rapidly when 
+  <span class="math display">
+    \[ \sin(\alpha + 2\theta) = -1 \quad \Rightarrow \quad \alpha + 2\theta = \left(2n+\frac{3}{2}\right)\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} + \left(n+\frac{3}{4}\right)\pi \; . \]
+  </span> 
+  $\qquad$ iii) $v_t$ doesn't change when 
+  <span class="math display">
+    \[ \sin(\alpha + 2\theta) = 0 \quad \Rightarrow \quad \alpha + 2\theta = n\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} + \frac{n\pi}{2} \; . \]
+  </span><br />
+  
+  <div class = "container">
+  <img
+    src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig1.png?raw=true"
+    alt="saddle_point_steepest_descent_Airy_fig1"
+    width="95%" />
+    <figcaption> Fig 1. Each arrow's head points toward each direction of steepest increase of $u_t$ and $v_t$. </figcaption>
+  </div> <br /><br />
+
+  Keep in mind that we haven't imposed any restriction to the integration contour $C$. 
+  This alludes us that we can set the $C$ however we want. Before proceeding, therefore, 
+  we should agonize for a while what contour will give us the most reasonable consequence.
+  
+<ul><li>
+  <p><span>
+    <strong>Why are we specifically working with the saddle point?</strong>
+  </span></p>
+  <ul style="list-style-type: none">
+<li><p><span>
+  If $z_0$ is any point other than the saddle point, the series expansion of $w_t$ contains a non-zero linear term in $r$ (i.e. $z-z_0$) because $ \left.\frac{\partial u}{\partial z}\right|_{z_0} $ doesn't vanish this time. Then, it is almost impossible to find a contour that passes through $z_0$ making $\vert F \vert = e^u $ decreases and keeping the phase term of $F$ (i.e. $e^{iv}$) invariant, as $z$ departs from $z_0$. This is why we are dealing with the saddle point. Thus, it is natural to set $z_0$ to the saddle point. 
+</span></p></li>
+
+<ul><li>
+  <p><span>
+    <strong>What is the most adequate integration contour?</strong>
+  </span></p>
+  <ul style="list-style-type: none">
+<li><p><span>
+  We should pick a contour which passes through the saddle point $z_0$ along the directions that $u$ decreases most rapidly as $z$ leaves from $z_0$. Observe that this contour is exactly the level line of $v_t$ (see the fig.1). Hence, $|F|=exp(u_t)$ decreases most rapidly along this contour keeping the phase contribution of $F$, $exp(i v_t)$, constant.
+</span></p></li>
+
+<ul><li>
+  <p><span>
+    <strong>Evaluation of the integral</strong>
+  </span></p>
+  <ul style="list-style-type: none">
+<li><p><span>
+  From now onwards, we assume that ${\vert w''_0 \vert}$ (the measure of the rate of decrease in $|F|$ as we leave $z_0$) is large enough that the value of the integral has already been attained only from the vicinity of the saddle point. (i.e. The significant contribution to the integral comes from the tiny segment of the contour near the saddle point where $R\ll1$.)
+</span></p></li>
+    
+<p>
+  Let us split the integration contour $C$ as below. 
+  <span class="math display">
+    \[ \begin{aligned}
+        f(t) \; &=\; \int_{C} dz\,F(z,t) \; \\ &{} \\ &= \; \int_{\text{near the saddle point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t) \\ &{} \\ &= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t) \;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t) 
+        \end{aligned} \]
+  </span>
+</p>
+<p>
+  Because we assumed "the significant contribution to the integral only comes 
+  from the immediate vicinity of the saddle point", we can approximate the integration 
+  contour by a straight line penetrating through the saddle point, without making significant error. 
+  Since $ z = z_0 + r e^{i\theta} $ gives $ dz = e^{i\theta} dr $ and the angle $\theta$ is invariant 
+  as $z$ varies along the contour $C$ according to our 'straight-line approximation', we get
+  <span class="math display">
+    \[ f(t) \;=\; \int_{0}^{R} dr \, r^2 e^{i\theta} \exp{ \left( w_0 + \frac{1}{2} {\vert w''_0 \vert} e^{i(\alpha+2\theta)} \right)} \;+\; \int_{R}^{0} dr \, r^2 e^{i\bar{\theta}} \exp{ \left( w_0 + \frac{1}{2} {\vert w''_0 \vert} e^{i(\alpha+2\bar{\theta})} \right)} \;+\; \text{error term} \]
+  </span> where  $ \bar{\theta} = \theta - \pi$. <br /><br/>
+
+  Note that we set the integration contour to satisfy $ e^{i(\alpha + 2\theta)} = e^{i(2n+1)\pi} = -1 $ right near the saddle point. Thus, 
+  <span class="math display">
+    \[ 
+    \begin{aligned} 
+      f(t) \;&=\; e^{w_0 + i\theta} \int_{0}^{R} dr \, r^2 e^{ - \frac{1}{2} {\vert w''_0 \vert}^2 } \;+\; e^{w_0 + i(\theta-\pi)} \int_{R}^{0} dr \, r^2 e^{ - \frac{1}{2} {\vert w''_0 \vert} } \;+\; \text{error term} \\ &=\; 2 \, e^{w_0 + i\theta} \int_{0}^{R} dr\, e^{-\frac{1}{2} {\vert w''_0 \vert} r^2 } \;+\; \text{error term} \;\;.
+    \end{aligned}
+    \]
+  </span>
+</p>
+<p>Furthermore, since we assumed ${\vert w''_0 \vert}$ is large enough that only the neighborhood of the saddle point matters, we can set $ R \to \infty$ without making a significant error.</p>
+<p><span class="math display">
+  \[ 
+  f(t) \;\approx \; 2\, e^{w_0 + i\theta} \int_{0}^{\infty} dr \, e^{-\frac{1}{2} {\vert w''_0 \vert} r^2} \;=\; 2\,e^{w_0 + i\theta} \frac{1}{2} \sqrt{ \frac{2\pi}{\vert w''_0 \vert} } \;=\; e^{w_t (z_0)} e^{i\theta} \sqrt{ \frac{2\pi}{\vert{ w''_t (z_0) \vert} } }
+  \]
+</span><br />
+  
+Therefore, for the region $\vert t \vert \gg 1$, we can approximate $f(t)$ by 
+  <span class="math display">
+    \[
+      \therefore \qquad f(t) \;\overset{|t| \gg 1} {\approx} \; F_t (z_0) \, e^{i\theta} \sqrt{ \frac{2\pi}{\vert w''_t (z_0) \vert} } 
+    \]
+  </span> where $z_0$ is a saddle point of $w_t (z)$ and 
+  <span class="math display">
+    \[
+      \theta = -\frac{1}{2} \mathrm{arg}{\left[w''_t (z_0)\right]} + { \left( { \frac{\pi}{2} \text{ or } \frac{3\pi}{2} } \right)\,. \; } 
+    \]
+  </span> The choice of $\theta$ (which affects only the sign of the final result) depends only to the sense in which the contour $C$ passes through the saddle point $z_0$. $\; \blacksquare$ <br />
 <br />
 <br />
 <br /></p>
+
+    
 <p style="text-align: center;">
-<em>Let’s derive asymptotic forms of Airy function applying this
-approximation method!</em><br /><br/><br/>
+<em>Let's derive asymptotic forms of Airy function applying this approximation method!</em><br /><br/><br/>
 </p>
-<h2 class="unnumbered" id="the-asymptotic-form-of-airy-function">2. The
-Asymptotic Form of Airy Function</h2><br/>
-<p>To apply the saddle point approximation, first we need to express Airy function in a form of complex contour integral.<br /><br/>
-Consider a differential equation whose solutions are Airy functions.
-<span class="math display">\[\begin{aligned}
-    \frac{d^2 f}{d t^2} = t\, f(t)    \tag{1}
-\end{aligned}\]</span></p>
-<p>Let us write the solution $f(t)$
-in a form of <span class="math display">\[f(t) = \int_{C} dz \,
-h(z)\,e^{tz} \quad \forall z \in \mathbb{C}
-\;.    \tag{2}\]</span><br />
-By plugging (2) into (1), L.H.S. becomes <span
-class="math display">\[\frac{d^2 f}{d t^2} = \int_{C} dz \,
-h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;,\]</span>
-and by integrating by parts, R.H.S. becomes <span
-class="math display">\[t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} =
-\left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} - \int_{C}
-dz\,e^{tz}\frac{dh}{dz} \;.\]</span><br/><br/>
-In order to make sure the equality in eqn(1), we must set <span
-class="math display">\[\left[\, h(z)\,e^{tz} \,\right]_{\text{ends of }
-C} = 0 \;.\]</span> <br/>
-Accepting the constraint above, we can express $h(z)$ as <span class="math display">\[z^2
-h(z) = -\frac{dh}{dz} \quad \Rightarrow \quad h(z) = c \cdot
-e^{-\frac{1}{3}z^3} \; .\]</span><br />
-Since we’ve set the square bracket term to be annihilated, each end
-point of the integration contour $C$
-must satisfy <span class="math display">\[\exp{\left[ -\frac{1}{3}
-{z^3_\text{end}} + t\, z_{\text{end}} \right]} = 0 \;.\]</span><br />
-This condition implies <span
-class="math display">\[\mathrm{Re}{(z^3_{\text{end}})} &gt; 0 \qquad
-\text{and} \qquad \left| \, z_{\text{end}} \, \right| \to
-\infty\]</span> because $z^3$
-diverges much faster than $z$, as
-$|z|$ increases.<br /><br/>
-From $\mathrm{Re}{(z^3_{\text{end}})}&gt;0$, we
-obtain <span class="math display">\[\frac{2n\pi}{3} - \frac{\pi}{6} \,
-&lt; \, \arg{(z_{\text{end}})} \,&lt;\, \frac{2n\pi}{3} + \frac{\pi}{6}
-   \tag{3}\]</span><br/>
-and according to this constraint, the complex plane is divided as below.<br /><br/>
+    
+<h2 class="unnumbered" id="the-asymptotic-form-of-airy-function">
+  2. The Asymptotic Forms of Airy Function
+</h2><br/>
+<p>
+  To apply the method of steepest descent, we need to express Airy function in a form of complex contour integral.
+  <span class="math display">
+    \[
+    \begin{aligned}
+      \frac{d^2 f}{d t^2} = t\, f(t)    \tag{1} 
+    \end{aligned}
+    \]
+  </span>
+</p>
+    
+<p>
+  Take the solution $f(t)$ by 
+  <span class="math display">
+    \[
+      f(t) = \int_{C} dz \, h(z)\,e^{tz} \quad \forall z \in \mathbb{C} \;.    \tag{2} 
+    \]
+  </span><br />
+  Plugging (2) into (1), the L.H.S. of (1) becomes 
+  <span class="math display">
+    \[
+      \frac{d^2 f}{d t^2} = \int_{C} dz \, h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;,
+    \]
+  </span>
+  and by integrating by parts, the R.H.S. of (1) becomes  
+  <span class="math display">
+    \[
+      t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} = \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} - \int_{C} dz\,e^{tz}\frac{dh}{dz} \;.
+    \]
+  </span><br/><br/>
+  
+  To make sure the equality of eqn(1) holds, we must set
+  <span class="math display">
+    \[
+      \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} = 0 \;. 
+    \]
+  </span> <br/>
+  
+  Accepting the constraint above, $ h(z) $ is now given by 
+  <span class="math display">
+    \[
+      z^2 h(z) = -\frac{dh}{dz} \quad \Rightarrow \quad h(z) = c \cdot e^{-\frac{1}{3}z^3}
+    \]
+  </span> where $c$ is just a constant. <br />
+  
+  Since the square bracket term should be annihilated, each end point of the integration contour $C$ must satisfy 
+  <span class="math display">
+    \[
+      \exp{\left[ -\frac{1}{3} {z^3_\text{end}} + t\, z_{\text{end}} \right]} = 0 \;.
+    \]
+  </span><br />
+  
+  This condition implies 
+  <span class="math display">
+    \[
+      \mathrm{Re}{(z^3_{\text{end}})} > 0 \qquad \text{and} \qquad \left| \, z_{\text{end}} \, \right| \to \infty
+    \]
+  </span> because $z^3$ diverges much faster than $z$, as $|z|$ increases. <br /><br/>
+
+  From $\mathrm{Re}{(z^3_{\text{end}})}>0$, we obtain obtain 
+  <span class="math display">
+    \[
+      \frac{2n\pi}{3} - \frac{\pi}{6} \, < \, \arg{(z_{\text{end}})} \,<\, \frac{2n\pi}{3} + \frac{\pi}{6} \; .   \tag{3} 
+    \]
+  </span><br/>
+  Accordingly, the complex plane is divided as Fig(2).<br /><br/>
+        
 <div class = "container">
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig2.png?raw=true"
@@ -285,184 +320,207 @@ and according to this constraint, the complex plane is divided as below.<br /><b
   width="60%" />
   <figcaption> Fig 2. All the ends of the integration contours should be lied inside the shaded areas. </figcaption> 
 </div> <br /><br />
-<p> Due to the condition (3), we must set our integration curve $C$ to start from an infinity in one gray
-sector, and terminate at infinity in the other gray sector. Note also
-that since there are three different sectors that satisfy the condition
-(3), we can make three different contours, say $C_1, C_2, C_3$, and each choice will give
-corresponding solutions $f_1, f_2,
-f_3$.<br /><br/>
-Consequently, the general solutions(in the contour integral form) to the differential equation (1) can be written as <span class="math display">\[\begin{aligned}
-&amp; \mathrm{Ai}\,(t) = \frac{1}{2\pi i} \int_{C_1}
-dz\,e^{zt-\frac{z^3}{3}} \\ &amp;{} \\ &amp;
-\mathrm{Bi}\,(t) = \frac{1}{2\pi} \int_{C_2 - C_3} dz\,
-e^{zt-\frac{z^3}{3}}
-\end{aligned}\]</span></p>
-</div>
-and we will only focus our attention on $\mathrm{Ai}\,(t)$ in today’s post.<br /><br /><br/>
+        
+<p> 
+  By the constraint (3), the integration contour $C$ should start from an infinity in one gray sector and terminate at infinity in the other gray sector. 
+  Note that, since there are three different shaded sectors, we can construct three different contours, say $C_1, C_2, C_3$, and each choice yields corresponding 
+  solutions $f_1, f_2, f_3$. <br /><br/>
+  Consequently, the general solutions to the differential equation (1) are given by 
+  <span class="math display">
+    \[
+    \begin{aligned}
+      &amp; \mathrm{Ai}\,(t) = \frac{1}{2\pi i} \int_{C_1} dz\,e^{zt-\frac{z^3}{3}} \\ 
+      &amp;{} \\ 
+      &amp; \mathrm{Bi}\,(t) = \frac{1}{2\pi} \int_{C_2 - C_3} dz\, e^{zt-\frac{z^3}{3}} 
+    \end{aligned}
+    \]
+  </span>
 </p>
-<h3 class="unnumbered"
-id="asymptotic-form-of-mathrmait-in-mathbft-gg-0-region">2.1 Asymptotic
-form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \gg 0}$ region</h3> 
-<p>First, we should figure out saddle points of $w$. <span
-class="math display">\[e^{w(z,t)} = e^{tz-\frac{z^3}{3}} \quad
-\Rightarrow \quad \frac{dw}{dz}=t-z^2 \quad \Rightarrow \quad
-\text{saddle points of }  w(z,t)  \text{  :  } \;\; z_0 = \pm
-\sqrt{t}\]</span><br />
-For each saddle point, let’s inspect in which direction $\mathrm{Re}(w)$ decreases most
-rapidly.</p>
-<ul>
-<li><p><span>For $z_0 =
--\sqrt{t}$</span></p>
-<ul style="list-style-type: none">
-<li><p><span> $w&#39;&#39;(z_0,t) =
-2\sqrt{t}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{arg}(w&#39;&#39;_0) = 0$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{Re}(w)$ decreases most rapidly when $\theta = \pi / 2 \, , \; 3\pi / 2$ as
-$z$ leaves $z_0$. </span></p></li>
+</div>
+and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br /><br /><br/>
+</p>
+
+        
+<h3 class="unnumbered" id="asymptotic-form-of-mathrmait-in-mathbft-gg-1-region">
+  2.1 Asymptotic form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \gg 1}$ region
+</h3> 
+
+<p>
+  First, we should figure out saddle points of $w_t$. 
+  <span class="math display">
+    \[
+      e^{w_t (z)} = e^{tz-\frac{z^3}{3}} \quad \Rightarrow \quad \frac{dw}{dz}=t-z^2 \quad \Rightarrow \quad \text{saddle points of }  w_t (z)  \text{  :  } \;\; z_0 = \pm \sqrt{t}
+    \]
+  </span><br />
+  For each saddle point, observe the following, in which direction $\mathrm{Re}(w_t)$ decreases most rapidly.
+</p>
+        
+<ul><li>
+  <p><span>For $z_0 = -\sqrt{t}$</span></p>
+  <ul style="list-style-type: none">
+  <li><p><span> $w''_t (z_0) = 2\sqrt{t} $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = 0 $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = \pi / 2 \, , \; 3\pi / 2 $ as $z$ leaves $z_0$. </span></p></li>
 </ul></li>
-<li><p><span>For $z_0 =
-\sqrt{t}$</span></p>
-<ul style="list-style-type: none">
-<li><p><span> $w&#39;&#39;(z_0,t) =
--2\sqrt{t}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{arg}(w&#39;&#39;_0) = \pi$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{Re}(w)$ decreases most rapidly when $\theta = 0 \, , \; \pi$ as $z$ leaves $z_0$. </span></p></li>
+  
+<ul><li>
+  <p><span>For $ z_0 = \sqrt{t} $</span></p>
+  <ul style="list-style-type: none">
+  <li><p><span> $w''_t (z_0) = -2\sqrt{t} $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = \pi $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = 0 \, , \; \pi $ as $z$ leaves $z_0$. </span></p></li> 
 </ul></li>
 </ul><br/>
-<p>Let us definitize the integration contour in an explicit algebraic
-form. To do so, All we need to do is to find the level lines of $v$ that pass through each saddle point of
-$w$.<br />
-By plugging $z=x+iy$ into $(w(z)$, we obtain <span
-class="math display">\[w(z) = tz-\frac{1}{3}z^3 = \left[ \,
-tx-\frac{1}{3}x^3 - xy^2 \, \right] + i\,\left[ \, ty + \frac{1}{3}y^3 -
-x^2 y \, \right] \;.\]</span><br />
-Since $v(x,y)$ should be a level
-line, <span class="math display">\[v(x,y) = ty + \frac{1}{3}y^3 - x^2 y
-= \gamma \qquad \text{where} \; \gamma \; \text{is a real
-constant}\]</span> and it must pass through the saddle point(s), <span
-class="math display">\[v(z_0) = v(\pm \sqrt{t}, 0) = 0 = \gamma \;
-.\]</span></p>
-<p>Then, we obtain some candidates for the integration contour $C$. <span class="math display">\[ty + \frac{1}{3}y^3 - x^2 y = 0 \qquad \implies \qquad C \; : \; \begin{cases} \quad  y=0 &amp; \mbox{:  real axis} \\ {} \\ \quad x^2 - \frac{1}{3}y^2 = t &amp; \mbox{:  hyperbola} \end{cases}\]</span>
-However, the real axis cannot be an integration contour since its
-left-end is not located inside the gray color sectors! Furthermore, the
-hyperbola lies in $x&gt;0$ region
-should be neglected as well since its both end-points are not inside the
-gray sectors.<br /><br/>
-Hence, the integration contour should be chosen as below. <span
-class="math display">\[C = \left\{ z=x+iy \;\; \left| \quad
-x&lt;0 \; , \; y \in \mathbb{R} \quad \text{s.t.} \quad x^2 -
-\frac{1}{3}y^2 = t \; \right. \right\}\]</span></p>
-<p>Therefore, the integration contour for this case might be drawn as
-below.<br /> <br/>
-<div class = "container" >
-<img
-  src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig3.png?raw=true"
-  alt="saddle_point_steepest_descent_Airy_fig3"
-  width="60%" />
-  <figcaption> Fig 3. The contour for ${t \gg 0}$ case </figcaption>
-</div> <br/>
-I chose the direction of the contour be upward in order to ensure that the derived asymptotic form of Airy function matches with the conventional definition of Airy function. <br /><br />
-Plugging <span class="math display">\[{ z_0 = -\sqrt{t} \; , \;\; w_0 =
--\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w&#39;&#39;_0 = 2\sqrt{t} \; ,
-\;\; \theta = -\frac{1}{2}\mathrm{arg}(w&#39;&#39;_0) + \frac{\pi}{2} =
-\frac{\pi}{2} }\]</span> into the general formula of the method of
-steepest descent <span class="math display">\[\mathrm{Ai}\,(t) \sim
-\frac{1}{2\pi i} F(z_0,t) \, e^{i\theta}
-\sqrt{\frac{2\pi}{|w&#39;&#39;(z_0,t)|}} \; ,\]</span> we finally obtain
-the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $t \gg 0$ region,</p>
-<p><span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \,
-\overset{t \to \infty}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}}
-\, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)} \; .\]</span><br />
-<br />
+  
+<p>
+  Let us definitize the integration contour in an explicit algebraic form. To do so, we should find the level lines of $v_t$ which pass through each saddle point of $w_t$. <br />
+  Plugging $z=x+iy$ into $w_t (z)$, we obtain 
+  <span class="math display">
+    \[
+      w_t (z) = tz-\frac{1}{3}z^3 = \left\{ \, tx-\frac{1}{3}x^3 - xy^2 \, \right\} + i\,\left\{ \, ty + \frac{1}{3}y^3 - x^2 y \, \right\} \;.
+    \]
+  </span><br />
+
+  Since $v_t (x,y)$ should be a level line passing through the saddle point(s), it must satisfy both
+  <span class="math display">
+    \[
+      v_t (x,y) = ty + \frac{1}{3}y^3 - x^2 y = \gamma \qquad \; (\gamma \; \text{is a real constant})
+    \]
+  </span> and 
+  <span class="math display">
+    \[
+      v(z_0) = v(\pm \sqrt{t}, 0) = 0 = \gamma \; .
+    \]
+  </span>
 </p>
-<h3 class="unnumbered"
-id="asymptotic-form-of-mathrmait-in-mathbft-ll-0-region">2.2 Asymptotic
-form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \ll 0}$ region</h3>
-<p>For this case, since $t$ is
-negative, saddle points are given by <span class="math display">\[z_0 =
-\pm i \sqrt{|t|} \;.\]</span></p>
-<p>For each saddle point, let’s inspect in which direction $\mathrm{Re}(w)$ decreases most
-rapidly.</p>
-<ul>
-<li><p><span>For $z_0 = -i\sqrt{|t|}$
-</span></p>
-<ul style="list-style-type: none">
-<li><p><span> $w&#39;&#39;(z_0,t) =
-2i\sqrt{|t|}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{arg}(w&#39;&#39;_0) = \frac{\pi}{2}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{Re}(w)$ decreases most rapidly when $\theta = \pi / 4 \, , \; 5\pi / 4$ as
-$z$ leaves $z_0$. </span></p></li>
-</ul></li>
-<li><p><span>For $z_0 =
-i\sqrt{|t|}$</span></p>
-<ul style="list-style-type: none">
-<li><p><span> $w&#39;&#39;(z_0,t) =
--2i\sqrt{|t|}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{arg}(w&#39;&#39;_0) = -\frac{\pi}{2}$ </span></p></li>
-<li><p><span> $\Rightarrow \quad
-\mathrm{Re}(w)$ decreases most rapidly when $\theta = 3\pi / 4 \, , \; 7\pi / 4$ as
-$z$ leaves $z_0$. </span></p></li>
-</ul></li>
-</ul> <br/>
-<p>For $z_0 = i\sqrt{|t|}$, the level
-line of $v$ which passes through the
-saddle this point is <span class="math display">\[v(x,y) = ty +
-\frac{1}{3}y^3 - x^2 y = v(0, \sqrt{|t|})  \qquad \Rightarrow \qquad
--|t|\,y + \frac{1}{3}y^3 - x^2 y = -\frac{2}{3} |t|^{\frac{3}{2}} \;\;
-.\]</span></p>
-<p>Similarly, for $z_0 =
--i\sqrt{|t|}$, the level line of $v$ that passes through this point is <span class="math display">\[-|t|\,y + \frac{1}{3}y^3 - x^2 y = \frac{2}{3}
-|t|^{\frac{3}{2}} \;\; .\]</span><br />
-By picking appropriate level lines (which end-points are inside the gray
-sectors), and by orienting the picked level lines properly, the
-integration contours can be depicted as below.<br /><br/>
-<div class = "container" >
-<img
-  src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig5.png?raw=true"
-  alt="saddle_point_steepest_descent_Airy_fig5"
-  width="60%" </>
-  <figcaption> Fig 4. The contour for ${t \ll 0}$ case </figcaption>
-</div> <br /><br />
-Following the process analogous to the antecedent case, we obtain the asymptotic form of Airy function in $t \ll 0$ region.</p>
-<p><span class="math display">\[\mathrm{Ai}\,(t) \;\; \sim \;\;
-\frac{1}{2\pi i} \; \left[ \, e^{\frac{2\,i}{3} |t|^{\frac{3}{2}}}
-e^{\frac{\pi}{4} i} \sqrt{\frac{2\pi}{\left|2i \sqrt{|t|}\right|}} \; +
-\; e^{-\frac{2\,i}{3} |t|^{\frac{3}{2}}} e^{\frac{3\pi}{4} i}
-\sqrt{\frac{2\pi}{\left|-2i \sqrt{|t|}\right|}} \, \right] \;\; = \;\;
-\frac{1}{\sqrt{\pi} \, |t|^{\frac{1}{4}}} \; \sin{\left( \frac{2}{3}
-|t|^{\frac{3}{2}} + \frac{\pi}{4} \right)}\]</span><br />
-<span class="math display">\[\therefore \qquad \mathrm{Ai}\,(t) \;\;
-\overset{t \to -\infty}{\sim} \;\;  \frac{1}{\sqrt{\pi} \,
-|t|^{\frac{1}{4}}} \;\sin{\left( \frac{2}{3} |t|^{\frac{3}{2}} +
-\frac{\pi}{4} \right)}\]</span><br />
-Note that, if we included only one saddle point or if we set the
-directions of contours to be opposite to each other, then $\mathrm{Ai}\,(t)$ becomes an
-imaginary-valued function. Hence, in order to ensure that $\mathrm{Ai}\,(t)$ be real, then we should
-take into account every saddle point, and should set the contours’
-orientations as fig.4.<br />
-<br />
-<br />
+  
+<p>
+  We thus obtain two prospective integration contours: 
+  <span class="math display">
+    \[
+       ty + \frac{1}{3}y^3 - x^2 y = 0 \qquad \implies \qquad C \; : \; \begin{cases} \quad  y=0 & \mbox{:  real axis} \\ {} \\ \quad x^2 - \frac{1}{3}y^2 = t & \mbox{:  hyperbola} \end{cases}
+    \]
+  </span>
+  The real axis cannot be an integration contour because its left-end is not inside any shaded sectors. Likewise, the hyperbola which lies in $x>0$ region is also improper.<br /><br/>
+  Therefore, the integration contour for this case is given by 
+  <span class="math display">
+    \[
+      C = \left\{ z=x+iy \;\; \left| \quad \forall x<0 \; , \; \forall y \in \mathbb{R} \quad \text{s.t.} \quad x^2 - \frac{1}{3}y^2 = t \; \right. \right\} \; .
+    \]
+  </span>
 </p>
+<p>
+  <div class = "container" >
+  <img
+    src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig3.png?raw=true"
+    alt="saddle_point_steepest_descent_Airy_fig3"
+    width="60%" />
+    <figcaption> Fig 3. The integration contour for $t\gg1$ case. </figcaption>
+  </div> <br/>
+  The upward orientation of the integration contour depicted in Fig.2 is for nothing but matching the asymptotic form with the conventional Airy function in a form of infinite series. <br /><br />
+
+  Plugging 
+  <span class="math display">
+    \[
+      { z_0 = -\sqrt{t} \; , \;\; w_0 = -\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w''_0 = 2\sqrt{t} \; , \;\; \theta = -\frac{1}{2}\mathrm{arg}(w''_0) + \frac{\pi}{2} = \frac{\pi}{2} }
+    \]
+  </span> into the resulting formula of Section 1 
+  <span class="math display">
+    \[
+      \mathrm{Ai}\,(t) \sim \frac{1}{2\pi i} F_t (z_0) \, e^{i\theta} \sqrt{\frac{2\pi}{|w''_t (z_0)|}} \; ,
+    \]
+  </span> we finally obtain the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $ t \gg 1 $ region
+  <span class="math display">
+    \[
+     \therefore \qquad \mathrm{Ai}\,(t) \, \overset{t \gg 1}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}} \, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)}  \quad \quad \blacksquare
+    \]
+  </span><br /><br />
+</p>
+
+  
+<h3 class="unnumbered" id="asymptotic-form-of-mathrmait-in-mathbft-ll-m1-region">
+  2.2 Asymptotic form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \ll -1}$ region
+</h3>
+<p>
+  For this case, since $t$ is negative, saddle points of $w_t$ are given by 
+  <span class="math display">
+    \[
+      z_0 = \pm i \sqrt{|t|} \;.
+    \]
+  </span>
+</p>
+<p>
+  For each saddle point, observe the following, in which direction $\mathrm{Re}(w_t)$ decreases most rapidly.
+</p>
+<ul><li>
+  <p><span>For $ z_0 = -i\sqrt{|t|} $</span></p>
+  <ul style="list-style-type: none">
+  <li><p><span> $ w''_t (z_0) = 2i\sqrt{|t|} $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = \frac{\pi}{2}$ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = \pi / 4 \, , \; 5\pi / 4 $ as $z$ leaves $z_0$. </span></p></li>
+</ul></li>
+  
+<ul><li>
+  <p><span>For $ z_0 = i\sqrt{|t|} $</span></p>
+  <ul style="list-style-type: none">
+  <li><p><span> $w''_t (z_0) = -2i\sqrt{|t|} $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{arg}(w''_0) = -\frac{\pi}{2} $ </span></p></li>
+  <li><p><span> $\Rightarrow \quad \mathrm{Re}(w_t)$ decreases most rapidly when $\theta = 3\pi / 4 \, , \; 7\pi / 4 $ as $z$ leaves $z_0$. </span></p></li> 
+</ul></li>
+</ul><br/>
+  
+<p>
+  For $z_0 = i\sqrt{|t|}$, the level line of $v_t$ that passes through this point is give by 
+  <span class="math display">
+    \[
+      v_t (x,y) = ty + \frac{1}{3}y^3 - x^2 y = v_t (0, \sqrt{|t|})  \qquad \Rightarrow \qquad -|t|\,y + \frac{1}{3}y^3 - x^2 y = -\frac{2}{3} |t|^{\frac{3}{2}} \;\; .
+    \]
+  </span>
+</p>
+<p>
+  Similarly, for $z_0 = -i\sqrt{|t|}$, the level line of $v_t$ that passes through this point is given by 
+  <span class="math display">
+    \[
+      -|t|\,y + \frac{1}{3}y^3 - x^2 y = \frac{2}{3} |t|^{\frac{3}{2}} \;\; .
+    \]
+  </span><br />
+
+  <div class = "container" >
+    <img
+      src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig5.png?raw=true"
+      alt="saddle_point_steepest_descent_Airy_fig5"
+      width="60%" </>
+      <figcaption> Fig 4. The integration contour for $t\ll-1$ case. </figcaption>
+  </div> <br /><br />
+  
+  Choosing adequate level lines (whose end-points are inside the shaded sectors) and orienting 
+  them properly (matching the result to be coincident to the infinite series Airy function) 
+  (see Fig.4), and performing the same process as the previous case, we obtain the asymptotic 
+  form of Airy function in $t \ll -1$ region. 
+  <span class="math display">
+    \[
+       \mathrm{Ai}\,(t) \;\; \sim \;\; \frac{1}{2\pi i} \; \left[ \, e^{\frac{2\,i}{3} |t|^{\frac{3}{2}}} e^{\frac{\pi}{4} i} \sqrt{\frac{2\pi}{\left|2i \sqrt{|t|}\right|}} \; + \; e^{-\frac{2\,i}{3} |t|^{\frac{3}{2}}} e^{\frac{3\pi}{4} i} \sqrt{\frac{2\pi}{\left|-2i \sqrt{|t|}\right|}} \, \right] \;\; = \;\; \frac{1}{\sqrt{\pi} \, |t|^{\frac{1}{4}}} \; \sin{\left( \frac{2}{3} |t|^{\frac{3}{2}} + \frac{\pi}{4} \right)} 
+    \] 
+    \[
+      \therefore \qquad \mathrm{Ai}\,(t) \;\; \overset{t \ll -1}{\sim} \;\;  \frac{1}{\sqrt{\pi} \, |t|^{\frac{1}{4}}} \;\sin{\left( \frac{2}{3} |t|^{\frac{3}{2}} + \frac{\pi}{4} \right)} \quad \quad \blacksquare
+    \]
+  </span><br />
+  If we include only one saddle point or if we set the orientations of the contours to be opposite to each other, then $\mathrm{Ai}\,(t)$ becomes an imaginary-valued function. Hence, to ensure $\mathrm{Ai}\,(t)$ be real, we've taken into account every saddle point and set the orientations of contours same to each other!<br />
+  <br />
+  <br />
+</p>
+  
+
 <h2 class="unnumbered" id="conclusion">3. Conclusion</h2><br/>
 <div class = "container">
 <img
   src="https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/photos/posts/Steepest%20Descent%20Method/saddle_point_steepest_descent_Airy_fig6.png?raw=true"
   alt="saddle_point_steepest_descent_Airy_fig6"
   width="80%" </>
-  <figcaption> Fig 5. </figcaption> 
+  <figcaption> Fig 5. Asymptotic forms of Airy function </figcaption> 
 </div> <br/>
 <p>
-From the adhered figure above, we can observe that the asymptotic
-forms well mimic the original Airy function without significant error
-barring the range $|t|&ll;1$ in
-which the asymptotic forms diverge.<br /><br /><br/>
+Observe that each asymptotic form well mimics the original Airy function overall barring the range $|t| \ll 1$ in which each asymptotic form diverges as $t$ approaches $0$. <br /><br /><br/>
 </p>
 <h2 class="unnumbered" id="references">References</h2>
 <ul>
