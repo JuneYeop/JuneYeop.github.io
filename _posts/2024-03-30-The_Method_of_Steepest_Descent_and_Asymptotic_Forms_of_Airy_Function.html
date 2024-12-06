@@ -52,7 +52,7 @@ categories:
   the limiting behaviors of the Airy function. Despite their importance, detailed 
   derivations of these asymptotic forms are seldom discussed in textbooks. <br/><br/>
   
-  &ensp; This paper bridges this gap by utilizing the method of steepest descent, a powerful 
+  &ensp; This post will bridge this gap using the method of steepest descent, a powerful 
   integral approximation technique, to derive the asymptotic forms of the Airy function 
   of the first kind.<br /><br />
 </p>
@@ -164,7 +164,7 @@ categories:
 
   Keep in mind that we haven't imposed any restriction to the integration contour $C$. 
   This alludes us that we can set the $C$ however we want. Before proceeding, therefore, 
-  we should agonize for a while what contour will give us the most reasonable consequence.
+  we should agonize for a while what contour will give us the most reasonable consequence. <br/><br/>
   
 <ul style="list-style-type: none"><li>
   <p><span>
@@ -191,7 +191,7 @@ categories:
   <ul style="list-style-type: none">
   <li> <p><span>From now onwards, we assume that ${\vert w''_0 \vert}$ (the measure of the rate of decrease in $|F|$ as we leave $z_0$) is large enough that the value of the integral has already been attained only from the vicinity of the saddle point. (i.e. The significant contribution to the integral comes from the tiny segment of the contour near the saddle point where $R\ll1$.) </span></p> </li>
   </ul>
-</li></ul>
+</li></ul> <br/><br/>
     
 <p>
   Let us split the integration contour $C$ as below. 
@@ -200,7 +200,7 @@ categories:
         f(t) \; &=\; \int_{C} dz\,F(z,t) \; \\ &{} \\ &= \; \int_{\text{near the saddle point}} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t) \\ &{} \\ &= \; \int_{\text{descend from } F(z_0)} dz \, F(z,t) \;+\; \int_{\text{ascend to } F(z_0)} dz \, F(z,t) \;+\; \int_{\text{error contribution}} dz \, F(z,t) 
         \end{aligned} \]
   </span>
-</p>
+</p><br/>
 <p>
   Because we assumed "the significant contribution to the integral only comes 
   from the immediate vicinity of the saddle point", we can approximate the integration 
@@ -273,8 +273,8 @@ Therefore, for the region $\vert t \vert \gg 1$, we can approximate $f(t)$ by
     \[
       \frac{d^2 f}{d t^2} = \int_{C} dz \, h(z)\frac{d^2}{d t^2}e^{tz} = \int_{C} dz\, z^2 h(z) e^{tz} \;,
     \]
-  </span>
-  and by integrating by parts, the R.H.S. of (1) becomes  
+  </span><br/>
+  and by integrating by parts, the R.H.S. of (1) becomes 
   <span class="math display">
     \[
       t\,f(t) = \int_{C} dz\, h(z)\, t\, e^{tz} = \left[\, h(z)\,e^{tz} \,\right]_{\text{ends of } C} - \int_{C} dz\,e^{tz}\frac{dh}{dz} \;.
@@ -293,7 +293,7 @@ Therefore, for the region $\vert t \vert \gg 1$, we can approximate $f(t)$ by
     \[
       z^2 h(z) = -\frac{dh}{dz} \quad \Rightarrow \quad h(z) = c \cdot e^{-\frac{1}{3}z^3}
     \]
-  </span> where $c$ is just a constant. <br />
+  </span> where $c$ is just a constant. <br /><br/>
   
   Since the square bracket term should be annihilated, each end point of the integration contour $C$ must satisfy 
   <span class="math display">
@@ -347,7 +347,7 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
         
 <h3 class="unnumbered" id="asymptotic-form-of-mathrmait-in-mathbft-gg-1-region">
   2.1 Asymptotic form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \gg 1}$ region
-</h3> 
+</h3> <br/>
 
 <p>
   First, we should figure out saddle points of $w_t$. 
@@ -378,7 +378,7 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
 </li></ul> <br/>
   
 <p>
-  Let us definitize the integration contour in an explicit algebraic form. To do so, we should find the level lines of $v_t$ which pass through each saddle point of $w_t$. <br />
+  Let us definitize the integration contour in an explicit algebraic form. To do so, we should find the level lines of $v_t$ which pass through each saddle point of $w_t$. <br /><br/>
   Plugging $z=x+iy$ into $w_t (z)$, we obtain 
   <span class="math display">
     \[
@@ -422,19 +422,19 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
     width="60%" />
     <figcaption> Fig 3. The integration contour for $t\gg1$ case. </figcaption>
   </div> <br/>
-  The upward orientation of the integration contour depicted in Fig.2 is for nothing but matching the asymptotic form with the conventional Airy function in a form of infinite series. <br /><br />
+  The upward orientation of the integration contour depicted in Fig.3 is nothing but for matching the asymptotic form with the conventional Airy function in a form of infinite series. <br /><br />
 
   Plugging 
   <span class="math display">
     \[
       { z_0 = -\sqrt{t} \; , \;\; w_0 = -\frac{2}{3}t^{\frac{3}{2}} \; , \;\; w''_0 = 2\sqrt{t} \; , \;\; \theta = -\frac{1}{2}\mathrm{arg}(w''_0) + \frac{\pi}{2} = \frac{\pi}{2} }
     \]
-  </span> into the resulting formula of Section 1 
+  </span> into the resulting formula of Section 1, we get 
   <span class="math display">
     \[
       \mathrm{Ai}\,(t) \sim \frac{1}{2\pi i} F_t (z_0) \, e^{i\theta} \sqrt{\frac{2\pi}{|w''_t (z_0)|}} \; ,
     \]
-  </span> we finally obtain the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $ t \gg 1 $ region
+  </span> and thus obtain the asymptotic approximation of $\mathrm{Ai}\,(t)$ in $ t \gg 1 $ region
   <span class="math display">
     \[
      \therefore \qquad \mathrm{Ai}\,(t) \, \overset{t \gg 1}{\sim} \, \frac{1}{2\sqrt{\pi}\, t^{\frac{1}{4}}} \, \exp{\left(-\frac{2}{3} t^{\frac{3}{2}}\right)}  \quad \quad \blacksquare
@@ -445,7 +445,7 @@ and we will focus our attention only to $\mathrm{Ai}\,(t)$ from now onwards.<br 
   
 <h3 class="unnumbered" id="asymptotic-form-of-mathrmait-in-mathbft-ll-m1-region">
   2.2 Asymptotic form of $\mathrm{Ai}\,(t)$ in $\mathbf{t \ll -1}$ region
-</h3>
+</h3><br/>
 <p>
   For this case, since $t$ is negative, saddle points of $w_t$ are given by 
   <span class="math display">
