@@ -44,12 +44,14 @@ categories:
 
 
 <body>
-<p> &ensp; <br/>
+<p> 
+  &ensp; <br/>
   &ensp; The Airy function is crucial to quantum physics as it represents the wave 
   function of a linear potential. Its asymptotic forms are particularly significant 
   in the WKB approximation because this approximation technique demands understanding 
   the limiting behaviors of the Airy function. Despite their importance, detailed 
-  derivations of these asymptotic forms are seldom discussed in textbooks. 
+  derivations of these asymptotic forms are seldom discussed in textbooks. <br/>
+  
   This paper bridges this gap by utilizing the method of steepest descent, a powerful 
   integral approximation technique, to derive the asymptotic forms of the Airy function 
   of the first kind.<br /><br />
@@ -75,9 +77,9 @@ categories:
   </span> where
   <span class="math display">
     \[w_t (x,y) = u_t (x,y) + i \, v_t (x,y)  \quad \forall x,y \in \mathbb{R}\]
-  </span> is also analytic. <br /><br/>
+  </span> is also analytic. <br /><br/><br/>
   
-  Observe that neither $u_t$ nor $v_t$ can have extremum. <br /><br/> 
+  Observe that neither $u_t$ nor $v_t$ can have extremum! <br /><br/><br/>
   
   <strong>
     <U>Lemma.</U> <em>Neither $u_t$ nor $v_t$ can have extremum if $w_t = u_t + i\,v_t$ is analytic.</em>
@@ -94,13 +96,13 @@ categories:
   a contradiction! Applying the same logic to $v_t (x,y)$, we can check $v_t$ has no extremum. 
   $\blacksquare$ <br /><br /><br/>
 
-  Although $u_t (x,y)$ and $v_t (x,y)$ cannot have any extremum, both can have a saddle point.<br /><br />
+  Although $u_t (x,y)$ and $v_t (x,y)$ cannot have any extremum, both can have a saddle point.<br /><br /><br/>
   
   Let us expand $w_t (z)$ near the saddle point, say $z=z_0$, up to second order of $z$. 
   <span class="math display">
     \[w_t (z) = w_t (z_0) + \frac{1}{2} \left.\frac{\partial^2 w_t}{\partial z^2}\right|_{z_0} (z-z_0)^2 + \cdots  \tag{1} \]
   </span> Note that $ \left.\frac{dw}{dz}\right|_{z_0} $ vanished since $z_0$ is a saddle point. 
-  Moreover, the holomorphicity of $w_t(z)$ assures no existence of singular terms.<br /><br/>
+  Moreover, the holomorphicity of $w_t(z)$ assures that no singular term exists.<br /><br/>
 
   For convenience, let us denote 
   <span class="math display">
@@ -122,7 +124,7 @@ categories:
   </span><br/><br/>
   
   Consider a situation that $z$ leaves from $z_0$ (i.e. $r$ increases from 0) and observe the followings: <br /><br/>
-  $\mathbf{\cdot}$ For $u_t (z)$$<br /><br/>
+  $\mathbf{\cdot}$ For $u_t (z)$ <br /><br/>
   $\qquad$ i) $u_t$ increases most rapidly when 
   <span class="math display">\[
     \cos(\alpha + 2\theta) = 1 \quad \Rightarrow \quad \alpha + 2\theta = 2n\pi \quad \Rightarrow \quad \theta = -\frac{\alpha}{2} +n\pi \; .
@@ -164,12 +166,13 @@ categories:
   
 <ul><li>
   <p><span>
-    <strong>Why are we specifically working with the saddle point?</strong>
-  </span></p>
+    <center><strong>Why are we specifically working with the saddle point?</strong>
+  </span></center></p>
   <ul style="list-style-type: none">
 <li><p><span>
   If $z_0$ is any point other than the saddle point, the series expansion of $w_t$ contains a non-zero linear term in $r$ (i.e. $z-z_0$) because $ \left.\frac{\partial u}{\partial z}\right|_{z_0} $ doesn't vanish this time. Then, it is almost impossible to find a contour that passes through $z_0$ making $\vert F \vert = e^u $ decreases and keeping the phase term of $F$ (i.e. $e^{iv}$) invariant, as $z$ departs from $z_0$. This is why we are dealing with the saddle point. Thus, it is natural to set $z_0$ to the saddle point. 
 </span></p></li>
+</ul>
 
 <ul><li>
   <p><span>
@@ -179,6 +182,7 @@ categories:
 <li><p><span>
   We should pick a contour which passes through the saddle point $z_0$ along the directions that $u$ decreases most rapidly as $z$ leaves from $z_0$. Observe that this contour is exactly the level line of $v_t$ (see the fig.1). Hence, $|F|=exp(u_t)$ decreases most rapidly along this contour keeping the phase contribution of $F$, $exp(i v_t)$, constant.
 </span></p></li>
+</ul>
 
 <ul><li>
   <p><span>
@@ -188,6 +192,7 @@ categories:
 <li><p><span>
   From now onwards, we assume that ${\vert w''_0 \vert}$ (the measure of the rate of decrease in $|F|$ as we leave $z_0$) is large enough that the value of the integral has already been attained only from the vicinity of the saddle point. (i.e. The significant contribution to the integral comes from the tiny segment of the contour near the saddle point where $R\ll1$.)
 </span></p></li>
+</ul>
     
 <p>
   Let us split the integration contour $C$ as below. 
