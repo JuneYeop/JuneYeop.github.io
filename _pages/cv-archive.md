@@ -10,6 +10,6 @@ share : true
 share : false
 ---
 
-<https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/CV.pdf>
+<!--https://github.com/JuneYeop/JuneYeop.github.io/blob/master/assets/CV.pdf-->
 
 <iframe src="/assets/CV.pdf" style="width:100%; height:2200px;" frameborder="0"></iframe>
