@@ -1,4 +1,5 @@
 ---
+date: 2025-05-21
 title: "Curriculum Vitae"
 layout: single
 permalink: /cv/
