@@ -24,9 +24,22 @@ docs:
       - title: "Computational Physics"
         url:  /categories/computational_physics
         category: Computational Physics
+
         
   - title: Travel
     children: 
+      - title: "Austria"
+        url:  /categories/austria
+        category: Austria
+
+      - title: "Belarus"
+        url:  /categories/belarus
+        category: Belarus
+        
+      - title: "Bulgaria"
+        url:  /categories/bulgaria
+        category: Bulgaria
+        
       - title: "Japan"
         url:  /categories/japan
         category: Japan
@@ -34,18 +47,6 @@ docs:
       - title: "Poland"
         url:  /categories/poland
         category: Poland
-
-      - title: "Bulgaria"
-        url:  /categories/bulgaria
-        category: Bulgaria
-
-      - title: "Belarus"
-        url:  /categories/belarus
-        category: Belarus
-
-      - title: "Austria"
-        url:  /categories/austria
-        category: Austria
 
       - title: "Turkey"
         url:  /categories/turkey
