@@ -25,12 +25,28 @@ docs:
         url:  /categories/computational_physics
         category: Computational Physics
         
-  - title: Life
+  - title: Travel
     children: 
-      - title: "Daily Life"
-        url: /categories/life
-        category: Daily Life
-        
-      - title: "Travel"
-        url:  /categories/travel
-        category: Travel
+      - title: "Japan"
+        url:  /categories/japan
+        category: Japan
+
+      - title: "Poland"
+        url:  /categories/poland
+        category: Poland
+
+      - title: "Bulgaria"
+        url:  /categories/bulgaria
+        category: Bulgaria
+
+      - title: "Belarus"
+        url:  /categories/belarus
+        category: Belarus
+
+      - title: "Austria"
+        url:  /categories/austria
+        category: Austria
+
+      - title: "Turkey"
+        url:  /categories/turkey
+        category: Turkey
