@@ -28,7 +28,7 @@ docs:
         
   - title: Travel
     children: 
-      - title: "&#x1f1e6;&#x1f1f9 Austria"
+      - title: "Austria"
         url:  /categories/austria
         category: Austria
 
