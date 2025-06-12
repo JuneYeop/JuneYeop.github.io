@@ -2,6 +2,9 @@
 layout: archive
 ---
 
+{% assign page_show_date = true %}
+{% assign page_show_excerpt = true %}
+
 {% for section in site.data.navigation.docs %}
   <h2>{{ section.title }}</h2>
 
@@ -12,7 +15,11 @@ layout: archive
     {% if posts and posts.size > 0 %}
       <div class="archive-list">
         {% for post in posts %}
-          {% include archive-single.html post=post %}
+          {% include archive-single.html
+            post=post
+            show_date=page_show_date
+            show_excerpt=page_show_excerpt
+          %}
         {% endfor %}
       </div>
     {% else %}
