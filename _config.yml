@@ -112,7 +112,8 @@ analytics:
 author:
   name             : "Junyeop Kim"
   avatar           : "assets/photos/bio-photo.jpg"
-  bio              : '$ \mathscr{L} = { \partial_{\mu} {\hat{\varphi}}^{\dagger}} { \partial^{\mu} \hat{\varphi} } - m^2 {\vert \hat{\varphi} \vert}^2 -  \lambda {\vert \hat{\varphi} \vert}^4 $'
+  #bio              : '$ \mathscr{L} = { \partial_{\mu} {\hat{\varphi}}^{\dagger}} { \partial^{\mu} \hat{\varphi} } - m^2 {\vert \hat{\varphi} \vert}^2 -  \lambda {\vert \hat{\varphi} \vert}^4 $'
+  bio              : '$\mathrm{TQFT} : \textrm{nCob} \rightarrow \textrm{Vect}$'
   location         : "Seoul"
   # email            : "juney1121@gmail.com"
   links:
