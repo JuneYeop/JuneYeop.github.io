@@ -2,22 +2,67 @@
 layout: archive
 ---
 
-{% for section in site.data.navigation.docs %}
-  <h1>{{ section.title }}</h1>
+<style>
+  /* Basic two-column layout */
+  .two-columns {
+    display: flex;
+    gap: 2rem;
+  }
+  .column {
+    flex: 1;
+  }
+  /* Optional: style subcategory headers */
+  .subcategory {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+  }
+</style>
 
-  {% for item in section.children %}
-    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+<h1>{{ page.title }}</h1>
 
-    {% assign posts = site.categories[item.category] %}
-    {% if posts and posts.size > 0 %}
-      <ul>
-      {% for post in posts %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
-    {% else %}
-      <p>No posts in this category.</p>
-    {% endif %}
+<div class="two-columns">
 
-  {% endfor %}
-{% endfor %}
+  <!-- Left Column: Study -->
+  <div class="column">
+    {% assign study_section = site.data.navigation.docs | where: "title", "Study" | first %}
+    <h2>{{ study_section.title }}</h2>
+
+    {% for item in study_section.children %}
+      <h3 class="subcategory"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+
+      {% assign posts = site.categories[item.category] | sort: 'date' | reverse %}
+      {% if posts and posts.size > 0 %}
+        <div class="archive-list">
+          {% for post in posts %}
+            {% include archive-single.html post=post show_date=true show_excerpt=true %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p><em>No posts in this category yet.</em></p>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Right Column: Travel -->
+  <div class="column">
+    {% assign travel_section = site.data.navigation.docs | where: "title", "Travel" | first %}
+    <h2>{{ travel_section.title }}</h2>
+
+    {% for item in travel_section.children %}
+      <h3 class="subcategory"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+
+      {% assign posts = site.categories[item.category] | sort: 'date' | reverse %}
+      {% if posts and posts.size > 0 %}
+        <div class="archive-list">
+          {% for post in posts %}
+            {% include archive-single.html post=post show_date=true show_excerpt=true %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p><em>No posts in this category yet.</em></p>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div>
