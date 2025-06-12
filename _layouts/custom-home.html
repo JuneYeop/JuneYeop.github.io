@@ -45,7 +45,7 @@ layout: archive
     <h2 style="text-align: center;">{{ travel_section.title }}</h2>
 
     {% for item in travel_section.children %}
-      <h3 class="subcategory">
+      <h3 class="subcategory;" style="text-align: center;">
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </h3>
     {% endfor %}
