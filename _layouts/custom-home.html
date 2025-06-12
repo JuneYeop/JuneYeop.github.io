@@ -30,7 +30,7 @@ layout: archive
   <!-- Left Column: Study -->
   <div class="column">
     {% assign study_section = site.data.navigation.docs | where: "title", "Study" | first %}
-    <h2>{{ study_section.title }}</h2>
+    <h2 style="text-align: center;">{{ study_section.title }}</h2>
 
     {% for item in study_section.children %}
       <h3 class="subcategory">
@@ -42,7 +42,7 @@ layout: archive
   <!-- Right Column: Travel -->
   <div class="column">
     {% assign travel_section = site.data.navigation.docs | where: "title", "Travel" | first %}
-    <h2>{{ travel_section.title }}</h2>
+    <h2 style="text-align: center;">{{ travel_section.title }}</h2>
 
     {% for item in travel_section.children %}
       <h3 class="subcategory">
