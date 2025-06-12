@@ -2,8 +2,24 @@
 layout: archive
 ---
 
-<h1>Testing Navigation Data</h1>
+<h1>Categories and Posts</h1>
 
-<pre>
-{{ site.data.navigation | jsonify }}
-</pre>
+{% for section in site.data.navigation.docs %}
+  <h2>{{ section.title }}</h2>
+
+  {% for item in section.children %}
+    <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+
+    {% assign posts = site.categories[item.category] %}
+    {% if posts and posts.size > 0 %}
+      <ul>
+      {% for post in posts %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>No posts in this category.</p>
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
