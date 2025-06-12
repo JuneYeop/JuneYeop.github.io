@@ -1,5 +1,5 @@
 ---
-title: "&#x1f1e6;&#x1f1f9 Austria"
+title: "Austria"
 layout: archive
 permalink: categories/austria
 author_profile: true
