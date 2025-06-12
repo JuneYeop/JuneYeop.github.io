@@ -113,7 +113,6 @@ author:
   name             : "Junyeop Kim"
   avatar           : "assets/photos/bio-photo.jpg"
   bio              : '$ \mathrm{TQFT} : \mathrm{nCob} \rightarrow \mathrm{Vect} $'
-  #bio              : '$ \mathscr{L} = { \partial_{\mu} {\hat{\varphi}}^{\dagger}} { \partial^{\mu} \hat{\varphi} } - m^2 {\vert \hat{\varphi} \vert}^2 -  \lambda {\vert \hat{\varphi} \vert}^4 $'
   location         : "Seoul"
   # email            : "juney1121@gmail.com"
   links:
