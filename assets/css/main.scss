@@ -8,6 +8,13 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+// Override sidebar height and overflow behavior
+.sidebar {
+  max-height: none !important;
+  overflow-y: visible !important;
+  position: relative !important; // optional, ensures sidebar scrolls with the page
+}
+
 @font-face {
     font-family: 'RIDIBatang';
     src: url('/assets/fonts/RIDIBatang.otf') format('woff');
