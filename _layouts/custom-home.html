@@ -2,37 +2,25 @@
 layout: archive
 ---
 
+
 <style>
   .two-columns {
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
   }
-
   .column {
     flex: 1;
   }
-
   .subcategory {
-    margin-top: 2rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .two-columns {
-      flex-direction: column;
-    }
+    margin-bottom: 1rem;
   }
 </style>
 
-<p> 
 <center>
     &nbsp <br/>
     안녕하세요, Welcome To My Page :) <br/><br/>
     Using desktop mode is recommended! <br/><br/><br/>
 </center>
-</p>
 
 <h1>{{ page.title }}</h1>
 
@@ -47,17 +35,6 @@ layout: archive
       <h3 class="subcategory">
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </h3>
-
-      {% assign posts = site.categories[item.category] | sort: 'date' | reverse %}
-      {% if posts and posts.size > 0 %}
-        <div class="archive-list">
-          {% for post in posts %}
-            {% include archive-single.html post=post show_date=true show_excerpt=true %}
-          {% endfor %}
-        </div>
-      {% else %}
-        <p><em>No posts in this category yet.</em></p>
-      {% endif %}
     {% endfor %}
   </div>
 
@@ -70,17 +47,6 @@ layout: archive
       <h3 class="subcategory">
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </h3>
-
-      {% assign posts = site.categories[item.category] | sort: 'date' | reverse %}
-      {% if posts and posts.size > 0 %}
-        <div class="archive-list">
-          {% for post in posts %}
-            {% include archive-single.html post=post show_date=true show_excerpt=true %}
-          {% endfor %}
-        </div>
-      {% else %}
-        <p><em>No posts in this category yet.</em></p>
-      {% endif %}
     {% endfor %}
   </div>
 
