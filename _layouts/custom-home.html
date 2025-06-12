@@ -2,23 +2,21 @@
 layout: archive
 ---
 
-<h1>Categories and Posts</h1>
-
 {% for section in site.data.navigation.docs %}
   <h2>{{ section.title }}</h2>
 
   {% for item in section.children %}
     <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
 
-    {% assign posts = site.categories[item.category] %}
+    {% assign posts = site.categories[item.category] | sort: 'date' | reverse %}
     {% if posts and posts.size > 0 %}
-      <ul>
-      {% for post in posts %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
+      <div class="archive-list">
+        {% for post in posts %}
+          {% include archive-single.html post=post %}
+        {% endfor %}
+      </div>
     {% else %}
-      <p>No posts in this category.</p>
+      <p><em>No posts in this category yet.</em></p>
     {% endif %}
 
   {% endfor %}
