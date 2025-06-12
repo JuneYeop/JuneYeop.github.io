@@ -39,6 +39,10 @@ docs:
       - title: "Bulgaria"
         url:  /categories/bulgaria
         category: Bulgaria
+
+      - title: "Hong Kong"
+        url:  /categories/hongkong
+        category: Hong Kong
         
       - title: "Japan"
         url:  /categories/japan
