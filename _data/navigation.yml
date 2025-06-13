@@ -56,7 +56,7 @@ docs:
         url:  /categories/turkey
         category: Turkey
 
-   - title: Daily Life
+  - title: Daily Life
     children: 
       - title: "Life in Seoul"
         url:  /categories/life_in_seoul
