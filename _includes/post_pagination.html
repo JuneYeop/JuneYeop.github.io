@@ -1,4 +1,5 @@
-{% assign cat = page.categories[1] %}
+<!--첫 번째 문단-->
+{% assign cat = page.categories[0] %}
 {% assign cat_list = site.categories[cat] %}
 {% for post in cat_list %}
   {% if post.url == page.url %}
@@ -14,29 +15,18 @@
   {% endif %}
 {% endfor %}
 
-<div class="post-navigation d-flex justify-content-between">
-  {% if prev_post %}
-  <a href="{{ site.baseurl }}{{ prev_post.url }}" class="btn btn-outline-primary"
-    prompt="{{ site.data.locales[site.lang].post.button.previous }}">
-    <p>{{ prev_post.title }}</p>
-  </a>
-  {% else %}
-  <div class="btn btn-outline-primary disabled"
-    prompt="{{ site.data.locales[site.lang].post.button.previous }}">
-    <p>-</p>
-  </div>
-  {% endif %}
-
-  {% if next_post %}
-  <a href="{{ site.baseurl }}{{next_post.url}}" class="btn btn-outline-primary"
-    prompt="{{ site.data.locales[site.lang].post.button.next }}">
-    <p>{{ next_post.title }}</p>
-  </a>
-  {% else %}
-  <div class="btn btn-outline-primary disabled"
-    prompt="{{ site.data.locales[site.lang].post.button.next }}">
-    <p>-</p>
-  </div>
-  {% endif %}
-
-</div>
+<!--두 번째 문단-->
+{% if prev_post or next_post %}
+  <nav class="pagination">
+    {% if prev_post %}
+      <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "To a Recent Posting" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "To a Recent Posting" }}</a>
+    {% endif %}
+    {% if next_post %}
+      <a href="{{ next_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_next | default: "To a Previous Posting" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "To a Previous Posting" }}</a>
+    {% endif %}
+  </nav>
+{% endif %}
