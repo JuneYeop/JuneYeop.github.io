@@ -1,4 +1,3 @@
-<!--첫 번째 문단-->
 {% assign cat = page.categories[0] %}
 {% assign cat_list = site.categories[cat] %}
 {% for post in cat_list %}
@@ -15,19 +14,18 @@
   {% endif %}
 {% endfor %}
 
-<!--두 번째 문단-->
 {% if prev_post or next_post %}
   <nav class="pagination">
     {% if next_post %}
       <a href="{{ next_post.url }}" class="pagination--pager">To the recent posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">This is the newest posting uploaded.</a>
+      <a href="#" class="pagination--pager disabled">This is the newest posting uploaded in this category.</a>
     {% endif %}
     
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">To the older Posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">This is the oldest posting uploaded.</a>
+      <a href="#" class="pagination--pager disabled">This is the oldest posting uploaded in this category.</a>
     {% endif %}
   </nav>
 {% endif %}
