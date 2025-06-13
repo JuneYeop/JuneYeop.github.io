@@ -12,8 +12,12 @@
   margin-top: 0.5em;
 }
 
-/* Ensure title and date are left-aligned in archive pages (default layout) */
-.layout--archive .page__title,
+
+.layout--archive .page__title {
+  text-align: center;
+  margin-top: 1em;
+}
+/* Ensure date is left-aligned in archive pages (default layout) */
 .layout--archive .page__meta,
 .layout--archive .page__date {
   text-align: left;  /* Optional: ensures they're left-aligned in archives */
