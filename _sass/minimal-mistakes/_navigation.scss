@@ -52,7 +52,7 @@
 
 .pagination {
   @include clearfix();
-  float: left;
+  float: center;
   margin-top: 1em;
   padding-top: 1em;
   width: 100%;
@@ -122,7 +122,7 @@
     display: block;
     padding: 1em 2em;
     //--- ORIGINAL CODE --- float: left;
-    width: 95%; //--- WAS INITIALLY 50%
+    width: 90%; //--- WAS INITIALLY 50%
     font-family: $sans-serif;
     font-size: $type-size-5;
     font-weight: bold;
