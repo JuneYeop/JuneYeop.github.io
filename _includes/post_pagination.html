@@ -19,7 +19,7 @@
     {% if next_post %}
       <a href="{{ next_post.url }}" class="pagination--pager">
         To the recent posting :</br>
-        <strong><i>{{ next_post.title }}</i></strong>
+        <strong><i>"{{ next_post.title }}"</i></strong>
       </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">
@@ -30,7 +30,7 @@
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">
         To the older posting :
-        <strong><i>{{ prev_post.title }}</i></strong>
+        <strong><i>"{{ prev_post.title }}"</i></strong>
       </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">
