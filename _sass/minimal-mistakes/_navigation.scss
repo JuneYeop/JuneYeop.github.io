@@ -66,8 +66,7 @@
 
   li {
     display: block;
-    //-- ORIGINAL CODE --- float: left;
-    width: 100; //-- To make the allocation of paginators be vertical, not horizontal.
+    float: left;
     margin-left: -1px;
 
     a {
@@ -122,8 +121,8 @@
   &--pager {
     display: block;
     padding: 1em 2em;
-    float: left;
-    width: 50%;
+    //--- ORIGINAL CODE --- float: left;
+    width: 95%; //--- WAS INITIALLY 50%
     font-family: $sans-serif;
     font-size: $type-size-5;
     font-weight: bold;
