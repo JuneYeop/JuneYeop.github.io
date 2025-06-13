@@ -58,6 +58,6 @@ docs:
 
    - title: Daily Life
     children: 
-      - title: "Seoul"
+      - title: "Life in Seoul"
         url:  /categories/life_in_seoul
-        category: Seoul
+        category: Life in Seoul
