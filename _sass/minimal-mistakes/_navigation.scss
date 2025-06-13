@@ -52,7 +52,7 @@
 
 .pagination {
   @include clearfix();
-  float: center;
+  float: left;
   margin-top: 1em;
   padding-top: 1em;
   width: 100%;
@@ -66,7 +66,7 @@
 
   li {
     display: block;
-    float: center;
+    float: left;
     margin-left: -1px;
 
     a {
@@ -121,7 +121,8 @@
   &--pager {
     display: block;
     padding: 1em 2em;
-    //--- ORIGINAL CODE --- float: left;
+    //--- ORIGINAL CODE --- 
+    float: center;
     width: 90%; //--- WAS INITIALLY 50%
     font-family: $sans-serif;
     font-size: $type-size-5;
