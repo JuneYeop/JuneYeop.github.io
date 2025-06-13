@@ -52,7 +52,8 @@
 
 .pagination {
   @include clearfix();
-  float: left;
+  //-- ORIGINAL CODE ---- [ float: left; ]
+  width: 100%; //-- To make the horizontal allocations to be vertical
   margin-top: 1em;
   padding-top: 1em;
   width: 100%;
