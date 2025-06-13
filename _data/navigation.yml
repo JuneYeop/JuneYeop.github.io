@@ -55,3 +55,9 @@ docs:
       - title: "Turkey"
         url:  /categories/turkey
         category: Turkey
+
+   - title: Daily Life
+    children: 
+      - title: "Seoul"
+        url:  /categories/life_in_seoul
+        category: Seoul
