@@ -18,7 +18,8 @@
   <nav class="pagination">
     {% if next_post %}
       <a href="{{ next_post.url }}" class="pagination--pager">
-        To the recent posting : <strong>{{ next_post.title }}</strong>
+        To the recent posting</br>
+        <strong>-{{ next_post.title }}-</strong>
       </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">
