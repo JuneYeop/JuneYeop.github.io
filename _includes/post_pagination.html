@@ -19,14 +19,14 @@
 {% if prev_post or next_post %}
   <nav class="pagination">
     {% if prev_post %}
-      <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "To a Recent Posting" }}</a>
+      <a href="{{ prev_post.url }}" class="pagination--pager">To a Recent Posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "To a Recent Posting" }}</a>
+      <a href="#" class="pagination--pager disabled">To a Recent Posting</a>
     {% endif %}
     {% if next_post %}
-      <a href="{{ next_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_next | default: "To a Previous Posting" }}</a>
+      <a href="{{ next_post.url }}" class="pagination--pager">To a Previous Posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "To a Previous Posting" }}</a>
+      <a href="#" class="pagination--pager disabled">To a Previous Posting</a>
     {% endif %}
   </nav>
 {% endif %}
