@@ -41,12 +41,12 @@
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "Recent Posting" }}</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "This is the Newest Posting." }}</a>
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "This is the Newest Posting Uploaded." }}</a>
     {% endif %}
     {% if next_post %}
-      <a href="{{ next_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_next | default: "Predated Posting" }}</a>
+      <a href="{{ next_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_next | default: "Former Posting" }}</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "This is the First Posting." }}</a>
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "This is the First Posting Uploaded." }}</a>
     {% endif %}
   </nav>
 {% endif %}
