@@ -1,0 +1,20 @@
+.layout--single .page__title {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.layout--single .page__meta {
+  text-align: center;
+}
+
+.layout--single .page__date {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+/* Ensure title and date are left-aligned in archive pages (default layout) */
+.layout--archive .page__title,
+.layout--archive .page__meta,
+.layout--archive .page__date {
+  text-align: left;  /* Optional: ensures they're left-aligned in archives */
+}
