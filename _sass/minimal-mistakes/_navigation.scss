@@ -52,8 +52,7 @@
 
 .pagination {
   @include clearfix();
-  //-- ORIGINAL CODE ---- [ float: left; ]
-  width: 100%; //-- To make the horizontal allocations to be vertical
+  float: left;
   margin-top: 1em;
   padding-top: 1em;
   width: 100%;
@@ -67,7 +66,8 @@
 
   li {
     display: block;
-    float: left;
+    //-- ORIGINAL CODE --- float: left;
+    width: 100; //-- To make the allocation of paginators be vertical, not horizontal.
     margin-left: -1px;
 
     a {
