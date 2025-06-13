@@ -3,7 +3,7 @@ layout: archive
 ---
 
 <style>
-  .two-columns {
+  .three-columns {
     display: flex;
     gap: 2rem;
   }
@@ -25,7 +25,7 @@ layout: archive
 
 <h1 style="text-align: center;">{{ page.title }}</h1>
 
-<div class="two-columns">
+<div class="three-columns">
 
   <!-- Left Column: Study -->
   <div class="column">
@@ -39,12 +39,24 @@ layout: archive
     {% endfor %}
   </div>
 
-  <!-- Right Column: Travel -->
+  <!-- Central Column: Travel -->
   <div class="column">
     {% assign travel_section = site.data.navigation.docs | where: "title", "Travel" | first %}
     <h2 style="text-align: center;">{{ travel_section.title }}</h2>
 
     {% for item in travel_section.children %}
+      <h3 class="subcategory;" style="text-align: center;">
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      </h3>
+    {% endfor %}
+  </div>
+
+  <!-- Right Column: Daily Life -->
+  <div class="column">
+    {% assign daily_life_section = site.data.navigation.docs | where: "title", "Daily Life" | first %}
+    <h2 style="text-align: center;">{{ daily_life_section.title }}</h2>
+
+    {% for item in daily_life_section.children %}
       <h3 class="subcategory;" style="text-align: center;">
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </h3>
