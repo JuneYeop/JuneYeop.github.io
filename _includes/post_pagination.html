@@ -21,12 +21,13 @@
     {% if next_post %}
       <a href="{{ next_post.url }}" class="pagination--pager">To a Previous Posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">This is the oldest posting uploaded.</a>
+      <a href="#" class="pagination--pager disabled">To a Previous Posting</a>
     {% endif %}
+    
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">To a Recent Posting</a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">This is the newest posting uploaded.</a>
+      <a href="#" class="pagination--pager disabled">To a Recent Posting</a>
     {% endif %}
   </nav>
 {% endif %}
