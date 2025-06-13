@@ -18,22 +18,23 @@
   <nav class="pagination">
     {% if next_post %}
       <a href="{{ next_post.url }}" class="pagination--pager">
-        To the recent posting</br>
-        <strong>-{{ next_post.title }}-</strong>
+        To the recent posting :</br>
+        <strong><i>{{ next_post.title }}</i></strong>
       </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">
-        This is the newest posting uploaded in this category.
+        This is the newest posting in this category.
       </a>
     {% endif %}
 
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">
-        To the older posting : <strong>{{ prev_post.title }}</strong>
+        To the older posting :
+        <strong><i>{{ prev_post.title }}</i></strong>
       </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">
-        This is the oldest posting uploaded in this category.
+        This is the oldest posting in this category.
       </a>
     {% endif %}
   </nav>
