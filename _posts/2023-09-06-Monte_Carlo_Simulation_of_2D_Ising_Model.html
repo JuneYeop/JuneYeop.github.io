@@ -1,0 +1,478 @@
+---
+date    : 2023-09-06
+
+title   : "Monte-Carlo Simulation of 2-dim Ising Model (ongoing)"
+excerpt : " "
+
+writer  : Junyeop Kim
+use_math: true
+
+published : false
+
+categories:
+  - 'Computational Physics'
+
+comments: true
+
+published : true
+---
+
+<head>
+    <style>
+        .center {
+            text-align: justify;
+        }
+
+        .MathJax, .MathJax_Display, .MJXc-display, .MathJax_SVG_Display, .math {
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+            min-width: 0 ! important
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+          text-align: center;
+        }
+
+        .pre {
+          font-size: 10px;
+        }
+    </style>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+
+
+<body>
+
+<p> 
+  요즘 하도 도서관에서 전공 공부만 하다보니 프로그래밍과 사이가 좀 많이 멀어진 것 같기도 하고, 
+  때마침 휴학도 했겠다 시간이 좀 남아서 Fortran95과 Python으로 2-dim Ising model Monte-Carlo simulation 코드를 작성해봤다. <br/><br/>
+  사실 포트란은 전혀 쓸 줄 모르는 언어였는데 이번 기회에 한 번 공부해봤다. 
+  아직은 많이 미숙해서 코드가 좀 더럽긴 한데 차차 나아지겠지 하핫... <br/><br/>
+</p>
+
+
+<h2 class="unnumbered">
+  1. Evolutions of spin-configuration and magnetisation w.r.t. iteration
+</h2>
+<p>
+  우선 iteration에 따라 spin configuration과 magnetisation이 어떻게 변하는지를 보여주는 프로그램을 만들어봤다.<br/>
+  계산을 수행하고 데이터를 저장하는 부분인 main program은 Fortran95로 작성했고, visualization 부분은 python으로 작성했다.<br/> 
+  아! 그리고 magnetisation vs iteration graph는 그냥 GNUPLOT으로 그렸다. <br/><br/>
+</p>
+<h3 class="unnembered">
+  1.1 Main Program (Fortran 90)
+</h3>
+<p>
+  &nbsp; <br/> 
+  언제나 그렇듯 PROGRAM ~ 으로 시작하자.
+  <pre><code class="codeblock">
+    PROGRAM ISING_MODEL
+  </code></pre> <br/><br/>
+  프로그램에 필요한 모든 변수들을 선언해주자. Question mark가 있는 곳은 원하는대로 넣어주면 된다.
+  <pre><code class="codeblock">
+    !---DECLARE VARIABLES---------------------------
+
+    IMPLICIT NONE
+
+
+    INTEGER(4) :: I_ROW, I_COL 
+    INTEGER(4) :: SPIN_LOW, SPIN_COL
+    INTEGER(4) :: ITR
+    iNTEGER(4) :: PRE_MAGNETISATION
+
+    INTEGER, PARAMETER :: DIM_ROW = ???, DIM_COL = ???
+    INTEGER, PARAMETER :: NUMBER_TOTAL_SPIN = DIM_ROW * DIM_COL
+    INTEGER, PARAMETER :: ITERATION = ???
+
+    INTEGER, DIMENSION(DIM_ROW , DIM_COL) :: SPIN_CONFIG
+
+
+    DOUBLE PRECISION, DIMENSION(ITERATION + 1) :: NORMALISED_MAGNETISATION
+
+    ! SPIN CORRELATION
+    DOUBLE PRECISION, PARAMETER :: J = ???                  
+    
+    ! NUMBER OF NEAREST LATTICE SITES (assume square lattice)
+    DOUBLE PRECISION, PARAMETER :: GAMMA = 4.               
+
+    ! CRITICAL TEMPERATURE OF MEAN FIELD THEORY
+    DOUBLE PRECISION, PARAMETER :: BETA_C = 1/(J*GAMMA)     
+
+    ! BETA_RATIO = BETA / BETA_C ... THEN BETA = BETA_C * BETA_RATIO
+    DOUBLE PRECISION, PARAMETER :: BETA_RATIO = ???         
+
+    DOUBLE PRECISION :: DEL_ENERGY, E_I, E_F
+    DOUBLE PRECISION :: RND, RND_ROW, RND_COL
+
+
+    !--- DIRECTORY RELATED VARIABLES
+    
+    CHARACTER(100) FOLDER_NAME
+
+    INTEGER :: FU
+    CHARACTER(100) FILE_NAME
+    CHARACTER(100) FILE_ID
+    
+    INTEGER :: IERR, UNIT_NUM, IOSTAT
+
+
+    !--- VARIABLES FOR THE PROGRAM EXECUATION TIME
+    REAL :: START_TIME, END_TIME, TOT_TIME
+  </code></pre> <br/> <br/>
+
+  필수는 아니지만, 프로그래밍 실행시간이 어느정도 나올지 궁금해서 한번 넣어봤다.
+  <pre><code class="codeblock">
+    !---LOAD CPU_TIME TO EVALUATE THE EXECUATION TIME---------------------------------
+    
+    CALL CPU_TIME(START_TIME)
+
+    !---------------------------------------------------
+  </code></pre> <br/> <br/>
+
+  Initial spin configuration을 만들자. <br/><br/>
+  뭐 아무렇게나 만들어도 상관 없겠지만, <br/>
+  &nbsp; i) high temperature limit (completely random configuration) <br/>
+  &nbsp; ii) low temperature limit (completely ordered configuration) <br/>
+  이렇게 두 가지 경우의 initial configurations을 상정해봤다.  
+  <pre><code class="codeblock">
+     !---HIGH TEMPERATURE LIMIT ---------------------
+    
+      DO I_COL = 1, DIM_COL, +1
+
+          DO I_ROW = 1, DIM_ROW, +1
+
+              !---CHOOSE A REAL VALUE IN (0,1) RANGE
+              CALL RANDOM_NUMBER(RND)
+
+              !---COMPARE RND W/ 0.5
+              !---IF RND < 0.5, GIVE UP-SPIN. ELSE, GIVE DOWN=SPIN
+              IF ( RND < 0.50000000000000 ) THEN
+                  SPIN_CONFIG(I_ROW, I_COL) = -1
+              ELSE   
+                  SPIN_CONFIG(I_ROW, I_COL) = +1
+              END IF
+
+          END DO
+    
+      END DO
+
+
+      !---LOW TEMPERATURE LIMIT
+
+      !DO I_COL = 1, DIM_COL, +1
+      !    DO I_ROW = 1, DIM_ROW, +1
+      !        SPIN_CONFIG(I_ROW, I_COL) = +1
+      !    END DO
+      !END DO
+  </code></pre> <br/><br/>
+
+  initial spin configuration의 normalized magnetisation을 계산하자.
+
+  <pre><code class="codeblock">
+    !---CALCULATE THE MAGNETISATION OF INITIAL STATE-------------------------------
+    
+    ITR = 0
+
+    PRE_MAGNETISATION = 0
+    
+    DO I_COL = 1, DIM_COL, +1
+        
+        DO I_ROW = 1, DIM_ROW, +1
+        
+            PRE_MAGNETISATION = PRE_MAGNETISATION + SPIN_CONFIG(I_ROW, I_COL)
+        
+        END DO
+    
+    END DO
+    
+    NORMALISED_MAGNETISATION(ITR) = 1. * PRE_MAGNETISATION / NUMBER_TOTAL_SPIN 
+    !--- I PUT (1.*) TERM TO PREVENT FROME THE MAGNETISATION BECOMING INTEGER...!
+  </code></pre> <br/><br/>
+
+  사실 코드를 처음부터 python이나 julia로 작성했으면, 
+  spin configuration의 data를 바로 이미지로 변환해서 이미지 자체를 list에 차곡차곡 하나씩 쌓을 수 있기 때문에, 
+  후술할 과정은 다른 언어라면 불필요한 과정일 수 있겠으나... (우리의 Fortran은 그런 packages 없기 때문에...) <br/><br/>
+ 
+  앞으로 DO loop를 돌리면서 얻게 될 each iteration step(?)에서의 spin configuration을 txt format으로 저장하려고 한다.<br/>
+  이 spin configuration txt 파일들을 새로운 하위폴더를 만들어서 저장을 할 생각인데, 아래에 적어둔 code가 해당 역할을 수행한다.
+  
+  <pre><code class="codeblock">
+     !--- WRITE THE SPIN CONFIGURATION AS A TXT FILE, and MAGNETISATION DATA IN A NEW FOLDER
+
+      ! Specify the folder name you want to create
+
+        ! Write the integer into a string:
+        FU = ITR + 20 !왜냐면 unit은 10부터 출발하자나...!!
+    
+        FOLDER_NAME = "spin_config"
+
+      ! Use a system-specific command to create the folder
+      ! Replace the following line with the appropriate command for your system (e.g., mkdir on Unix-like systems)
+      ! On Windows, you can use "mkdir" as well.
+        CALL SYSTEM("mkdir " // TRIM(FOLDER_NAME), IERR)
+
+        IF (IERR == 0) THEN
+
+        ! Specify the name of the text file to create inside the folder
+            WRITE(FILE_ID, '(I0)') ITR
+            FILE_NAME = TRIM(FOLDER_NAME) // "/config" // TRIM(ADJUSTL(FILE_ID)) // ".txt"
+        
+        ! Open the text file for writing
+            OPEN( UNIT = FU , FILE = TRIM(FILE_NAME) , STATUS = "replace", ACTION = "write", IOSTAT = IOSTAT )
+
+            IF (IOSTAT == 0) THEN
+          ! Write data to the file
+                WRITE(FU, *) SPIN_CONFIG
+          ! Close the file
+                CLOSE(FU)
+            END IF
+
+        END IF
+
+
+        OPEN( 10, FILE = "magnetisation.txt", STATUS = "new" )    
+        WRITE(10 ,*) ITR, NORMALISED_MAGNETISATION(ITR)
+  </code></pre> <br/>
+  마지막 두 줄은 magnetisation을 기록하기 위한 새로운 txt file을 만들고, 파일을 열어서 데이터를 입력하도록 하는 코드이다.<br/>
+  이 파일은 그냥 main Fortran code와 동일한 directory에 저장할 생각이다.
+               
+  <br/><br/>
+  Do loop으로 iteration을 시작하자.
+  <pre><code class="codeblock">
+    !---BEGIN ITERATION--------------------------------
+    
+     DO ITR = 1, ITERATION, +1
+  </code></pre> <br/><br/>
+
+  우선, 무작위로 spin element를 하나 뽑아서 뒤집어보자.
+
+  <pre><code class="codeblock">
+    !---PICK A SPIN AT A RANDOM SITE---------------------
+        CALL RANDOM_NUMBER(RND_ROW)
+        CALL RANDOM_NUMBER(RND_COL)
+
+        SPIN_ROW = 1 + FLOOR((DIM_ROW+1-1)*RND_ROW)
+        SPIN_COL = 1 + FLOOR((DIM_COL+1-1)*RND_COL)
+
+    !--- * FLIP THE CORRESPONDING PICKED SPIN TO OPPISITE DIRRECTION
+        SPIN_CONFIG(SPIN_ROW, SPIN_COL) = (-1) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)  
+        !---[ (-1) FLIPS THE SPIN DIRRECTION ]
+  </code></pre> <br/>
+  spin element의 위치를 matrix element의 것과 같은 형식으로 지정할 생각이다. (말이 조금 이상하긴 한데 (1,3)같이 위치를 나타내고 싶다는 뜻이다.) <br/>
+  조심해야 할 부분이 있는데, RANDOM_NUMBER( )로 가져온 float은 [0,1) range에 있다. 
+  그래서 [1, DIM_ROW or DIM_COL] range의 integer을 얻으려면, 위와같이 FLOOR function에 적절히 manipulation을 해주어야 한다. <br/><br/>
+
+  위에서 뽑은 spin element의 flipping 전후의 energy difference를 계산하자. 
+  <pre><code class="codeblock">
+      !--- * CALCULATE THE ENERGY DIFFERENCE BEFORE AND AFTER THE SPIN FLIPPING -----------------
+    
+        IF ( SPIN_ROW == 1 .AND. SPIN_COL == 1 ) THEN
+            
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) &
+                                    + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+
+        ELSE IF ( SPIN_ROW == 1 .AND. SPIN_COL == DIM_COL ) THEN
+            
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) &
+                                    + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL) 
+        
+        ELSE IF ( SPIN_ROW == DIM_ROW .AND. SPIN_COL == 1 ) THEN
+
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) &
+                                    + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+
+        ELSE IF ( SPIN_ROW == DIM_ROW .AND. SPIN_COL == DIM_COL ) THEN
+
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) &
+                                    + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+        
+        ELSE IF ( SPIN_COL == 1 ) THEN
+            
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) + SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) &
+                                + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+        
+        ELSE IF ( SPIN_COL == DIM_COL ) THEN
+
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) + SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) &
+                                + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+                                
+        ELSE IF ( SPIN_ROW == 1 ) THEN
+
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) &
+                                + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+        
+        ELSE IF ( SPIN_ROW == DIM_ROW ) THEN
+
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) &
+                                + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+        
+        ELSE 
+        
+            DEL_ENERGY = (-2) * J * ( SPIN_CONFIG(SPIN_ROW+1, SPIN_COL) + SPIN_CONFIG(SPIN_ROW-1, SPIN_COL) &
+                                + SPIN_CONFIG(SPIN_ROW, SPIN_COL+1) + SPIN_CONFIG(SPIN_ROW, SPIN_COL-1) ) & 
+                                * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+
+        END IF
+
+!        (1,1)           ... (1,DIM_COL)
+!        (2,1)           ... (2,DIM_COL)
+!        .
+!        .
+!        .
+!        (DIM_ROW,1)     ... (DIM_ROW,DIM_COL)
+  </code></pre> <br/><br/>
+
+  이제 Metropolis algorithm의 하이라이트(?)이다. <br/><br/>
+ 
+  위에서 계산된 energy difference가 0보다 작으면 spin flipping을 accept하자. <br/>
+  이건 뭐 당연하지... spin flipping 이후에 에너지가 더 낮아지는데 reject할 이유가 없잖아! <br/><br/>
+ 
+  근데, 만약 energy difference가 0보다 크다면, (0,1) range에서 random number 하나를 불러와서 exp(-beta*del_E)랑 비교를 할 건데, <br/>
+  random number <  exp(-beta*del_E) 이면,  accept the spin flipping . <br/>
+  random number >  exp(-beta*del_E) 이면,  reject the spin flipping .
+
+   <pre><code class="codeblock">
+        IF ( DEL_ENERGY <= 0. ) THEN ! ACCEPT THE SPIN FLIP
+            
+            CONTINUE
+
+        ELSE
+            
+            ! (DEL_ENERGY > 0)
+
+            !--- CHOOSE A RANDOM NUMBER IN (0,1)
+            CALL RANDOM_NUMBER(RND)
+            
+            IF ( RND < EXP(- BETA_C * BETA_RATIO * DEL_ENERGY) ) THEN ! ACCEPT THE SPIN FLIP
+                
+                CONTINUE
+
+            ELSE ! REJECT THE SPIN FLIP
+                
+                SPIN_CONFIG(SPIN_ROW, SPIN_COL) = (-1) * SPIN_CONFIG(SPIN_ROW, SPIN_COL)
+            
+            END IF
+        
+        END IF
+   </code></pre> <br/><br/>
+              
+    위의 IF statement가 끝나고 난 뒤의 최종 spin configuration과 normalized magnetisation을 txt file로 저장하자.
+
+    <pre><code class="codeblock">
+    !--- WRITE AND SAVE DATA----------------------------
+
+        !--- SPIN CONFIGURATION----------
+
+        WRITE(FILE_ID, '(I0)') ITR
+
+        FILE_NAME = TRIM(FOLDER_NAME) // "/config" // TRIM(ADJUSTL(FILE_ID)) // ".txt"
+        
+        ! Open the text file for writing
+        OPEN( UNIT = FU , FILE = TRIM(FILE_NAME) , STATUS = "replace" , ACTION = "write" , IOSTAT = IOSTAT )
+
+        IF (IOSTAT == 0) THEN
+            ! Write data to the file
+            WRITE(FU, *) SPIN_CONFIG
+            ! Close the file
+            CLOSE(FU)
+
+        END IF
+
+    
+        !--- MAGNETISATION ----------------
+
+        PRE_MAGNETISATION = 0
+            
+        DO I_COL = 1, DIM_COL, +1
+            
+            DO I_ROW = 1, DIM_ROW, +1
+            
+                PRE_MAGNETISATION = PRE_MAGNETISATION + SPIN_CONFIG(I_ROW, I_COL)
+            
+            END DO
+            
+        END DO
+            
+        NORMALISED_MAGNETISATION(ITR) = 1. * PRE_MAGNETISATION / NUMBER_TOTAL_SPIN
+
+
+        WRITE(10 ,*) ITR, NORMALISED_MAGNETISATION(ITR)
+      </code></pre> <br/><br/>
+
+      DO Loop을 닫고,
+      <pre><code class="codeblock">
+      !--- END ITERATION
+          END DO
+      </code></pre> <br/><br/>
+      궁금하니까 프로그래밍 실행 총 소요시간도 한번 계산해보자.
+      <pre><code class="codeblock">
+!---PROGRAM EXECUATION TIME-----------------------------------
+
+    CALL CPU_TIME(END_TIME)
+
+    TOT_TIME = END_TIME - START_TIME
+
+    PRINT *, "IT TOOK ", TOT_TIME," SEC FOR THIS PROGRAM!"
+
+!----------------------------------------------------------
+      </code></pre> <br/><br/>
+      이제 main Fortran Program은 다 완성됐다.
+      <pre><code class="codeblock">
+      END PROGRAM ISING_MODEL
+      </code></pre> <br/><br/>
+      다음으론, 위에서 만든 데이터들을 시각화하는 코드를 작성해보자.
+</p> 
+<h3 class="unnembered">
+  1.2 Visualisation (Python)
+</h3>
+<p>
+  &nbsp; <br/> 
+  DO loop를 실행하며 계속 update되는 spin configuration을 시각화 하고 싶다.
+  <br/><br/>
+  우선 필요한 package들을 가져오자.
+
+
+
+
+
+
+  
+</p> 
+
+
+<h2 class="unnumbered" id="motivation">
+  2. Magnetisation w.r.t. Temperature
+</h2>
+<h3 class="unnembered">
+  1.1 Main Program (Fortran 90)
+</h3>
+<p>
+  &nbsp; <br/> 
+  ARRRRRRRRR
+  <br/><br/>
+</p> 
+<h3 class="unnembered">
+  1.2 Visualisation (Python)
+</h3>
+<p>
+  &nbsp; <br/> 
+  ARRRRRRRRR
+  <br/><br/>
+</p> 
+
