@@ -6,7 +6,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories['Computatinal Physics']%}
+{% assign posts = site.categories['Computational Physics']%}
 {% for post in posts %} 
   {% include archive-single.html type=page.entries_layout %} 
 {% endfor %}
