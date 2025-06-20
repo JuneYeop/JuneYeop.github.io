@@ -1,7 +1,7 @@
 ---
 title: "Belarus"
 layout: archive
-permalink: categories/belarus
+permalink: categories/Belarus
 author_profile: true
 types: posts
 ---
