@@ -1,7 +1,7 @@
 ---
 title: "Austria"
 layout: archive
-permalink: categories/austria
+permalink: categories/Austria
 author_profile: true
 types: posts
 ---
