@@ -1,7 +1,7 @@
 ---
 title: "Hong Kong"
 layout: archive
-permalink: categories/hongkong
+permalink: categories/Hong_Kong
 author_profile: true
 types: posts
 ---
