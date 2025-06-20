@@ -1,7 +1,7 @@
 ---
 title: "Japan"
 layout: archive
-permalink: categories/japan
+permalink: categories/Japan
 author_profile: true
 types: posts
 ---
