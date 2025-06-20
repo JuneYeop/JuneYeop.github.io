@@ -1,7 +1,7 @@
 ---
 title: "Turkey"
 layout: archive
-permalink: categories/turkey
+permalink: categories/Turkey
 author_profile: true
 types: posts
 ---
