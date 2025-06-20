@@ -1,7 +1,7 @@
 ---
 title: "Bulgaria"
 layout: archive
-permalink: categories/Bulgaria
+permalink: categories/bulgaria
 author_profile: true
 types: posts
 ---
