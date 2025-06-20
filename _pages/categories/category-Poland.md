@@ -1,7 +1,7 @@
 ---
 title: "Poland"
 layout: archive
-permalink: categories/poland
+permalink: categories/Poland
 author_profile: true
 types: posts
 ---
