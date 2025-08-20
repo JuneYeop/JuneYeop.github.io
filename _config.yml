@@ -114,8 +114,8 @@ analytics:
 author:
   name             : "Junyeop Kim"
   avatar           : "assets/photos/bio-photo.jpg"
-  bio              : 'A mathematical physics fanatic'
-  location         : "Seoul"
+  bio              : ' '
+  location         : "Seoul and Munich"
   # email            : "juney1121@gmail.com"
   links:
     - label: "juney1121@gmail.com"
